@@ -1,100 +1,119 @@
-# 🛡 VPN Checker & Aggregator (Raw/Beta Version)
+# 🛡️ VPN Checker & Aggregator | Automated VLESS/VMess/Trojan Validator
 
-![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/YOUR_USERNAME/YOUR_REPO/run_check.yml?label=Auto-Check&style=for-the-badge)
+![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/kort0881/vpn-checker-backend/run_check.yml?label=Auto-Check&style=for-the-badge)
+![Python](https://img.shields.io/badge/Python-3.10%2B-blue?style=for-the-badge&logo=python)
+![License](https://img.shields.io/github/license/kort0881/vpn-checker-backend?style=for-the-badge)
 
-**ПРЕДУПРЕЖДЕНИЕ:** Это ранняя (сырая) версия скрипта. Возможны ошибки при плохом соединении с GitHub и ложные срабатывания при проверке.
-
-Скрипт для автоматического сбора, валидации и сортировки VLESS/VMess/Trojan конфигураций. Работает полностью на GitHub Actions (бесплатно, сервер не нужен).
-
----
-
-## 🚀 Основные возможности
-
-1.  **Smart Chunking (Умная разбивка):** Защита от слишком больших файлов подписки. Если рабочих ключей > 1000, скрипт автоматически делит их на `part1.txt`, `part2.txt`, чтобы клиенты (Hiddify, v2rayNG) не зависали.
-2.  **Гео-Сортировка:**
-    *   🇷🇺 **RU_Best** — Российские ключи (белые списки, гос. сервисы).
-    *   🇪🇺 **My_Euro** — Чистая Европа (NL, DE, FI, FR...). Остальное отсеивается.
-3.  **Генератор подписок:** Создает единый файл `subscriptions_list.txt` со всеми готовыми ссылками.
-4.  **Валидация:** Реальная проверка соединения через сокеты (TCP/TLS) с замером пинга.
-5.  **Фильтр мусора:** Автоматически удаляет дубликаты, Китай (CN), Иран (IR) и локальные IP.
+**High-performance Python automation for collecting, validating, and managing VLESS, VMess, and Trojan proxy configurations.**  
+Runs entirely on **GitHub Actions** (Free Tier) — zero server costs, fully automated updates every 6 hours.
 
 ---
 
-## 📂 Результат работы
+## 📖 About the Project
 
-После запуска в папке `checked` появляются файлы.
-В файле `subscriptions_list.txt` будут готовые ссылки такого вида:
+This repository hosts a powerful backend script designed to aggregate VPN configurations from multiple sources, validate their connectivity (TCP/TLS/WebSocket), measure latency, and sort them by geo-location. 
 
-**Если ключей мало:**
-`https://raw.githubusercontent.com/USER/REPO/main/checked/RU_Best/ru_white.txt`
-
-**Если ключей много (авто-разбивка):**
-`https://raw.githubusercontent.com/USER/REPO/main/checked/RU_Best/ru_white.txt`
-`https://raw.githubusercontent.com/USER/REPO/main/checked/RU_Best/ru_white_part2.txt`
-
-*(Ссылки генерируются автоматически и всегда ведут на существующие файлы)*
+It is specifically optimized for:
+*   **Bypassing Censorship:** Automatically filters and verifies keys for stability.
+*   **Geo-Routing:** Separates **Russian (RU)** configs (for local services like Gosuslugi/Banking) from **European (EU)** configs (for high-speed international access).
+*   **Client Compatibility:** Generates subscription files compatible with **Hiddify, v2rayNG, Nekobox, Streisand**, and other Xray-core based clients.
 
 ---
 
-## 🛠 ИНСТРУКЦИЯ: Установка и Запуск
+## ⚡ Key Features
 
-Делайте строго по шагам, чтобы скрипт заработал в вашем репозитории.
+### 1. 🧠 Smart Validation & Filtering
+*   **Real-time Ping Test:** Checks every key via socket connection (TCP/TLS).
+*   **Protocol Support:** Full support for VLESS, VMess, Trojan, and Shadowsocks.
+*   **Deduping:** Automatically removes duplicate keys to keep lists clean.
+*   **Garbage Collector:** Filters out dead keys, local IPs, and unstable nodes (CN, IR relays).
 
-### Шаг 1. Сделайте Fork
-1.  Нажмите кнопку **Fork** (вверху справа).
-2.  Назовите репозиторий (например, `vpn-checker`).
-3.  Нажмите **Create fork**.
+### 2. 🌍 Advanced Geo-Sorting
+*   **🇷🇺 RU_Best:** Dedicated list for Russian IP addresses. Essential for accessing region-locked services from abroad.
+*   **🇪🇺 My_Euro:** Exclusive filter for high-quality European nodes (NL, DE, FI, GB, FR, SE, etc.). Automatically rejects keys from Asia, USA, or Latin America.
 
-### Шаг 2. Включите права (Permissions) — ВАЖНО!
-Скрипту нужно разрешение на запись файлов в репозиторий.
-1.  В новом репозитории перейдите в **Settings**.
-2.  Слева выберите **Actions** -> **General**.
-3.  Прокрутите вниз до **Workflow permissions**.
-4.  Выберите пункт: **Read and write permissions**.
-5.  Нажмите **Save**.
+### 3. 📦 Smart Chunking System
+*   **Crash Protection:** If the number of working keys exceeds `1000`, the script automatically splits the list into `part1.txt`, `part2.txt`, etc.
+*   **Client Stability:** Prevents mobile VPN clients from freezing due to oversized subscription files.
 
-### Шаг 3. Настройка скрипта (main.py)
-Откройте файл `main.py` и отредактируйте 3 обязательных пункта под себя:
+### 4. 🚀 Performance Optimized
+*   **Multi-threaded:** Checks up to **40 keys simultaneously** for maximum speed.
+*   **Caching System:** Uses `history.json` to store results for 12 hours, drastically reducing API load and checking time.
 
-**1. Ваш канал/метка (Строка 33):**
+---
+
+## 🛠️ Installation & Setup Guide
+
+Follow these steps to deploy your own instance of the VPN Checker.
+
+### Step 1: Fork the Repository
+1.  Click the **Fork** button (top right corner of this page).
+2.  Name your repository (e.g., `vpn-checker-backend`).
+3.  Click **Create fork**.
+
+### Step 2: Enable Workflow Permissions (Critical!)
+*Without this step, the script cannot save the checked keys.*
+1.  Go to your repository **Settings**.
+2.  Navigate to **Actions** → **General**.
+3.  Scroll down to **Workflow permissions**.
+4.  Select **Read and write permissions**.
+5.  Click **Save**.
+
+### Step 3: Configure `main.py`
+Edit `main.py` directly in GitHub or your IDE. Update these variables to match your setup:
+
+#### A. Set Your Channel Name (Line ~33)
+```python
 MY_CHANNEL = "@your_channel_name"
+```
+*This tag will be added to every key's name.*
 
-Будет отображаться в названии каждого ключа
-text
+#### B. Define Your Sources (Line ~46)
+```python
+URLS_RU = [ "https://raw.githubusercontent.com/..." ]  # For RU keys
+URLS_MY = [ "https://raw.githubusercontent.com/..." ]  # For EU keys
+```
 
-**2. Ваши источники (Строка 46):**
-URLS_MY = [
-"https://raw.githubusercontent.com/..."
-]
+#### C. Set Your Repo Path (Line ~260 - End of File)
+**⚠️ IMPORTANT:** Scroll to the bottom and find the subscription generation block.
+```python
+GITHUB_USER_REPO = "your-username/your-repo-name"
+```
+*Change this to YOUR username and repository name. Example: `alex/vpn-checker`.*
 
-Вставьте сюда ссылки на ваши RAW файлы с ключами.
-text
-
-**3. Ваш репозиторий (Строка 188) — КРИТИЧНО:**
-GITHUB_USER_REPO = "ВАШ_НИК/НАЗВАНИЕ_РЕПОЗИТОРИЯ"
-
-Например: "ivanov/vpn-checker". Без этого ссылки в файле подписок будут вести на чужой репо.
-text
-
-### Шаг 4. Запуск
-1.  Перейдите во вкладку **Actions**.
-2.  Нажмите зеленую кнопку **I understand my workflows...**.
-3.  Выберите воркфлоу **Check VPN Keys** слева.
-4.  Нажмите **Run workflow**.
+### Step 4: Launch
+1.  Go to the **Actions** tab.
+2.  Select **Check VPN Keys** from the left sidebar.
+3.  Click **Run workflow** → **Run workflow**.
 
 ---
 
-## ⚙️ Технические настройки (Опции скрипта)
+## 📂 Output Files (Subscription Links)
 
-Описание переменных в начале файла `main.py` для тех, кто хочет изменить логику:
+Once the workflow finishes, check the `checked/` folder or the `subscriptions_list.txt` file.
 
-*   **TIMEOUT (5):** Время ожидания ответа от сервера в секундах.
-*   **THREADS (40):** Количество потоков проверки. Больше 50 ставить не рекомендуется (GitHub может забанить).
-*   **CACHE_HOURS (12):** Время хранения истории. Если сервер проверен менее 12 часов назад, он не проверяется повторно.
-*   **CHUNK_LIMIT (1000):** Максимальное количество ключей в одном файле перед разбивкой на части.
-*   **MAX_KEYS_TO_CHECK (15000):** Лимит входящих ключей. Если ссылок больше, лишние отбрасываются для экономии ресурсов.
-*   **EURO_CODES:** Список кодов стран, которые считаются "Европой".
-*   **BAD_MARKERS:** Стоп-слова (CN, IR, RELAY), при наличии которых ключ удаляется сразу.
+| File Path | Description |
+| :--- | :--- |
+| **`checked/RU_Best/ru_white.txt`** | Verified **Russia** (RU) proxy list. |
+| **`checked/My_Euro/my_euro.txt`** | Verified **Europe** (EU) proxy list. |
+| **`subscriptions_list.txt`** | Master file containing direct links to all generated parts. |
+
+*Use the raw links from `subscriptions_list.txt` in your VPN client.*
 
 ---
 
+## ⚙️ Advanced Configuration (`main.py`)
+
+| Variable | Default | Description |
+| :--- | :--- | :--- |
+| `TIMEOUT` | `5` | Socket connection timeout in seconds. |
+| `THREADS` | `40` | Number of concurrent checking threads. |
+| `CACHE_HOURS` | `12` | How long to trust previous check results. |
+| `MAX_KEYS_TO_CHECK` | `15000` | Input limit to prevent memory overflows. |
+| `EURO_CODES` | `{'NL', ...}` | Set of country codes to include in "My_Euro". |
+
+---
+
+## ⚖️ Legal Disclaimer
+
+This repository is for **educational and research purposes only**. The developer is not responsible for how the scripts or the data generated by them are used. Users are solely responsible for ensuring their usage complies with local laws and regulations regarding VPN usage and internet censorship circumvention.
