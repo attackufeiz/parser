@@ -38,7 +38,7 @@ RU_FILES = ["ru_white_part1.txt", "ru_white_part2.txt", "ru_white_part3.txt", "r
 EURO_FILES = ["my_euro_part1.txt", "my_euro_part2.txt", "my_euro_part3.txt"]
 
 HISTORY_FILE = os.path.join(BASE_DIR, "history.json")
-MY_CHANNEL = "@vlesstrojan"
+MY_CHANNEL = "@attackufeiz"
 
 URLS_RU = [
     "https://github.com/igareck/vpn-configs-for-russia/blob/main/BLACK_VLESS_RUS_mobile.txt",
@@ -257,7 +257,7 @@ def save_chunked(keys_list, folder, base_name, chunk_size=None):
     return file_names
 
 def generate_subscriptions_list():
-    GITHUB_USER_REPO = "kort0881/vpn-checker-backend"
+    GITHUB_USER_REPO = "attackufeiz/parser"
     BRANCH = "main"
     BASE_RAW = f"https://raw.githubusercontent.com/{GITHUB_USER_REPO}/{BRANCH}"
 
