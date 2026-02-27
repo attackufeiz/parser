@@ -41,20 +41,8 @@ HISTORY_FILE = os.path.join(BASE_DIR, "history.json")
 MY_CHANNEL = "@attackufeiz"
 
 URLS_RU = [
-    "https://github.com/igareck/vpn-configs-for-russia/blob/main/BLACK_VLESS_RUS_mobile.txt",
-    "https://github.com/igareck/vpn-configs-for-russia/blob/main/BLACK_SS%2BAll_RUS.txt",
-    "https://github.com/igareck/vpn-configs-for-russia/blob/main/Vless-Reality-White-Lists-Rus-Mobile-2.txt",
-    "https://github.com/igareck/vpn-configs-for-russia/blob/main/Vless-Reality-White-Lists-Rus-Mobile.txt",
-    "https://github.com/igareck/vpn-configs-for-russia/blob/main/WHITE-CIDR-RU-all.txt",
-    "https://github.com/igareck/vpn-configs-for-russia/blob/main/WHITE-CIDR-RU-checked.txt",
-    "https://github.com/igareck/vpn-configs-for-russia/blob/main/WHITE-SNI-RU-all.txt",
-    "https://raw.githubusercontent.com/zieng2/wl/main/vless.txt",
-    "https://raw.githubusercontent.com/LowiKLive/BypassWhitelistRu/refs/heads/main/WhiteList-Bypass_Ru.txt",
-    "https://raw.githubusercontent.com/zieng2/wl/main/vless_universal.txt",
-    "https://raw.githubusercontent.com/vsevjik/OBSpiskov/refs/heads/main/wwh",
-    "https://jsnegsukavsos.hb.ru-msk.vkcloud-storage.ru/love",
-    "https://etoneya.a9fm.site/1",
-    "https://s3c3.001.gpucloud.ru/vahe4xkwi/cjdr"
+    "https://raw.githubusercontent.com/AvenCores/goida-vpn-configs/refs/heads/main/githubmirror/26.txt"
+    "https://raw.githubusercontent.com/roosterkid/openproxylist/main/V2RAY_RAW.txt"
 ]
 
 URLS_MY = [
@@ -427,6 +415,7 @@ if __name__ == "__main__":
     print("\n✅ SUCCESS: FAST/ALL LAYERS GENERATED")
     print(f"  Префильтр: {len(RU_FILES)} RU + {len(EURO_FILES)} EURO (FAST)")
     print(f"  Постер: до 8 кнопок (FAST + ограниченные ALL)")
+
 
 
 
