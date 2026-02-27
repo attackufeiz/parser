@@ -6,7 +6,6 @@ https://raw.githubusercontent.com/attackufeiz/parser/main/checked/RU_Best/ru_whi
 
 === 🇷🇺 RUSSIA (ALL) ===
 https://raw.githubusercontent.com/attackufeiz/parser/main/checked/RU_Best/ru_white_all_part1.txt
-https://raw.githubusercontent.com/attackufeiz/parser/main/checked/RU_Best/ru_white_all_part2.txt
 
 === 🇪🇺 EUROPE (FAST) ===
 https://raw.githubusercontent.com/attackufeiz/parser/main/checked/My_Euro/VPN.txt
