@@ -5,6 +5,7 @@ https://raw.githubusercontent.com/attackufeiz/parser/main/checked/RU_Best/ru_whi
 https://raw.githubusercontent.com/attackufeiz/parser/main/checked/RU_Best/ru_white_part4.txt
 
 === 🇷🇺 RUSSIA (ALL) ===
+https://raw.githubusercontent.com/attackufeiz/parser/main/checked/RU_Best/ru_white_all_part1.txt
 
 === 🇪🇺 EUROPE (FAST) ===
 https://raw.githubusercontent.com/attackufeiz/parser/main/checked/My_Euro/my_euro_part1.txt
@@ -12,3 +13,4 @@ https://raw.githubusercontent.com/attackufeiz/parser/main/checked/My_Euro/my_eur
 https://raw.githubusercontent.com/attackufeiz/parser/main/checked/My_Euro/my_euro_part3.txt
 
 === 🇪🇺 EUROPE (ALL) ===
+https://raw.githubusercontent.com/attackufeiz/parser/main/checked/My_Euro/my_euro_all_part1.txt
