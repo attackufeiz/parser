@@ -34,8 +34,8 @@ MAX_PING_MS = 3000
 FAST_LIMIT = 3000
 MAX_HISTORY_AGE = 2 * 24 * 3600
 
-RU_FILES = ["ru_white_part1.txt", "ru_white_part2.txt", "ru_white_part3.txt", "ru_white_part4.txt"]
-EURO_FILES = ["my_euro_part1.txt", "my_euro_part2.txt", "my_euro_part3.txt"]
+RU_FILES = ["BS.txt", "ru_white_part2.txt", "ru_white_part3.txt", "ru_white_part4.txt"]
+EURO_FILES = ["VPN.txt", "my_euro_part2.txt", "my_euro_part3.txt"]
 
 HISTORY_FILE = os.path.join(BASE_DIR, "history.json")
 MY_CHANNEL = "@attackufeiz"
@@ -415,6 +415,7 @@ if __name__ == "__main__":
     print("\n✅ SUCCESS: FAST/ALL LAYERS GENERATED")
     print(f"  Префильтр: {len(RU_FILES)} RU + {len(EURO_FILES)} EURO (FAST)")
     print(f"  Постер: до 8 кнопок (FAST + ограниченные ALL)")
+
 
 
 
