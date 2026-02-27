@@ -122,7 +122,8 @@ def fetch_keys(urls, tag):
                 url = url.replace("github.com", "raw.githubusercontent.com").replace("/blob/", "/")
             r = requests.get(url, timeout=10)
             if r.status_code != 200: continue
-            header = """#profile-title: attackufeiz
+            header = """
+#profile-title: attackufeiz
 #support-url: none
 #announce: autoupdate every 8 hours
 #profile-update-interval: 8
@@ -421,6 +422,7 @@ if __name__ == "__main__":
     print("\n✅ SUCCESS: FAST/ALL LAYERS GENERATED")
     print(f"  Префильтр: {len(RU_FILES)} RU + {len(EURO_FILES)} EURO (FAST)")
     print(f"  Постер: до 8 кнопок (FAST + ограниченные ALL)")
+
 
 
 
