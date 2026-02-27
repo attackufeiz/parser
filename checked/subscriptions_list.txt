@@ -1,5 +1,5 @@
 === 🇷🇺 RUSSIA (FAST) ===
-https://raw.githubusercontent.com/attackufeiz/parser/main/checked/RU_Best/ru_white_part1.txt
+https://raw.githubusercontent.com/attackufeiz/parser/main/checked/RU_Best/BS.txt
 https://raw.githubusercontent.com/attackufeiz/parser/main/checked/RU_Best/ru_white_part2.txt
 https://raw.githubusercontent.com/attackufeiz/parser/main/checked/RU_Best/ru_white_part3.txt
 https://raw.githubusercontent.com/attackufeiz/parser/main/checked/RU_Best/ru_white_part4.txt
@@ -8,7 +8,7 @@ https://raw.githubusercontent.com/attackufeiz/parser/main/checked/RU_Best/ru_whi
 https://raw.githubusercontent.com/attackufeiz/parser/main/checked/RU_Best/ru_white_all_part1.txt
 
 === 🇪🇺 EUROPE (FAST) ===
-https://raw.githubusercontent.com/attackufeiz/parser/main/checked/My_Euro/my_euro_part1.txt
+https://raw.githubusercontent.com/attackufeiz/parser/main/checked/My_Euro/VPN.txt
 https://raw.githubusercontent.com/attackufeiz/parser/main/checked/My_Euro/my_euro_part2.txt
 https://raw.githubusercontent.com/attackufeiz/parser/main/checked/My_Euro/my_euro_part3.txt
 
