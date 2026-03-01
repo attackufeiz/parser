@@ -1,3 +1,8 @@
+#profile-title: BS
+#support-url: none
+#announce: autoupdate every 8 hours
+#profile-update-interval: 8
+
 ss://YWVzLTI1Ni1nY206OEpDc1Bzc2ZnUzh0aVJ3aU1saEFSZz09@144.217.164.29:12000#%5B19ms%20LT%20%40attackufeiz%5D
 vless://27b6068a-e1e6-4675-ab14-87143c690390@144.217.133.97:30238?security=none&encryption=none&headerType=none&type=tcp#%5B20ms%20SE%20%40attackufeiz%5D
 vless://8dc7722c-2767-4eea-a28b-2f8daacc07e3@45.82.251.115:8880?encryption=none&security=none&type=grpc#%5B35ms%20SE%20%40attackufeiz%5D
@@ -45,5 +50,6 @@ vless://30c04389-bbcb-431f-9d47-a8ad24406bd4@89.125.48.112:443?type=tcp&security
 vless://d50ef9ea-7adf-4b45-977a-16bca0f11584@185.234.57.216:443?security=reality&encryption=none&pbk=2Z2meC9rRAMD3k52ne8dh8PdfRNpOs5T9yObPyFkXyQ&headerType=none&fp=chrome&spx=/&type=tcp&sni=yahoo.com&sid=f9fe#%5B762ms%20FR%20%40attackufeiz%5D
 vless://2ab6258a-6670-4875-ab65-60999b764f87@209.17.118.131:26403?security=none&type=tcp&encryption=none#%5B912ms%20SE%20%40attackufeiz%5D
 ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpjMFp5MThuSG1qY1Vmb21lMWZZUGhB@147.45.135.39:4205#%5B1169ms%20AT%20%40attackufeiz%5D
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpYTjZYZjBacXdEZUZydDM5VFFyYWVu@45.80.231.75:31019#%5B1196ms%20SE%20%40attackufeiz%5D
 vless://7177f5c4-f26a-4ab5-820f-62cb6ba649f7@31.170.22.193:47997?security=reality&encryption=none&pbk=cFora2YYa3aZdpWW8vMD9iX97qRKtyLzXv4pWgXoh20&headerType=none&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=apple.com&sid=ead461#%5B2740ms%20CH%20%40attackufeiz%5D
 vless://38707963-acf6-4e72-8db6-94faba4b5844@72.56.108.252:443?security=reality&encryption=none&pbk=FV_Zfr_YpvUVYmLpggwOwoJdiYVsmAqgXqDIGAILP3A&headerType=none&fp=chrome&spx=/&type=tcp&sni=yahoo.com&sid=3f8a#%5B2948ms%20FR%20%40attackufeiz%5D

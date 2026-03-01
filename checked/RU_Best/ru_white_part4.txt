@@ -1,0 +1,5 @@
+#profile-title: BS
+#support-url: none
+#announce: autoupdate every 8 hours
+#profile-update-interval: 8
+
