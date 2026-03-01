@@ -42,6 +42,8 @@ MY_CHANNEL = "@attackufeiz"
 
 URLS_RU = [
     "https://raw.githubusercontent.com/AvenCores/goida-vpn-configs/refs/heads/main/githubmirror/26.txt"
+    "https://raw.githubusercontent.com/vsevjik/OBWL/refs/heads/main/wwh"
+    "https://raw.githubusercontent.com/RKPchannel/RKP_bypass_configs/refs/heads/main/configs/url_work.txt"
     
 ]
 
@@ -438,6 +440,7 @@ if __name__ == "__main__":
     print("\n✅ SUCCESS: FAST/ALL LAYERS GENERATED")
     print(f"  Префильтр: {len(RU_FILES)} RU + {len(EURO_FILES)} EURO (FAST)")
     print(f"  Постер: до 8 кнопок (FAST + ограниченные ALL)")
+
 
 
 
