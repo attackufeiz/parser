@@ -211,8 +211,24 @@ def extract_ping(key_str):
 
 def save_exact(keys, folder, filename):
     path = os.path.join(folder, filename)
+    
+    # Твои заголовки (то, что ты просил)
+    headers = """#profile-title: BS
+#support-url: none
+#announce: autoupdate every 8 hours
+#profile-update-interval: 8
+
+"""
+    
+    # Формируем контент: заголовки + ключи
+    if keys:
+        content = headers + "\n".join(keys)
+    else:
+        content = headers  # если ключей нет, всё равно пишем заголовки
+    
     with open(path, "w", encoding="utf-8") as f:
-        f.write("\n".join(keys) if keys else "")  # ✅ ИСПРАВЛЕНО
+        f.write(content)
+    
     return path
 
 def save_fixed_chunks_ru(keys_list, folder):
@@ -422,6 +438,7 @@ if __name__ == "__main__":
     print("\n✅ SUCCESS: FAST/ALL LAYERS GENERATED")
     print(f"  Префильтр: {len(RU_FILES)} RU + {len(EURO_FILES)} EURO (FAST)")
     print(f"  Постер: до 8 кнопок (FAST + ограниченные ALL)")
+
 
 
 
