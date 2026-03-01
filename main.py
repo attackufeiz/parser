@@ -87,6 +87,17 @@ def load_json(path):
         except: pass
     return {}
 
+def get_flag_emoji(country_code):
+    flags = {
+        "RU": "🇷🇺", "DE": "🇩🇪", "NL": "🇳🇱", "GB": "🇬🇧", "FR": "🇫🇷",
+        "SE": "🇸🇪", "PL": "🇵🇱", "CZ": "🇨🇿", "AT": "🇦🇹", "CH": "🇨🇭",
+        "IT": "🇮🇹", "ES": "🇪🇸", "NO": "🇳🇴", "DK": "🇩🇰", "BE": "🇧🇪",
+        "IE": "🇮🇪", "LU": "🇱🇺", "EE": "🇪🇪", "LV": "🇱🇻", "LT": "🇱🇹",
+        "FI": "🇫🇮", "US": "🇺🇸", "CA": "🇨🇦", "AU": "🇦🇺", "JP": "🇯🇵",
+        "SG": "🇸🇬", "UNKNOWN": "🌍"
+    }
+    return flags.get(country_code, "🌍")
+    
 def save_json(path, data):
     try:
         with open(path, "w", encoding="utf-8") as f:
@@ -439,6 +450,7 @@ if __name__ == "__main__":
     print("\n✅ SUCCESS: FAST/ALL LAYERS GENERATED")
     print(f"  Префильтр: {len(RU_FILES)} RU + {len(EURO_FILES)} EURO (FAST)")
     print(f"  Постер: до 8 кнопок (FAST + ограниченные ALL)")
+
 
 
 
