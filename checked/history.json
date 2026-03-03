@@ -148,8 +148,8 @@
   },
   "vless://af1a9622-5deb-480c-8539-d8763f59e012@185.221.222.206:56824?encryption=none&flow=xtls-rprx-vision&fp=chrome&pbk=Gpzl6U5r_tIq-xIGyXhzT37vIDsZW6Vot6XL1sH6lVM&security=reality&sid=aabbccdd&sni=ya.ru&type=tcp": {
     "alive": true,
-    "latency": 334,
-    "time": 1772470390.373953,
+    "latency": 433,
+    "time": 1772514924.7573948,
     "country": "NO",
     "host": "185.221.222.206"
   },
@@ -1023,9 +1023,9 @@
   },
   "vless://f1449968-0329-468b-b56b-1c573ac2a767@46.243.233.78:8081?encryption=none&fp=chrome&pbk=EJKcPSl0dv7mtU26gg6tUmKPw_aDvO2AHraRgNn6B14&security=reality&sid=425ba80cd1a821a8&sni=sun6-21.userapi.com&type=tcp": {
     "alive": true,
-    "latency": 346,
-    "time": 1772483999.6616282,
-    "country": "CH",
+    "latency": 649,
+    "time": 1772514888.485745,
+    "country": "NO",
     "host": "46.243.233.78"
   },
   "vless://400c1f85-9d3a-444a-8a50-81b11f3b4c20@84.201.128.76:443?encryption=none&flow=xtls-rprx-vision&fp=random&pbk=66kZLshj9fxAIQA7NsABohNwgiOcY71enc6as_Frqw0&security=reality&sid=3c1523da43287ec4&sni=smartcaptcha.yandexcloud.net&type=tcp": {
@@ -5055,9 +5055,9 @@
   },
   "vless://cef12ad2-fb16-4ace-ab26-2a026d40a7d2@144.31.74.41:8443?encryption=none&type=grpc&security=reality&fp=chrome&pbk=LB2i67ErtJPlIIDeDHlGvSip6-qPJLH9HzYju5fZ32c&sni=sun6-21.userapi.com&sid=2916": {
     "alive": true,
-    "latency": 2672,
-    "time": 1772425718.7761495,
-    "country": "PL",
+    "latency": 782,
+    "time": 1772514887.5578394,
+    "country": "NO",
     "host": "144.31.74.41"
   },
   "vless://aa302418-508d-1770-885e-c8418e6956bd@146.185.242.246:51006?type=tcp&security=reality&sni=sun6-22.userapi.com&fp=chrome&flow=xtls-rprx-vision&pbk=4CH3o5zOMcFNMbnwXnkAg0FFepmsc0QzhahXkUzb1ik&sid=d8c6b58bcbb0c323": {
@@ -5475,9 +5475,9 @@
   },
   "vless://cef12ad2-fb16-4ace-ab26-2a026d40a7d2@de.himikvpn.online:8443?mode=gun&security=reality&encryption=none&pbk=LB2i67ErtJPlIIDeDHlGvSip6-qPJLH9HzYju5fZ32c&fp=chrome&type=grpc&sni=sun6-21.userapi.com&sid=2916": {
     "alive": true,
-    "latency": 1728,
-    "time": 1772470353.608254,
-    "country": "NL",
+    "latency": 3683,
+    "time": 1772514888.2986794,
+    "country": "NO",
     "host": "de.himikvpn.online"
   },
   "vless://05dc09d5-5c56-454b-a34e-6ef743d91e1a@94.156.154.88:8443?security=reality&encryption=none&pbk=3JGwSDrfkiCPdU3rvQP5m0z4Ag_UB_2w8Qq3VMXmo28&headerType=none&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=yandex.ru&sid=abc123": {
@@ -6805,9 +6805,9 @@
   },
   "vless://c48bd63d-f4a0-42d5-9569-6ccfe5c435ed@64.188.82.88:443?type=tcp&security=reality&flow=xtls-rprx-vision&fp=chrome&pbk=wYoaKmGm40vL6L1lg-2umg9nIXUIqzPfmvw57C1fwXU&sid=7aa7ad2b38&sni=yandex.ru&path=&host=&spx=/": {
     "alive": true,
-    "latency": 312,
-    "time": 1772484013.592794,
-    "country": "CH",
+    "latency": 436,
+    "time": 1772514899.1610026,
+    "country": "AT",
     "host": "64.188.82.88"
   },
   "vless://c48bd63d-f4a0-42d5-9569-6ccfe5c435ed@64.188.67.25:443?type=tcp&security=reality&flow=xtls-rprx-vision&fp=chrome&pbk=wYoaKmGm40vL6L1lg-2umg9nIXUIqzPfmvw57C1fwXU&sid=847cd30556ea39&sni=yandex.ru&path=&host=&spx=/": {
@@ -8737,8 +8737,8 @@
   },
   "vless://f862698b-5c8a-4209-a961-ca6b2b9bf503@37.139.33.57:443?encryption=none&flow=xtls-rprx-vision&security=reality&sni=m.vk.ru&fp=chrome&pbk=_CjW0Khlrr5z5oc9Oy6-w2ZEanz-zMBktVn5EOX9oTM&sid=4ffc99daad0f261f&type=tcp&headerType=none": {
     "alive": true,
-    "latency": 3558,
-    "time": 1772470395.9787242,
+    "latency": 1665,
+    "time": 1772514929.3319612,
     "country": "NO",
     "host": "37.139.33.57"
   },
@@ -9983,9 +9983,9 @@
   },
   "vless://2dd1a15d-1426-413a-a3b8-a645788bc844@185.40.152.115:443?encryption=none&flow=xtls-rprx-vision&fp=chrome&pbk=J5ITJbg5FQFembAfkogKHHQB6DigsFXQxK7xu-QMWUs&security=reality&sid=a20d3ed244c76426&sni=api-maps.yandex.ru&type=tcp": {
     "alive": true,
-    "latency": 2467,
-    "time": 1772484003.6487086,
-    "country": "CH",
+    "latency": 2662,
+    "time": 1772514893.350201,
+    "country": "NO",
     "host": "185.40.152.115"
   },
   "vless://2dd1a15d-1426-413a-a3b8-a645788bc844@185.40.152.116:443?encryption=none&flow=xtls-rprx-vision&fp=chrome&pbk=J5ITJbg5FQFembAfkogKHHQB6DigsFXQxK7xu-QMWUs&security=reality&sid=a20d3ed244c76426&sni=sso.passport.yandex.ru&type=tcp": {
@@ -10417,8 +10417,8 @@
   },
   "vless://488fa2ff-440b-46b7-b0e0-211bcf923d5e@217.16.26.35:8443?alpn=h2%2Chttp%2F1.1&encryption=none&host=chat.speedload.ru&mode=auto&path=%2F&security=tls&sni=chat.speedload.ru&type=xhttp": {
     "alive": true,
-    "latency": 485,
-    "time": 1772470421.0359664,
+    "latency": 693,
+    "time": 1772514935.7710361,
     "country": "NO",
     "host": "217.16.26.35"
   },
@@ -14344,9 +14344,9 @@
   },
   "vless://a001c9c4-ece2-4dc1-9658-cbad90fcd2e0@de.tortvpnbot.world:8080?type=tcp&security=reality&fp=chrome&pbk=w28tNIWZCfW4X9aQDLwXECK3pU59zihJ0GIMA13u5X8&sid=&sni=max.ru&path=&host=": {
     "alive": true,
-    "latency": 429,
-    "time": 1772483998.6788776,
-    "country": "CH",
+    "latency": 816,
+    "time": 1772514888.298731,
+    "country": "AT",
     "host": "de.tortvpnbot.world"
   },
   "vless://1218c022-dca8-49e5-b7d4-a04f3023db81@de-01.opsvpnvless.ru:443?type=tcp&security=reality&encryption=none&flow=xtls-rprx-vision&fp=chrome&pbk=7_RFavizkZFWUyGrUalk1jAKAJ7oVTxIgV-PEGD89Bs&sid=50d4a7cd&sni=stats.vk-portal.net": {
@@ -14372,9 +14372,9 @@
   },
   "vless://a001c9c4-ece2-4dc1-9658-cbad90fcd2e0@103.35.189.204:8080?type=tcp&security=reality&fp=chrome&pbk=w28tNIWZCfW4X9aQDLwXECK3pU59zihJ0GIMA13u5X8&sid=&sni=max.ru&path=&host=": {
     "alive": true,
-    "latency": 260,
-    "time": 1772483999.048111,
-    "country": "CH",
+    "latency": 526,
+    "time": 1772514888.298752,
+    "country": "AT",
     "host": "103.35.189.204"
   },
   "vless://c48bd63d-f4a0-42d5-9569-6ccfe5c435ed@138.124.180.67:8443?type=grpc&security=reality&fp=chrome&pbk=effVBkYBsEdW-kFm6lPHNrxQYPnrLp2utlfF87J8Ph8&sid=ca&sni=yandex.ru&mode=gun&serviceName=&spx=/&authority=": {
@@ -16171,9 +16171,9 @@
   },
   "ss://edc9daf2-fc2e-435b-a87b-8427020b1d40@217.16.25.94:8443?encryption=none&amp;flow=xtls-rprx-vision&amp;fp=chrome&amp;pbk=urvTdWo4dZxKfyZPbqMnVhX319f-6W_7pZtHITljvy4&amp;security=reality&amp;sid=aca9&amp;sni=max.ru&amp;type=tcp": {
     "alive": true,
-    "latency": 382,
-    "time": 1772483998.3708978,
-    "country": "CH",
+    "latency": 691,
+    "time": 1772514887.8883486,
+    "country": "NO",
     "host": "217.16.25.94"
   },
   "ss://54ef6124-3a61-4a44-9901-78fadc6c59d9@de16.fastlanehosting.ru:443?encryption=none&amp;flow=xtls-rprx-vision&amp;fp=chrome&amp;pbk=iAWzXE2vetDOtZePY7-Y64p5AY7h35eE3YnVSZM8LUw&amp;security=reality&amp;sid=760f7a4c46859978&amp;sni=sun6-22.userapi.com&amp;type=tcp": {
@@ -16234,9 +16234,9 @@
   },
   "vless://c48bd63d-f4a0-42d5-9569-6ccfe5c435ed@144.31.93.66:443?type=tcp&security=reality&flow=xtls-rprx-vision&fp=chrome&pbk=wYoaKmGm40vL6L1lg-2umg9nIXUIqzPfmvw57C1fwXU&sid=9231cf&sni=yandex.ru&path=&host=&spx=/": {
     "alive": true,
-    "latency": 283,
-    "time": 1772484013.4225276,
-    "country": "CH",
+    "latency": 707,
+    "time": 1772514898.8076036,
+    "country": "AT",
     "host": "144.31.93.66"
   },
   "vless://bf77f272-4220-4655-ab76-5ccdf0d2a60f@87.239.107.34:443?flow=xtls-rprx-vision&encryption=none&type=tcp&security=reality&fp=chrome&sni=eh.vk.com&pbk=JaP4bhvIMW-l7T0_RkLra59DeBYI6W9XemKa8MyRPSY&sid=6c6082a2223c1d03": {
@@ -16353,9 +16353,9 @@
   },
   "vless://c48bd63d-f4a0-42d5-9569-6ccfe5c435ed@144.31.93.66:8443?encryption=none&type=grpc&security=reality&mode=gun&fp=chrome&sni=yandex.ru&pbk=effVBkYBsEdW-kFm6lPHNrxQYPnrLp2utlfF87J8Ph8&sid=2d34&spx=%2F": {
     "alive": true,
-    "latency": 358,
-    "time": 1772484044.440225,
-    "country": "CH",
+    "latency": 791,
+    "time": 1772514899.160969,
+    "country": "NO",
     "host": "144.31.93.66"
   },
   "vless://45223222-04c6-1f40-b5e6-486115d5968e@146.185.240.38:443?flow=xtls-rprx-vision&encryption=none&type=tcp&security=reality&fp=qq&sni=max.ru&pbk=4CH3o5zOMcFNMbnwXnkAg0FFepmsc0QzhahXkUzb1ik&sid=d8c6b58bcbb0c323": {
@@ -17638,5 +17638,12 @@
     "time": 1772511916.5102718,
     "country": "EE",
     "host": "82.146.34.220"
+  },
+  "vless://31db9cf6-a995-45ab-8750-2030f8bdff12@212.233.78.21:447?flow=xtls-rprx-vision&encryption=none&type=tcp&security=reality&fp=qq&sni=max.ru&pbk=D6Rp5wFAzRZ-ZHOcKdaTK7aCfsBBu1jb3_dtvekt2W0": {
+    "alive": true,
+    "latency": 453,
+    "time": 1772514898.807637,
+    "country": "NO",
+    "host": "212.233.78.21"
   }
 }
