@@ -1,119 +1,203 @@
-# 🛡️ VPN Checker & Aggregator | Automated VLESS/VMess/Trojan Validator
+# Project X
 
-![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/kort0881/vpn-checker-backend/run_check.yml?label=Auto-Check&style=for-the-badge)
-![Python](https://img.shields.io/badge/Python-3.10%2B-blue?style=for-the-badge&logo=python)
-![License](https://img.shields.io/github/license/kort0881/vpn-checker-backend?style=for-the-badge)
+[Project X](https://github.com/XTLS) originates from XTLS protocol, providing a set of network tools such as [Xray-core](https://github.com/XTLS/Xray-core) and [REALITY](https://github.com/XTLS/REALITY).
 
-**High-performance Python automation for collecting, validating, and managing VLESS, VMess, and Trojan proxy configurations.**  
-Runs entirely on **GitHub Actions** (Free Tier) — zero server costs, fully automated updates every 6 hours.
+[README](https://github.com/XTLS/Xray-core#readme) is open, so feel free to submit your project [here](https://github.com/XTLS/Xray-core/pulls).
 
----
+## Sponsors
 
-## 📖 About the Project
+[![Remnawave](https://github.com/user-attachments/assets/a22d34ae-01ee-441c-843a-85356748ed1e)](https://docs.rw)
 
-This repository hosts a powerful backend script designed to aggregate VPN configurations from multiple sources, validate their connectivity (TCP/TLS/WebSocket), measure latency, and sort them by geo-location. 
+[![Happ](https://github.com/user-attachments/assets/14055dab-e8bb-48bd-89e8-962709e4098e)](https://happ.su)
 
-It is specifically optimized for:
-*   **Bypassing Censorship:** Automatically filters and verifies keys for stability.
-*   **Geo-Routing:** Separates **Russian (RU)** configs (for local services like Gosuslugi/Banking) from **European (EU)** configs (for high-speed international access).
-*   **Client Compatibility:** Generates subscription files compatible with **Hiddify, v2rayNG, Nekobox, Streisand**, and other Xray-core based clients.
+[**Sponsor Xray-core**](https://github.com/XTLS/Xray-core/issues/3668)
 
----
+## Donation & NFTs
 
-## ⚡ Key Features
+### [Collect a Project X NFT to support the development of Project X!](https://opensea.io/item/ethereum/0x5ee362866001613093361eb8569d59c4141b76d1/1)
 
-### 1. 🧠 Smart Validation & Filtering
-*   **Real-time Ping Test:** Checks every key via socket connection (TCP/TLS).
-*   **Protocol Support:** Full support for VLESS, VMess, Trojan, and Shadowsocks.
-*   **Deduping:** Automatically removes duplicate keys to keep lists clean.
-*   **Garbage Collector:** Filters out dead keys, local IPs, and unstable nodes (CN, IR relays).
+[<img alt="Project X NFT" width="150px" src="https://raw2.seadn.io/ethereum/0x5ee362866001613093361eb8569d59c4141b76d1/7fa9ce900fb39b44226348db330e32/8b7fa9ce900fb39b44226348db330e32.svg" />](https://opensea.io/item/ethereum/0x5ee362866001613093361eb8569d59c4141b76d1/1)
 
-### 2. 🌍 Advanced Geo-Sorting
-*   **🇷🇺 RU_Best:** Dedicated list for Russian IP addresses. Essential for accessing region-locked services from abroad.
-*   **🇪🇺 My_Euro:** Exclusive filter for high-quality European nodes (NL, DE, FI, GB, FR, SE, etc.). Automatically rejects keys from Asia, USA, or Latin America.
+- **TRX(Tron)/USDT/USDC: `TNrDh5VSfwd4RPrwsohr6poyNTfFefNYan`**
+- **TON: `UQApeV-u2gm43aC1uP76xAC1m6vCylstaN1gpfBmre_5IyTH`**
+- **BTC: `1JpqcziZZuqv3QQJhZGNGBVdCBrGgkL6cT`**
+- **XMR: `4ABHQZ3yJZkBnLoqiKvb3f8eqUnX4iMPb6wdant5ZLGQELctcerceSGEfJnoCk6nnyRZm73wrwSgvZ2WmjYLng6R7sR67nq`**
+- **SOL/USDT/USDC: `3x5NuXHzB5APG6vRinPZcsUv5ukWUY1tBGRSJiEJWtZa`**
+- **ETH/USDT/USDC: `0xDc3Fe44F0f25D13CACb1C4896CD0D321df3146Ee`**
+- **Project X NFT: https://opensea.io/item/ethereum/0x5ee362866001613093361eb8569d59c4141b76d1/1**
+- **VLESS NFT: https://opensea.io/collection/vless**
+- **REALITY NFT: https://opensea.io/item/ethereum/0x5ee362866001613093361eb8569d59c4141b76d1/2**
+- **Related links: [VLESS Post-Quantum Encryption](https://github.com/XTLS/Xray-core/pull/5067), [XHTTP: Beyond REALITY](https://github.com/XTLS/Xray-core/discussions/4113), [Announcement of NFTs by Project X](https://github.com/XTLS/Xray-core/discussions/3633)**
 
-### 3. 📦 Smart Chunking System
-*   **Crash Protection:** If the number of working keys exceeds `1000`, the script automatically splits the list into `part1.txt`, `part2.txt`, etc.
-*   **Client Stability:** Prevents mobile VPN clients from freezing due to oversized subscription files.
+## License
 
-### 4. 🚀 Performance Optimized
-*   **Multi-threaded:** Checks up to **40 keys simultaneously** for maximum speed.
-*   **Caching System:** Uses `history.json` to store results for 12 hours, drastically reducing API load and checking time.
+[Mozilla Public License Version 2.0](https://github.com/XTLS/Xray-core/blob/main/LICENSE)
 
----
+## Documentation
 
-## 🛠️ Installation & Setup Guide
+[Project X Official Website](https://xtls.github.io)
 
-Follow these steps to deploy your own instance of the VPN Checker.
+## Telegram
 
-### Step 1: Fork the Repository
-1.  Click the **Fork** button (top right corner of this page).
-2.  Name your repository (e.g., `vpn-checker-backend`).
-3.  Click **Create fork**.
+[Project X](https://t.me/projectXray)
 
-### Step 2: Enable Workflow Permissions (Critical!)
-*Without this step, the script cannot save the checked keys.*
-1.  Go to your repository **Settings**.
-2.  Navigate to **Actions** → **General**.
-3.  Scroll down to **Workflow permissions**.
-4.  Select **Read and write permissions**.
-5.  Click **Save**.
+[Project X Channel](https://t.me/projectXtls)
 
-### Step 3: Configure `main.py`
-Edit `main.py` directly in GitHub or your IDE. Update these variables to match your setup:
+[Project VLESS](https://t.me/projectVless) (Русский)
 
-#### A. Set Your Channel Name (Line ~33)
-```python
-MY_CHANNEL = "@your_channel_name"
+[Project XHTTP](https://t.me/projectXhttp) (Persian)
+
+## Installation
+
+- Linux Script
+  - [XTLS/Xray-install](https://github.com/XTLS/Xray-install) (**Official**)
+  - [tempest](https://github.com/team-cloudchaser/tempest) (supports [`systemd`](https://systemd.io) and [OpenRC](https://github.com/OpenRC/openrc); Linux-only)
+- Docker
+  - [ghcr.io/xtls/xray-core](https://ghcr.io/xtls/xray-core) (**Official**)
+  - [teddysun/xray](https://hub.docker.com/r/teddysun/xray)
+  - [wulabing/xray_docker](https://github.com/wulabing/xray_docker)
+- Web Panel
+  - [Remnawave](https://github.com/remnawave/panel)
+  - [3X-UI](https://github.com/MHSanaei/3x-ui)
+  - [PasarGuard](https://github.com/PasarGuard/panel)
+  - [Xray-UI](https://github.com/qist/xray-ui)
+  - [X-Panel](https://github.com/xeefei/X-Panel)
+  - [Marzban](https://github.com/Gozargah/Marzban)
+  - [Hiddify](https://github.com/hiddify/Hiddify-Manager)
+  - [TX-UI](https://github.com/AghayeCoder/tx-ui)
+- One Click
+  - [Xray-REALITY](https://github.com/zxcvos/Xray-script), [xray-reality](https://github.com/sajjaddg/xray-reality), [reality-ezpz](https://github.com/aleskxyz/reality-ezpz)
+  - [Xray_bash_onekey](https://github.com/hello-yunshu/Xray_bash_onekey), [XTool](https://github.com/LordPenguin666/XTool), [VPainLess](https://github.com/vpainless/vpainless)
+  - [v2ray-agent](https://github.com/mack-a/v2ray-agent), [Xray_onekey](https://github.com/wulabing/Xray_onekey), [ProxySU](https://github.com/proxysu/ProxySU)
+- Magisk
+  - [Xray4Magisk](https://github.com/Asterisk4Magisk/Xray4Magisk)
+  - [Xray_For_Magisk](https://github.com/E7KMbb/Xray_For_Magisk)
+- Homebrew
+  - `brew install xray`
+
+## Usage
+
+- Example
+  - [VLESS-XTLS-uTLS-REALITY](https://github.com/XTLS/REALITY#readme)
+  - [VLESS-TCP-XTLS-Vision](https://github.com/XTLS/Xray-examples/tree/main/VLESS-TCP-XTLS-Vision)
+  - [All-in-One-fallbacks-Nginx](https://github.com/XTLS/Xray-examples/tree/main/All-in-One-fallbacks-Nginx)
+- Xray-examples
+  - [XTLS/Xray-examples](https://github.com/XTLS/Xray-examples)
+  - [chika0801/Xray-examples](https://github.com/chika0801/Xray-examples)
+  - [lxhao61/integrated-examples](https://github.com/lxhao61/integrated-examples)
+- Tutorial
+  - [XTLS Vision](https://github.com/chika0801/Xray-install)
+  - [REALITY (English)](https://cscot.pages.dev/2023/03/02/Xray-REALITY-tutorial/)
+  - [XTLS-Iran-Reality (English)](https://github.com/SasukeFreestyle/XTLS-Iran-Reality)
+  - [Xray REALITY with 'steal oneself' (English)](https://computerscot.github.io/vless-xtls-utls-reality-steal-oneself.html)
+  - [Xray with WireGuard inbound (English)](https://g800.pages.dev/wireguard)
+
+## GUI Clients
+
+- OpenWrt
+  - [PassWall](https://github.com/Openwrt-Passwall/openwrt-passwall), [PassWall 2](https://github.com/Openwrt-Passwall/openwrt-passwall2)
+  - [ShadowSocksR Plus+](https://github.com/fw876/helloworld)
+  - [luci-app-xray](https://github.com/yichya/luci-app-xray) ([openwrt-xray](https://github.com/yichya/openwrt-xray))
+- Asuswrt-Merlin
+  - [XRAYUI](https://github.com/DanielLavrushin/asuswrt-merlin-xrayui)
+  - [fancyss](https://github.com/hq450/fancyss)
+- Windows
+  - [v2rayN](https://github.com/2dust/v2rayN)
+  - [Furious](https://github.com/LorenEteval/Furious)
+  - [Invisible Man - Xray](https://github.com/InvisibleManVPN/InvisibleMan-XRayClient)
+  - [AnyPortal](https://github.com/AnyPortal/AnyPortal)
+- Android
+  - [v2rayNG](https://github.com/2dust/v2rayNG)
+  - [X-flutter](https://github.com/XTLS/X-flutter)
+  - [SaeedDev94/Xray](https://github.com/SaeedDev94/Xray)
+  - [SimpleXray](https://github.com/lhear/SimpleXray)
+  - [AnyPortal](https://github.com/AnyPortal/AnyPortal)
+- iOS & macOS arm64 & tvOS
+  - [Happ](https://apps.apple.com/app/happ-proxy-utility/id6504287215) | [Happ RU](https://apps.apple.com/ru/app/happ-proxy-utility-plus/id6746188973) | [Happ tvOS](https://apps.apple.com/us/app/happ-proxy-utility-for-tv/id6748297274)
+  - [Streisand](https://apps.apple.com/app/streisand/id6450534064)
+  - [OneXray](https://github.com/OneXray/OneXray)
+- macOS arm64 & x64
+  - [Happ](https://apps.apple.com/app/happ-proxy-utility/id6504287215) | [Happ RU](https://apps.apple.com/ru/app/happ-proxy-utility-plus/id6746188973)
+  - [V2rayU](https://github.com/yanue/V2rayU)
+  - [V2RayXS](https://github.com/tzmax/V2RayXS)
+  - [Furious](https://github.com/LorenEteval/Furious)
+  - [OneXray](https://github.com/OneXray/OneXray)
+  - [GoXRay](https://github.com/goxray/desktop)
+  - [AnyPortal](https://github.com/AnyPortal/AnyPortal)
+  - [v2rayN](https://github.com/2dust/v2rayN)
+- Linux
+  - [v2rayA](https://github.com/v2rayA/v2rayA)
+  - [Furious](https://github.com/LorenEteval/Furious)
+  - [GorzRay](https://github.com/ketetefid/GorzRay)
+  - [GoXRay](https://github.com/goxray/desktop)
+  - [AnyPortal](https://github.com/AnyPortal/AnyPortal)
+  - [v2rayN](https://github.com/2dust/v2rayN)
+
+## Others that support VLESS, XTLS, REALITY, XUDP, PLUX...
+
+- iOS & macOS arm64 & tvOS
+  - [Shadowrocket](https://apps.apple.com/app/shadowrocket/id932747118)
+  - [Loon](https://apps.apple.com/us/app/loon/id1373567447)
+  - [Egern](https://apps.apple.com/us/app/egern/id1616105820)
+  - [Quantumult X](https://apps.apple.com/us/app/quantumult-x/id1443988620)
+- Xray Tools
+  - [xray-knife](https://github.com/lilendian0x00/xray-knife)
+  - [xray-checker](https://github.com/kutovoys/xray-checker)
+- Xray Wrapper
+  - [XTLS/libXray](https://github.com/XTLS/libXray)
+  - [xtls-sdk](https://github.com/remnawave/xtls-sdk)
+  - [xtlsapi](https://github.com/hiddify/xtlsapi)
+  - [AndroidLibXrayLite](https://github.com/2dust/AndroidLibXrayLite)
+  - [Xray-core-python](https://github.com/LorenEteval/Xray-core-python)
+  - [xray-api](https://github.com/XVGuardian/xray-api)
+- [XrayR](https://github.com/XrayR-project/XrayR)
+  - [XrayR-release](https://github.com/XrayR-project/XrayR-release)
+  - [XrayR-V2Board](https://github.com/missuo/XrayR-V2Board)
+- Cores
+  - [Amnezia VPN](https://github.com/amnezia-vpn)
+  - [mihomo](https://github.com/MetaCubeX/mihomo)
+  - [sing-box](https://github.com/SagerNet/sing-box)
+
+## Contributing
+
+[Code of Conduct](https://github.com/XTLS/Xray-core/blob/main/CODE_OF_CONDUCT.md)
+
+[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/XTLS/Xray-core)
+
+## Credits
+
+- [Xray-core v1.0.0](https://github.com/XTLS/Xray-core/releases/tag/v1.0.0) was forked from [v2fly-core 9a03cc5](https://github.com/v2fly/v2ray-core/commit/9a03cc5c98d04cc28320fcee26dbc236b3291256), and we have made & accumulated a huge number of enhancements over time, check [the release notes for each version](https://github.com/XTLS/Xray-core/releases).
+- For third-party projects used in [Xray-core](https://github.com/XTLS/Xray-core), check your local or [the latest go.mod](https://github.com/XTLS/Xray-core/blob/main/go.mod).
+
+## One-line Compilation
+
+### Windows (PowerShell)
+
+```powershell
+$env:CGO_ENABLED=0
+go build -o xray.exe -trimpath -buildvcs=false -ldflags="-s -w -buildid=" -v ./main
 ```
-*This tag will be added to every key's name.*
 
-#### B. Define Your Sources (Line ~46)
-```python
-URLS_RU = [ "https://raw.githubusercontent.com/..." ]  # For RU keys
-URLS_MY = [ "https://raw.githubusercontent.com/..." ]  # For EU keys
+### Linux / macOS
+
+```bash
+CGO_ENABLED=0 go build -o xray -trimpath -buildvcs=false -ldflags="-s -w -buildid=" -v ./main
 ```
 
-#### C. Set Your Repo Path (Line ~260 - End of File)
-**⚠️ IMPORTANT:** Scroll to the bottom and find the subscription generation block.
-```python
-GITHUB_USER_REPO = "your-username/your-repo-name"
+### Reproducible Releases
+
+Make sure that you are using the same Go version, and remember to set the git commit id (7 bytes):
+
+```bash
+CGO_ENABLED=0 go build -o xray -trimpath -buildvcs=false -gcflags="all=-l=4" -ldflags="-X github.com/xtls/xray-core/core.build=REPLACE -s -w -buildid=" -v ./main
 ```
-*Change this to YOUR username and repository name. Example: `alex/vpn-checker`.*
 
-### Step 4: Launch
-1.  Go to the **Actions** tab.
-2.  Select **Check VPN Keys** from the left sidebar.
-3.  Click **Run workflow** → **Run workflow**.
+If you are compiling a 32-bit MIPS/MIPSLE target, use this command instead:
 
----
+```bash
+CGO_ENABLED=0 go build -o xray -trimpath -buildvcs=false -gcflags="-l=4" -ldflags="-X github.com/xtls/xray-core/core.build=REPLACE -s -w -buildid=" -v ./main
+```
 
-## 📂 Output Files (Subscription Links)
+## Stargazers over time
 
-Once the workflow finishes, check the `checked/` folder or the `subscriptions_list.txt` file.
-
-| File Path | Description |
-| :--- | :--- |
-| **`checked/RU_Best/ru_white.txt`** | Verified **Russia** (RU) proxy list. |
-| **`checked/My_Euro/my_euro.txt`** | Verified **Europe** (EU) proxy list. |
-| **`subscriptions_list.txt`** | Master file containing direct links to all generated parts. |
-
-*Use the raw links from `subscriptions_list.txt` in your VPN client.*
-
----
-
-## ⚙️ Advanced Configuration (`main.py`)
-
-| Variable | Default | Description |
-| :--- | :--- | :--- |
-| `TIMEOUT` | `5` | Socket connection timeout in seconds. |
-| `THREADS` | `40` | Number of concurrent checking threads. |
-| `CACHE_HOURS` | `12` | How long to trust previous check results. |
-| `MAX_KEYS_TO_CHECK` | `15000` | Input limit to prevent memory overflows. |
-| `EURO_CODES` | `{'NL', ...}` | Set of country codes to include in "My_Euro". |
-
----
-
-## ⚖️ Legal Disclaimer
-
-This repository is for **educational and research purposes only**. The developer is not responsible for how the scripts or the data generated by them are used. Users are solely responsible for ensuring their usage complies with local laws and regulations regarding VPN usage and internet censorship circumvention.
+[![Stargazers over time](https://starchart.cc/XTLS/Xray-core.svg)](https://starchart.cc/XTLS/Xray-core)
