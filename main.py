@@ -1,371 +1,560 @@
-"""
-white_checker.py — реальная проверка «белого списка» через xray.
-
-Логика:
-  1. По vpn_uri генерируем временный конфиг xray с локальным SOCKS5-прокси.
-  2. Запускаем xray как subprocess.
-  3. Через прокси делаем HTTP-запросы к WHITE_TEST_DOMAINS.
-  4. Если >= WHITE_THRESHOLD из доменов ответили (200/30x/403/404) — WHITE.
-  5. В любом случае xray-процесс корректно завершается.
-"""
-
-import json
 import os
+import re
 import socket
-import subprocess
-import tempfile
+import ssl
 import time
-from base64 import b64decode
-from typing import Optional
-from urllib.parse import unquote, parse_qs
-
+import json
 import requests
-import urllib3
+import base64
+import websocket
+import shutil
+from urllib.parse import quote, unquote
+from concurrent.futures import ThreadPoolExecutor
 
-urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+# ------------------ Настройки ------------------
+BASE_DIR = "checked"
+FOLDER_RU = os.path.join(BASE_DIR, "RU_Best")
+FOLDER_EURO = os.path.join(BASE_DIR, "My_Euro")
 
-# ---------------------------------------------------------------------------
-# Конфигурация
-# ---------------------------------------------------------------------------
+if os.path.exists(FOLDER_RU): shutil.rmtree(FOLDER_RU)
+if os.path.exists(FOLDER_EURO): shutil.rmtree(FOLDER_EURO)
+os.makedirs(FOLDER_RU, exist_ok=True)
+os.makedirs(FOLDER_EURO, exist_ok=True)
 
-# Якорные домены белого списка РФ
-WHITE_TEST_DOMAINS = ["alfabank.ru", "mironline.ru", "vkusvill.ru"]
+TIMEOUT = 5
+socket.setdefaulttimeout(TIMEOUT)
+THREADS = 40
 
-# Сколько доменов должны ответить, чтобы ключ считался WHITE
-WHITE_THRESHOLD = 2
+CACHE_HOURS = 6
+CHUNK_LIMIT = 1000
+EURO_CHUNK_LIMIT = 500
+MAX_KEYS_TO_CHECK = 30000
 
-# Таймаут одного HTTP-запроса через прокси (секунды)
-HTTP_TIMEOUT = 5
+MAX_PING_MS = 3000
+FAST_LIMIT = 3000
+MAX_HISTORY_AGE = 2 * 24 * 3600
 
-# Пауза после запуска xray перед первым запросом (секунды)
-XRAY_STARTUP_WAIT = 3.0
+RU_FILES = ["ru_white_part1.txt", "ru_white_part2.txt", "ru_white_part3.txt", "ru_white_part4.txt"]
+EURO_FILES = ["my_euro_part1.txt", "my_euro_part2.txt", "my_euro_part3.txt"]
 
-# Путь к бинарнику xray (ENV > рядом со скриптом > PATH)
-XRAY_BIN = os.environ.get(
-    "XRAY_BIN",
-    os.path.join(os.path.dirname(os.path.abspath(__file__)), "xray"),
-)
+HISTORY_FILE = os.path.join(BASE_DIR, "history.json")
+MY_CHANNEL = "@vlesstrojan"
 
-# ---------------------------------------------------------------------------
-# Поиск бинарника
-# ---------------------------------------------------------------------------
+URLS_RU = [
+    "https://github.com/igareck/vpn-configs-for-russia/blob/main/BLACK_VLESS_RUS_mobile.txt",
+    "https://github.com/igareck/vpn-configs-for-russia/blob/main/BLACK_SS%2BAll_RUS.txt",
+    "https://github.com/igareck/vpn-configs-for-russia/blob/main/Vless-Reality-White-Lists-Rus-Mobile-2.txt",
+    "https://github.com/igareck/vpn-configs-for-russia/blob/main/Vless-Reality-White-Lists-Rus-Mobile.txt",
+    "https://github.com/igareck/vpn-configs-for-russia/blob/main/WHITE-CIDR-RU-all.txt",
+    "https://github.com/igareck/vpn-configs-for-russia/blob/main/WHITE-CIDR-RU-checked.txt",
+    "https://github.com/igareck/vpn-configs-for-russia/blob/main/WHITE-SNI-RU-all.txt",
+    "https://raw.githubusercontent.com/zieng2/wl/main/vless.txt",
+    "https://raw.githubusercontent.com/LowiKLive/BypassWhitelistRu/refs/heads/main/WhiteList-Bypass_Ru.txt",
+    "https://raw.githubusercontent.com/zieng2/wl/main/vless_universal.txt",
+    "https://raw.githubusercontent.com/vsevjik/OBSpiskov/refs/heads/main/wwh",
+    "https://jsnegsukavsos.hb.ru-msk.vkcloud-storage.ru/love",
+    "https://etoneya.a9fm.site/1",
+    "https://s3c3.001.gpucloud.ru/vahe4xkwi/cjdr"
+]
 
-def _xray_binary() -> Optional[str]:
-    """Возвращает путь к xray или None."""
-    if os.path.isfile(XRAY_BIN) and os.access(XRAY_BIN, os.X_OK):
-        return XRAY_BIN
-    base = os.path.dirname(os.path.abspath(__file__))
-    for name in ("xray", "xray-linux-64", "xray.exe"):
-        cand = os.path.join(base, name)
-        if os.path.isfile(cand) and os.access(cand, os.X_OK):
-            return cand
-    import shutil
-    return shutil.which("xray")
+URLS_MY = [
+    "https://raw.githubusercontent.com/kort0881/vpn-vless-configs-russia/refs/heads/main/githubmirror/new/all_new.txt"
+]
 
+EURO_CODES = {"NL", "DE", "FI", "GB", "FR", "SE", "PL", "CZ", "AT", "CH", "IT", "ES", "NO", "DK", "BE", "IE", "LU", "EE", "LV", "LT"}
+BAD_MARKERS = ["CN", "IR", "KR", "BR", "IN", "RELAY", "POOL", "🇨🇳", "🇮🇷", "🇰🇷"]
 
-# ---------------------------------------------------------------------------
-# Свободный порт
-# ---------------------------------------------------------------------------
+# ------------------ Жёсткий фильтр русских выходных серверов ------------------
 
-def _free_port() -> int:
-    with socket.socket() as s:
-        s.bind(("127.0.0.1", 0))
-        return s.getsockname()[1]
+RU_MARKERS_STRICT = [
+    ".ru", "moscow", "msk", "spb", "saint-peter", "russia",
+    "россия", "москва", "питер", "ru-", "-ru.",
+    "178.154.", "77.88.", "5.255.", "87.250.",
+    "95.108.", "213.180.", "195.208.",
+    "91.108.", "149.154.",
+]
 
+def is_russian_exit(key_str, host, country):
+    if country == "RU":
+        return True
+    host_lower = host.lower()
+    key_upper = key_str.upper()
+    if host_lower.endswith(".ru"):
+        return True
+    for marker in RU_MARKERS_STRICT:
+        if marker.lower() in host_lower:
+            return True
+        if marker.upper() in key_upper:
+            return True
+    return False
 
-# ---------------------------------------------------------------------------
-# Парсинг URI → xray outbound
-# ---------------------------------------------------------------------------
+# ------------------ Функции ------------------
 
-def _p(params: dict, key: str, default: str = "") -> str:
-    return params.get(key, [default])[0]
+def load_json(path):
+    if os.path.exists(path):
+        try:
+            with open(path, "r", encoding="utf-8") as f:
+                return json.load(f)
+        except: pass
+    return {}
 
-
-def _parse_vless(uri: str) -> Optional[dict]:
+def save_json(path, data):
     try:
-        body = uri[len("vless://"):]
-        user_id, rest = body.split("@", 1)
-        host_port, qs = (rest.split("?", 1) + [""])[:2]
-        qs = qs.split("#")[0]
-        host, port = host_port.rsplit(":", 1)
-        port = int(port)
-        params = parse_qs(qs)
+        with open(path, "w", encoding="utf-8") as f:
+            json.dump(data, f, ensure_ascii=False, indent=2)
+    except: pass
 
-        security = _p(params, "security", "none")
-        net = _p(params, "type", "tcp")
-        sni = _p(params, "sni", host)
-        fp = _p(params, "fp", "chrome")
-        flow = _p(params, "flow", "")
-        path = unquote(_p(params, "path", "/"))
-        h_host = unquote(_p(params, "host", host))
-        pbk = _p(params, "pbk", "")
-        sid = _p(params, "sid", "")
-
-        ss: dict = {"network": net}
-        if security == "tls":
-            ss["security"] = "tls"
-            ss["tlsSettings"] = {"allowInsecure": True, "serverName": sni, "fingerprint": fp}
-        elif security == "reality":
-            ss["security"] = "reality"
-            ss["realitySettings"] = {"serverName": sni, "fingerprint": fp, "publicKey": pbk, "shortId": sid}
-        else:
-            ss["security"] = "none"
-
-        if net == "ws":
-            ss["wsSettings"] = {"path": path, "headers": {"Host": h_host}}
-        elif net == "grpc":
-            ss["grpcSettings"] = {"serviceName": _p(params, "serviceName", "")}
-
-        user: dict = {"id": user_id, "encryption": "none"}
-        if flow:
-            user["flow"] = flow
-
-        return {
-            "protocol": "vless",
-            "settings": {"vnext": [{"address": host, "port": port, "users": [user]}]},
-            "streamSettings": ss,
-        }
-    except Exception:
-        return None
-
-
-def _parse_trojan(uri: str) -> Optional[dict]:
+def get_country_fast(host, key_name):
     try:
-        body = uri[len("trojan://"):]
-        password, rest = body.split("@", 1)
-        host_port, qs = (rest.split("?", 1) + [""])[:2]
-        qs = qs.split("#")[0]
-        host, port = host_port.rsplit(":", 1)
-        port = int(port)
-        params = parse_qs(qs)
+        host = host.lower()
+        name = key_name.upper()
+        if host.endswith(".ru"): return "RU"
+        if host.endswith(".de"): return "DE"
+        if host.endswith(".nl"): return "NL"
+        if host.endswith(".uk") or host.endswith(".co.uk"): return "GB"
+        if host.endswith(".fr"): return "FR"
+        for code in EURO_CODES:
+            if code in name: return code
+    except: pass
+    return "UNKNOWN"
 
-        security = _p(params, "security", "tls")
-        net = _p(params, "type", "tcp")
-        sni = _p(params, "sni", host)
-        fp = _p(params, "fp", "chrome")
-        path = unquote(_p(params, "path", "/"))
-        h_host = unquote(_p(params, "host", host))
-        pbk = _p(params, "pbk", "")
-        sid = _p(params, "sid", "")
+def is_garbage_text(key_str):
+    upper = key_str.upper()
+    for m in BAD_MARKERS:
+        if m in upper: return True
+    if ".ir" in key_str or ".cn" in key_str or "127.0.0.1" in key_str: return True
+    return False
 
-        ss: dict = {"network": net}
-        if security == "reality":
-            ss["security"] = "reality"
-            ss["realitySettings"] = {"serverName": sni, "fingerprint": fp, "publicKey": pbk, "shortId": sid}
-        else:
-            ss["security"] = "tls"
-            ss["tlsSettings"] = {"allowInsecure": True, "serverName": sni, "fingerprint": fp}
-
-        if net == "ws":
-            ss["wsSettings"] = {"path": path, "headers": {"Host": h_host}}
-
-        return {
-            "protocol": "trojan",
-            "settings": {"servers": [{"address": host, "port": port, "password": password}]},
-            "streamSettings": ss,
-        }
-    except Exception:
-        return None
-
-
-def _parse_vmess(uri: str) -> Optional[dict]:
-    try:
-        enc = uri[len("vmess://"):]
-        enc += "=" * (-len(enc) % 4)
-        data = json.loads(b64decode(enc).decode("utf-8", errors="ignore"))
-
-        host = data.get("add", "")
-        port = int(data.get("port", 443))
-        uid = data.get("id", "")
-        aid = int(data.get("aid", 0))
-        net = data.get("net", "tcp")
-        tls = data.get("tls", "")
-        sni = data.get("sni", host)
-        path = data.get("path", "/")
-        h_host = data.get("host", host)
-        fp = data.get("fp", "chrome")
-
-        ss: dict = {"network": net}
-        if tls == "tls":
-            ss["security"] = "tls"
-            ss["tlsSettings"] = {"allowInsecure": True, "serverName": sni, "fingerprint": fp}
-        else:
-            ss["security"] = "none"
-
-        if net == "ws":
-            ss["wsSettings"] = {"path": path, "headers": {"Host": h_host}}
-        elif net == "grpc":
-            ss["grpcSettings"] = {"serviceName": path}
-
-        return {
-            "protocol": "vmess",
-            "settings": {"vnext": [{"address": host, "port": port,
-                                     "users": [{"id": uid, "alterId": aid, "security": "auto"}]}]},
-            "streamSettings": ss,
-        }
-    except Exception:
-        return None
-
-
-def _parse_ss(uri: str) -> Optional[dict]:
-    try:
-        body = uri[len("ss://"):].split("#")[0]
-        if "@" in body:
-            cred_b64, host_port = body.rsplit("@", 1)
-            try:
-                cred_b64 += "=" * (-len(cred_b64) % 4)
-                cred = b64decode(cred_b64).decode("utf-8")
-            except Exception:
-                cred = cred_b64
-            method, password = cred.split(":", 1)
-        else:
-            body += "=" * (-len(body) % 4)
-            decoded = b64decode(body).decode("utf-8")
-            if "@" not in decoded:
-                return None
-            cred, host_port = decoded.rsplit("@", 1)
-            method, password = cred.split(":", 1)
-
-        host, port = host_port.rsplit(":", 1)
-        port = int(port)
-
-        return {
-            "protocol": "shadowsocks",
-            "settings": {"servers": [{"address": host, "port": port,
-                                       "method": method, "password": password}]},
-            "streamSettings": {"network": "tcp"},
-        }
-    except Exception:
-        return None
-
-
-def _build_outbound(vpn_uri: str) -> Optional[dict]:
-    uri = vpn_uri.split("#")[0].strip()
-    if uri.startswith("vless://"):
-        return _parse_vless(uri)
-    if uri.startswith("trojan://"):
-        return _parse_trojan(uri)
-    if uri.startswith("vmess://"):
-        return _parse_vmess(uri)
-    if uri.startswith("ss://"):
-        return _parse_ss(uri)
-    return None
-
-
-def _build_config(outbound: dict, socks_port: int) -> dict:
-    return {
-        "log": {"loglevel": "none"},
-        "inbounds": [{
-            "listen": "127.0.0.1",
-            "port": socks_port,
-            "protocol": "socks",
-            "settings": {"auth": "noauth", "udp": False},
-            "sniffing": {"enabled": False},
-        }],
-        "outbounds": [
-            {**outbound, "tag": "proxy"},
-            {"protocol": "freedom", "tag": "direct"},
-        ],
-        "routing": {
-            "rules": [{"type": "field", "outboundTag": "proxy", "port": "0-65535"}]
-        },
-    }
-
-
-# ---------------------------------------------------------------------------
-# Основная функция
-# ---------------------------------------------------------------------------
-
-def is_white_key(vpn_uri: str, timeout: float = 20.0) -> bool:
-    """
-    Проверяет, является ли vpn_uri «белым» ключом.
-
-    Returns:
-        True  — WHITE (>= WHITE_THRESHOLD доменов из WHITE_TEST_DOMAINS доступны).
-        False — BLACK или ошибка.
-    """
-    xray_bin = _xray_binary()
-    if not xray_bin:
-        return False  # Нет бинарника — нельзя проверить
-
-    outbound = _build_outbound(vpn_uri)
-    if outbound is None:
-        return False
-
-    socks_port = _free_port()
-    config = _build_config(outbound, socks_port)
-
-    proc: Optional[subprocess.Popen] = None
-    tmp_cfg: Optional[str] = None
-
-    try:
-        # Сохраняем временный конфиг
-        with tempfile.NamedTemporaryFile(
-            mode="w", suffix=".json", delete=False, encoding="utf-8"
-        ) as tf:
-            json.dump(config, tf)
-            tmp_cfg = tf.name
-
-        # Запускаем xray
-        proc = subprocess.Popen(
-            [xray_bin, "run", "-config", tmp_cfg],
-            stdout=subprocess.DEVNULL,
-            stderr=subprocess.DEVNULL,
-        )
-
-        # Ждём поднятия туннеля
-        time.sleep(XRAY_STARTUP_WAIT)
-
-        # xray уже завершился — ключ нерабочий
-        if proc.poll() is not None:
-            return False
-
-        proxies = {
-            "http":  f"socks5h://127.0.0.1:{socks_port}",
-            "https": f"socks5h://127.0.0.1:{socks_port}",
-        }
-
-        # Равномерно распределяем оставшееся время по доменам
-        remaining = timeout - XRAY_STARTUP_WAIT
-        per_req = min(HTTP_TIMEOUT, max(2.0, remaining / len(WHITE_TEST_DOMAINS)))
-
-        success = 0
-        for domain in WHITE_TEST_DOMAINS:
-            try:
-                resp = requests.get(
-                    f"https://{domain}/",
-                    proxies=proxies,
-                    timeout=per_req,
-                    allow_redirects=True,
-                    verify=False,
-                    headers={"User-Agent": "Mozilla/5.0 (compatible)"},
-                )
-                # Любой HTTP-ответ = сервер доступен
-                if resp.status_code < 600:
-                    success += 1
-            except Exception:
-                pass
-
-        return success >= WHITE_THRESHOLD
-
-    except Exception:
-        return False
-
-    finally:
-        if proc is not None:
-            try:
-                proc.terminate()
-                proc.wait(timeout=5)
-            except Exception:
+def fetch_keys(urls, tag):
+    out = []
+    print(f"Загрузка {tag}...")
+    for url in urls:
+        try:
+            if "github.com" in url and "/blob/" in url:
+                url = url.replace("github.com", "raw.githubusercontent.com").replace("/blob/", "/")
+            r = requests.get(url, timeout=10)
+            if r.status_code != 200: continue
+            content = r.text.strip()
+            if "://" not in content:
                 try:
-                    proc.kill()
-                except Exception:
-                    pass
-        if tmp_cfg and os.path.exists(tmp_cfg):
-            try:
-                os.unlink(tmp_cfg)
-            except Exception:
-                pass
+                    lines = base64.b64decode(content + "==").decode('utf-8', errors='ignore').splitlines()
+                except:
+                    lines = content.splitlines()
+            else:
+                lines = content.splitlines()
+            for l in lines:
+                l = l.strip()
+                if len(l) > 2000: continue
+                if l.startswith(("vless://", "vmess://", "trojan://", "ss://")):
+                    if tag == "MY" and is_garbage_text(l):
+                        continue
+                    out.append((l, tag))
+        except: pass
+    return out
+
+def check_single_key(data):
+    key, tag = data
+    try:
+        if "@" in key and ":" in key:
+            part = key.split("@")[1].split("?")[0].split("#")[0]
+            host, port = part.split(":")[0], int(part.split(":")[1])
+        else:
+            return None, None, None, None
+
+        country = get_country_fast(host, key)
+
+        if tag == "MY" and country == "RU":
+            return None, None, None, None
+
+        is_tls = 'security=tls' in key or 'security=reality' in key or 'trojan://' in key or 'vmess://' in key
+        is_ws = 'type=ws' in key or 'net=ws' in key
+        path = "/"
+        match = re.search(r'path=([^&]+)', key)
+        if match: path = unquote(match.group(1))
+
+        start = time.time()
+
+        if is_ws:
+            protocol = "wss" if is_tls else "ws"
+            ws_url = f"{protocol}://{host}:{port}{path}"
+            ws = websocket.create_connection(
+                ws_url,
+                timeout=TIMEOUT,
+                sslopt={"cert_reqs": ssl.CERT_NONE},
+                sockopt=((socket.SOL_SOCKET, socket.SO_RCVTIMEO, TIMEOUT),)
+            )
+            ws.close()
+        elif is_tls:
+            context = ssl.create_default_context()
+            context.check_hostname = False
+            context.verify_mode = ssl.CERT_NONE
+            with socket.create_connection((host, port), timeout=TIMEOUT) as sock:
+                with context.wrap_socket(sock, server_hostname=host): pass
+        else:
+            with socket.create_connection((host, port), timeout=TIMEOUT): pass
+
+        latency = int((time.time() - start) * 1000)
+        return latency, tag, country, host
+    except:
+        return None, None, None, None
+
+def make_final_key(k_id, latency, country):
+    info_str = f"[{latency}ms {country} {MY_CHANNEL}]"
+    label_encoded = quote(info_str, safe='')
+    return f"{k_id}#{label_encoded}"
+
+def extract_ping(key_str):
+    try:
+        decoded = unquote(key_str)
+        label = decoded.split("#")[-1]
+        match = re.search(r'(\d+)ms', label)  # ✅ ИСПРАВЛЕНО
+        if match:
+            return int(match.group(1))
+        return None
+    except:
+        return None
+
+def save_exact(keys, folder, filename):
+    path = os.path.join(folder, filename)
+    with open(path, "w", encoding="utf-8") as f:
+        f.write("\n".join(keys) if keys else "")  # ✅ ИСПРАВЛЕНО
+    return path
+
+def save_fixed_chunks_ru(keys_list, folder):
+    valid_keys = [k.strip() for k in keys_list if k and k.strip()]
+    chunks = [valid_keys[i:i + CHUNK_LIMIT] for i in range(0, min(len(valid_keys), CHUNK_LIMIT * 4), CHUNK_LIMIT)]
+    while len(chunks) < 4:
+        chunks.append([])
+    for i, filename in enumerate(RU_FILES):
+        save_exact(chunks[i] if i < len(chunks) else [], folder, filename)
+        count = len(chunks[i]) if i < len(chunks) else 0
+        print(f"  {filename}: {count} ключей")
+    return RU_FILES
+
+def save_fixed_chunks_euro(keys_list, folder):
+    valid_keys = [k.strip() for k in keys_list if k and k.strip()]
+    chunks = [valid_keys[i:i + EURO_CHUNK_LIMIT]
+              for i in range(0, min(len(valid_keys), EURO_CHUNK_LIMIT * 3), EURO_CHUNK_LIMIT)]
+    while len(chunks) < 3:
+        chunks.append([])
+    for i, filename in enumerate(EURO_FILES):
+        save_exact(chunks[i] if i < len(chunks) else [], folder, filename)
+        count = len(chunks[i]) if i < len(chunks) else 0
+        print(f"  {filename}: {count} ключей")
+    return EURO_FILES
+
+def save_chunked(keys_list, folder, base_name, chunk_size=None):
+    if chunk_size is None:
+        chunk_size = CHUNK_LIMIT
+    valid_keys = [k.strip() for k in keys_list if k and k.strip()]
+    chunks = [valid_keys[i:i + chunk_size] for i in range(0, len(valid_keys), chunk_size)]
+    file_names = []
+    for idx, chunk in enumerate(chunks, start=1):
+        filename = f"{base_name}_part{idx}.txt"
+        save_exact(chunk, folder, filename)
+        file_names.append(filename)
+        print(f"  {filename}: {len(chunk)} ключей")
+    return file_names
+
+def generate_subscriptions_list():
+    GITHUB_USER_REPO = "kort0881/vpn-checker-backend"
+    BRANCH = "main"
+    BASE_RAW = f"https://raw.githubusercontent.com/{GITHUB_USER_REPO}/{BRANCH}"
+
+    subs_lines = []
+
+    subs_lines.append("=== 🇷🇺 RUSSIA (FAST) ===")
+    for filename in RU_FILES:
+        subs_lines.append(f"{BASE_RAW}/checked/RU_Best/{filename}")
+    subs_lines.append("")
+
+    subs_lines.append("=== 🇷🇺 RUSSIA (ALL) ===")
+    ru_all_candidates = sorted(
+        f for f in os.listdir(FOLDER_RU)
+        if f.startswith("ru_white_all_part") and f.endswith(".txt")
+    )
+    for fname in ru_all_candidates[:2]:
+        subs_lines.append(f"{BASE_RAW}/checked/RU_Best/{fname}")
+    subs_lines.append("")
+
+    subs_lines.append("=== 🇪🇺 EUROPE (FAST) ===")
+    for filename in EURO_FILES:
+        subs_lines.append(f"{BASE_RAW}/checked/My_Euro/{filename}")
+    subs_lines.append("")
+
+    subs_lines.append("=== 🇪🇺 EUROPE (ALL) ===")
+    euro_all_candidates = sorted(
+        f for f in os.listdir(FOLDER_EURO)
+        if f.startswith("my_euro_all_part") and f.endswith(".txt")
+    )
+    for fname in euro_all_candidates[:2]:
+        subs_lines.append(f"{BASE_RAW}/checked/My_Euro/{fname}")
+
+    subs_path = os.path.join(BASE_DIR, "subscriptions_list.txt")
+    with open(subs_path, "w", encoding="utf-8") as f:
+        f.write("\n".join(subs_lines))  # ✅ ИСПРАВЛЕНО
+
+    print(f"\n📋 subscriptions_list.txt создан ({len([l for l in subs_lines if l.startswith('http')])} ссылок):")
+    for line in subs_lines:
+        if line:
+            print(f"  {line}")
+
+    return subs_path
+
+# ------------------ MAIN ------------------
+
+if __name__ == "__main__":
+    print("=== CHECKER v5 (FAST/ALL LAYERS) ===")
+    print(f"Параметры: CACHE={CACHE_HOURS}h, MAX_PING={MAX_PING_MS}ms, FAST={FAST_LIMIT}, HISTORY={MAX_HISTORY_AGE//3600}h")
+
+    history = load_json(HISTORY_FILE)
+    tasks = fetch_keys(URLS_RU, "RU") + fetch_keys(URLS_MY, "MY")
+
+    unique_tasks = {k: tag for k, tag in tasks}
+    all_items = list(unique_tasks.items())
+
+    if len(all_items) > MAX_KEYS_TO_CHECK:
+        all_items = all_items[:MAX_KEYS_TO_CHECK]
+
+    current_time = time.time()
+    to_check = []
+    res_ru = []
+    res_euro = []
+
+    print(f"\n📊 Всего уникальных ключей: {len(all_items)}")
+
+    # 2. Кэш
+    for k, tag in all_items:
+        k_id = k.split("#")[0]
+        cached = history.get(k_id)
+
+        if cached and (current_time - cached['time'] < CACHE_HOURS * 3600) and cached['alive']:
+            latency = cached['latency']
+            country = cached.get('country', 'UNKNOWN')
+            host = cached.get('host', '')
+            final = make_final_key(k_id, latency, country)
+
+            if tag == "RU":
+                res_ru.append(final)
+            elif tag == "MY" and not is_russian_exit(k, host, country):
+                res_euro.append(final)
+        else:
+            to_check.append((k, tag))
+
+    print(f"✅ Из кэша: RU={len(res_ru)}, EURO={len(res_euro)}")
+    print(f"🔍 На проверку: {len(to_check)}")
+
+    # 3. Проверка новых ключей
+    if to_check:
+        checked_count = 0
+        with ThreadPoolExecutor(max_workers=THREADS) as executor:
+            future_to_item = {executor.submit(check_single_key, item): item for item in to_check}
+
+            for future in future_to_item:
+                key, tag = future_to_item[future]
+                res = future.result()
+
+                if not res or res[0] is None:
+                    continue
+
+                latency, _, country, host = res
+                k_id = key.split("#")[0]
+
+                history[k_id] = {
+                    'alive': True,
+                    'latency': latency,
+                    'time': time.time(),
+                    'country': country,
+                    'host': host
+                }
+
+                final = make_final_key(k_id, latency, country)
+
+                if tag == "RU":
+                    res_ru.append(final)
+                elif tag == "MY" and not is_russian_exit(key, host, country):
+                    res_euro.append(final)
+
+                checked_count += 1
+
+        print(f"✅ Проверено успешно: {checked_count}")
+
+    # 4. Чистка истории
+    save_json(HISTORY_FILE, {
+        k: v for k, v in history.items()
+        if current_time - v['time'] < MAX_HISTORY_AGE
+    })
+
+    # 5. Фильтрация по пингу + сортировка
+    res_ru_clean = [k for k in res_ru if extract_ping(k) is not None and extract_ping(k) <= MAX_PING_MS]
+    res_euro_clean = [k for k in res_euro if extract_ping(k) is not None and extract_ping(k) <= MAX_PING_MS]
+
+    res_ru_clean.sort(key=extract_ping)
+    res_euro_clean.sort(key=extract_ping)
+
+    print(f"\n📈 После фильтрации (≤ {MAX_PING_MS} ms) и сортировки:")
+    print(f"  RU: {len(res_ru_clean)} ключей")
+    print(f"  EURO: {len(res_euro_clean)} ключей")
+
+    # 6. FAST / ALL слои
+    res_ru_fast = res_ru_clean[:FAST_LIMIT]
+    res_euro_fast = res_euro_clean[:FAST_LIMIT]
+    res_ru_all = res_ru_clean
+    res_euro_all = res_euro_clean
+
+    print(f"\n🚀 FAST слои (топ {FAST_LIMIT}):")
+    print(f"  RU FAST: {len(res_ru_fast)}")
+    print(f"  EURO FAST: {len(res_euro_fast)}")
+
+    # 7. Сохранение FAST
+    print(f"\n💾 Сохранение RU FAST → {FOLDER_RU}:")
+    save_fixed_chunks_ru(res_ru_fast, FOLDER_RU)
+
+    print(f"\n💾 Сохранение EURO FAST → {FOLDER_EURO} (по {EURO_CHUNK_LIMIT} ключей):")
+    save_fixed_chunks_euro(res_euro_fast, FOLDER_EURO)
+
+    # 8. Сохранение ALL
+    print(f"\n💾 Сохранение RU ALL → {FOLDER_RU}:")
+    ru_all_files = save_chunked(res_ru_all, FOLDER_RU, "ru_white_all")
+
+    print(f"\n💾 Сохранение EURO ALL → {FOLDER_EURO} (по {EURO_CHUNK_LIMIT} ключей):")
+    euro_all_files = save_chunked(res_euro_all, FOLDER_EURO, "my_euro_all",
+                                  chunk_size=EURO_CHUNK_LIMIT)
+
+    # 9. Генерация subscriptions_list.txt
+    generate_subscriptions_list()
+
+    print("\n✅ SUCCESS: FAST/ALL LAYERS GENERATED")
+    print(f"  Префильтр: {len(RU_FILES)} RU + {len(EURO_FILES)} EURO (FAST)")
+    print(f"  Постер: до 8 кнопок (FAST + ограниченные ALL)")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
