@@ -1,3 +1,30 @@
+"""
+CHECKER v5  —  FAST / ALL / WHITE / BLACK  (полная версия)
+
+Схема работы:
+  1. Загружаем ключи из URLS_RU (тег RU) и URLS_MY (тег MY).
+  2. Дедупликация, проверка кеша (history.json).
+  3. TCP/TLS/WS-проверка живых ключей, замер латентности.
+  4. Фильтрация по MAX_PING_MS, сортировка по пингу.
+  5. Разбивка на FAST-слой и ALL-слой.
+  6. WHITE/BLACK сплит через white_checker.py (реальный HTTP через xray).
+     Если white_checker недоступен или xray не найден — fallback: все → WHITE.
+  7. Сохранение файлов и генерация subscriptions_list.txt.
+
+Улучшения относительно оригинала v5:
+  - Флаг страны + эмодзи в хвосте ключа: [120ms 🇩🇪 DE @vlesstrojan]
+  - Константа WHITELIST_DOMAINS (справочник)
+  - WHITE_TEST_DOMAINS (3 якорных домена для реального чека)
+  - Реальный WHITE/BLACK чек через xray (white_checker.py):
+    · активный опрос порта вместо sleep
+    · ограниченный параллелизм (WHITE_WORKERS воркеров)
+    · кеш белого статуса в history.json (WHITE_CACHE_HOURS)
+  - Непроверенные ключи (за пределами MAX_WHITE_TEST) → BLACK
+  - Прогресс-вывод каждые 10 ключей
+  - Дедупликация по k_id ещё до проверки
+  - Защита от пустых файлов в save_exact
+"""
+
 import os
 import re
 import socket
@@ -11,34 +38,47 @@ import shutil
 from urllib.parse import quote, unquote
 from concurrent.futures import ThreadPoolExecutor
 
-# ------------------ Настройки ------------------
-BASE_DIR = "checked"
-FOLDER_RU = os.path.join(BASE_DIR, "RU_Best")
+# =============================================================================
+# Настройки
+# =============================================================================
+
+BASE_DIR    = "checked"
+FOLDER_RU   = os.path.join(BASE_DIR, "RU_Best")
 FOLDER_EURO = os.path.join(BASE_DIR, "My_Euro")
 
-if os.path.exists(FOLDER_RU): shutil.rmtree(FOLDER_RU)
+if os.path.exists(FOLDER_RU):   shutil.rmtree(FOLDER_RU)
 if os.path.exists(FOLDER_EURO): shutil.rmtree(FOLDER_EURO)
-os.makedirs(FOLDER_RU, exist_ok=True)
+os.makedirs(FOLDER_RU,   exist_ok=True)
 os.makedirs(FOLDER_EURO, exist_ok=True)
 
-TIMEOUT = 5
+TIMEOUT    = 5
 socket.setdefaulttimeout(TIMEOUT)
-THREADS = 40
+THREADS    = 40
 
-CACHE_HOURS = 6
-CHUNK_LIMIT = 1000
-EURO_CHUNK_LIMIT = 500
+CACHE_HOURS       = 6
+CHUNK_LIMIT       = 1000
+EURO_CHUNK_LIMIT  = 500
 MAX_KEYS_TO_CHECK = 30000
 
-MAX_PING_MS = 3000
-FAST_LIMIT = 3000
-MAX_HISTORY_AGE = 2 * 24 * 3600
+MAX_PING_MS      = 3000
+FAST_LIMIT       = 3000
+MAX_HISTORY_AGE  = 2 * 24 * 3600
 
-RU_FILES = ["ru_white_part1.txt", "ru_white_part2.txt", "ru_white_part3.txt", "ru_white_part4.txt"]
-EURO_FILES = ["my_euro_part1.txt", "my_euro_part2.txt", "my_euro_part3.txt"]
+# Максимум ключей, которые прогоняем через белый HTTP-чек
+# (самые быстрые, уже отсортированы по пингу)
+MAX_WHITE_TEST = 200
+
+RU_FILES   = [
+    "ru_white_part1.txt", "ru_white_part2.txt",
+    "ru_white_part3.txt", "ru_white_part4.txt",
+]
+EURO_FILES = [
+    "my_euro_part1.txt", "my_euro_part2.txt",
+    "my_euro_part3.txt",
+]
 
 HISTORY_FILE = os.path.join(BASE_DIR, "history.json")
-MY_CHANNEL = "@vlesstrojan"
+MY_CHANNEL   = "@vlesstrojan"
 
 URLS_RU = [
     "https://github.com/igareck/vpn-configs-for-russia/blob/main/BLACK_VLESS_RUS_mobile.txt",
@@ -54,17 +94,23 @@ URLS_RU = [
     "https://raw.githubusercontent.com/vsevjik/OBSpiskov/refs/heads/main/wwh",
     "https://jsnegsukavsos.hb.ru-msk.vkcloud-storage.ru/love",
     "https://etoneya.a9fm.site/1",
-    "https://s3c3.001.gpucloud.ru/vahe4xkwi/cjdr"
+    "https://s3c3.001.gpucloud.ru/vahe4xkwi/cjdr",
 ]
 
 URLS_MY = [
-    "https://raw.githubusercontent.com/kort0881/vpn-vless-configs-russia/refs/heads/main/githubmirror/new/all_new.txt"
+    "https://raw.githubusercontent.com/kort0881/vpn-vless-configs-russia/refs/heads/main/githubmirror/new/all_new.txt",
 ]
 
-EURO_CODES = {"NL", "DE", "FI", "GB", "FR", "SE", "PL", "CZ", "AT", "CH", "IT", "ES", "NO", "DK", "BE", "IE", "LU", "EE", "LV", "LT"}
+EURO_CODES = {
+    "NL", "DE", "FI", "GB", "FR", "SE", "PL", "CZ",
+    "AT", "CH", "IT", "ES", "NO", "DK", "BE", "IE",
+    "LU", "EE", "LV", "LT",
+}
 BAD_MARKERS = ["CN", "IR", "KR", "BR", "IN", "RELAY", "POOL", "🇨🇳", "🇮🇷", "🇰🇷"]
 
-# ------------------ Жёсткий фильтр русских выходных серверов ------------------
+# =============================================================================
+# Жёсткий фильтр российских выходных серверов
+# =============================================================================
 
 RU_MARKERS_STRICT = [
     ".ru", "moscow", "msk", "spb", "saint-peter", "russia",
@@ -74,11 +120,84 @@ RU_MARKERS_STRICT = [
     "91.108.", "149.154.",
 ]
 
-def is_russian_exit(key_str, host, country):
+# =============================================================================
+# Белый список доменов (Минцифры / социально значимые ресурсы)
+# =============================================================================
+# Справочник — используется как полный реестр.
+# Для реального чека используется только WHITE_TEST_DOMAINS (3 якорных домена).
+#
+# Белый ключ (white)  — ключ, через который при включении белых списков у
+#   провайдера доступны ключевые сайты из WHITELIST_DOMAINS.
+# Чёрный ключ (black) — любой другой живой ключ (полный доступ, без гарантий).
+
+WHITELIST_DOMAINS = [
+    # Банки
+    "alfabank.ru", "vtb.ru", "psbank.ru", "mts-bank.ru",
+    "sberbank.ru", "tinkoff.ru", "raiffeisen.ru", "gazprombank.ru",
+    "rshb.ru", "open.ru", "sovcombank.ru", "mkb.ru",
+    "rosbank.ru", "uralsib.ru", "akbars.ru", "bspb.ru",
+    # Платёжные системы
+    "mironline.ru", "sbp.nspk.ru", "nspk.ru", "moex.com",
+    "mir.ru", "qiwi.com", "yoomoney.ru", "payonline.ru",
+    # Ритейл — продукты
+    "vkusvill.ru", "auchan.ru", "magnit.ru", "dixy.ru",
+    "spar.ru", "metro-cc.ru", "azbukavkusa.ru",
+    "5ka.ru", "x5.ru", "perekrestok.ru",
+    "lenta.com", "okmarket.ru", "globus.ru", "bristol.ru",
+    # Доставки еды и продуктов
+    "samokat.ru", "eda.yandex.ru", "lavka.yandex.ru",
+    "delivery-club.ru", "sbermarket.ru", "vprok.ru",
+    "sbermegamarket.ru", "market.yandex.ru",
+    # Маркетплейсы и онлайн-ритейл
+    "wildberries.ru", "ozon.ru", "lamoda.ru", "mvideo.ru",
+    "eldorado.ru", "citilink.ru", "dns-shop.ru",
+    "avito.ru", "youla.ru",
+    # Фастфуд и рестораны
+    "vkusnoitochka.ru", "burgerking.ru", "kfc.ru",
+    "dodopizza.ru", "papajohns.ru",
+    # Строительство и товары для дома
+    "petrovich.ru", "leroymerlin.ru", "obi.ru",
+    # Детские товары
+    "detmir.ru",
+    # Телеком и интернет-провайдеры
+    "mts.ru", "beeline.ru", "megafon.ru", "tele2.ru",
+    "rostelecom.ru", "dom.ru",
+    # Госуслуги и государственные сайты
+    "gosuslugi.ru", "mos.ru", "nalog.ru", "pfr.gov.ru",
+    "cbr.ru", "minfin.ru", "egov.ru",
+    # Медицина
+    "zdravcity.ru", "apteka.ru", "eapteka.ru",
+    # и другие домены из официального белого списка
+]
+
+# =============================================================================
+# Флаги стран
+# =============================================================================
+
+def country_to_flag(country: str) -> str:
+    """Возвращает эмодзи-флаг по двухбуквенному коду страны ISO 3166-1."""
+    flags = {
+        "RU": "🇷🇺", "NL": "🇳🇱", "DE": "🇩🇪", "FI": "🇫🇮",
+        "GB": "🇬🇧", "FR": "🇫🇷", "SE": "🇸🇪", "PL": "🇵🇱",
+        "CZ": "🇨🇿", "AT": "🇦🇹", "CH": "🇨🇭", "IT": "🇮🇹",
+        "ES": "🇪🇸", "NO": "🇳🇴", "DK": "🇩🇰", "BE": "🇧🇪",
+        "IE": "🇮🇪", "LU": "🇱🇺", "EE": "🇪🇪", "LV": "🇱🇻",
+        "LT": "🇱🇹", "US": "🇺🇸", "UA": "🇺🇦", "BY": "🇧🇾",
+        "KZ": "🇰🇿", "TR": "🇹🇷", "JP": "🇯🇵", "SG": "🇸🇬",
+        "HK": "🇭🇰", "CA": "🇨🇦", "AU": "🇦🇺", "NZ": "🇳🇿",
+    }
+    return flags.get(country.upper(), "🏳️")
+
+
+# =============================================================================
+# Фильтры
+# =============================================================================
+
+def is_russian_exit(key_str: str, host: str, country: str) -> bool:
     if country == "RU":
         return True
     host_lower = host.lower()
-    key_upper = key_str.upper()
+    key_upper  = key_str.upper()
     if host_lower.endswith(".ru"):
         return True
     for marker in RU_MARKERS_STRICT:
@@ -88,89 +207,147 @@ def is_russian_exit(key_str, host, country):
             return True
     return False
 
-# ------------------ Функции ------------------
 
-def load_json(path):
+def is_garbage_text(key_str: str) -> bool:
+    upper = key_str.upper()
+    for m in BAD_MARKERS:
+        if m in upper:
+            return True
+    if ".ir" in key_str or ".cn" in key_str or "127.0.0.1" in key_str:
+        return True
+    return False
+
+
+# =============================================================================
+# JSON-кеш
+# =============================================================================
+
+def load_json(path: str) -> dict:
     if os.path.exists(path):
         try:
             with open(path, "r", encoding="utf-8") as f:
                 return json.load(f)
-        except: pass
+        except Exception:
+            pass
     return {}
 
-def save_json(path, data):
+
+def save_json(path: str, data: dict) -> None:
     try:
         with open(path, "w", encoding="utf-8") as f:
             json.dump(data, f, ensure_ascii=False, indent=2)
-    except: pass
+    except Exception:
+        pass
 
-def get_country_fast(host, key_name):
+
+# =============================================================================
+# Определение страны по хосту / имени ключа
+# =============================================================================
+
+def get_country_fast(host: str, key_name: str) -> str:
     try:
-        host = host.lower()
-        name = key_name.upper()
-        if host.endswith(".ru"): return "RU"
-        if host.endswith(".de"): return "DE"
-        if host.endswith(".nl"): return "NL"
-        if host.endswith(".uk") or host.endswith(".co.uk"): return "GB"
-        if host.endswith(".fr"): return "FR"
+        h = host.lower()
+        n = key_name.upper()
+        if h.endswith(".ru"):                        return "RU"
+        if h.endswith(".de"):                        return "DE"
+        if h.endswith(".nl"):                        return "NL"
+        if h.endswith(".uk") or h.endswith(".co.uk"): return "GB"
+        if h.endswith(".fr"):                        return "FR"
+        if h.endswith(".fi"):                        return "FI"
+        if h.endswith(".se"):                        return "SE"
+        if h.endswith(".no"):                        return "NO"
+        if h.endswith(".dk"):                        return "DK"
+        if h.endswith(".pl"):                        return "PL"
+        if h.endswith(".cz"):                        return "CZ"
+        if h.endswith(".at"):                        return "AT"
+        if h.endswith(".ch"):                        return "CH"
+        if h.endswith(".it"):                        return "IT"
+        if h.endswith(".es"):                        return "ES"
+        if h.endswith(".be"):                        return "BE"
+        if h.endswith(".ie"):                        return "IE"
+        if h.endswith(".lu"):                        return "LU"
+        if h.endswith(".ee"):                        return "EE"
+        if h.endswith(".lv"):                        return "LV"
+        if h.endswith(".lt"):                        return "LT"
         for code in EURO_CODES:
-            if code in name: return code
-    except: pass
+            if code in n:
+                return code
+    except Exception:
+        pass
     return "UNKNOWN"
 
-def is_garbage_text(key_str):
-    upper = key_str.upper()
-    for m in BAD_MARKERS:
-        if m in upper: return True
-    if ".ir" in key_str or ".cn" in key_str or "127.0.0.1" in key_str: return True
-    return False
 
-def fetch_keys(urls, tag):
+# =============================================================================
+# Загрузка ключей
+# =============================================================================
+
+def fetch_keys(urls: list, tag: str) -> list:
     out = []
-    print(f"Загрузка {tag}...")
+    print(f"📥 Загрузка {tag}...")
     for url in urls:
         try:
             if "github.com" in url and "/blob/" in url:
                 url = url.replace("github.com", "raw.githubusercontent.com").replace("/blob/", "/")
             r = requests.get(url, timeout=10)
-            if r.status_code != 200: continue
+            if r.status_code != 200:
+                continue
             content = r.text.strip()
             if "://" not in content:
                 try:
-                    lines = base64.b64decode(content + "==").decode('utf-8', errors='ignore').splitlines()
-                except:
+                    lines = base64.b64decode(content + "==").decode("utf-8", errors="ignore").splitlines()
+                except Exception:
                     lines = content.splitlines()
             else:
                 lines = content.splitlines()
-            for l in lines:
-                l = l.strip()
-                if len(l) > 2000: continue
-                if l.startswith(("vless://", "vmess://", "trojan://", "ss://")):
-                    if tag == "MY" and is_garbage_text(l):
+            added = 0
+            for line in lines:
+                line = line.strip()
+                if len(line) > 2000:
+                    continue
+                if line.startswith(("vless://", "vmess://", "trojan://", "ss://")):
+                    if tag == "MY" and is_garbage_text(line):
                         continue
-                    out.append((l, tag))
-        except: pass
+                    out.append((line, tag))
+                    added += 1
+            print(f"  {url.split('/')[-1][:60]}: +{added}")
+        except Exception as e:
+            print(f"  ⚠️  Ошибка загрузки {url[:60]}: {e}")
     return out
 
-def check_single_key(data):
+
+# =============================================================================
+# TCP/TLS/WS проверка одного ключа
+# =============================================================================
+
+def check_single_key(data: tuple):
     key, tag = data
     try:
-        if "@" in key and ":" in key:
-            part = key.split("@")[1].split("?")[0].split("#")[0]
-            host, port = part.split(":")[0], int(part.split(":")[1])
-        else:
+        if "@" not in key or ":" not in key:
             return None, None, None, None
+
+        part = key.split("@")[1].split("?")[0].split("#")[0]
+        host_port = part.rsplit(":", 1)
+        if len(host_port) != 2:
+            return None, None, None, None
+        host, port = host_port[0].strip("[]"), int(host_port[1])
 
         country = get_country_fast(host, key)
 
         if tag == "MY" and country == "RU":
             return None, None, None, None
 
-        is_tls = 'security=tls' in key or 'security=reality' in key or 'trojan://' in key or 'vmess://' in key
-        is_ws = 'type=ws' in key or 'net=ws' in key
+        is_tls = (
+            "security=tls" in key
+            or "security=reality" in key
+            or key.startswith("trojan://")
+            or key.startswith("vmess://")
+        )
+        is_ws = "type=ws" in key or "net=ws" in key
+
         path = "/"
-        match = re.search(r'path=([^&]+)', key)
-        if match: path = unquote(match.group(1))
+        m = re.search(r"path=([^&]+)", key)
+        if m:
+            path = unquote(m.group(1))
 
         start = time.time()
 
@@ -181,158 +358,224 @@ def check_single_key(data):
                 ws_url,
                 timeout=TIMEOUT,
                 sslopt={"cert_reqs": ssl.CERT_NONE},
-                sockopt=((socket.SOL_SOCKET, socket.SO_RCVTIMEO, TIMEOUT),)
+                sockopt=((socket.SOL_SOCKET, socket.SO_RCVTIMEO, TIMEOUT),),
             )
             ws.close()
         elif is_tls:
-            context = ssl.create_default_context()
-            context.check_hostname = False
-            context.verify_mode = ssl.CERT_NONE
+            ctx = ssl.create_default_context()
+            ctx.check_hostname = False
+            ctx.verify_mode = ssl.CERT_NONE
             with socket.create_connection((host, port), timeout=TIMEOUT) as sock:
-                with context.wrap_socket(sock, server_hostname=host): pass
+                with ctx.wrap_socket(sock, server_hostname=host):
+                    pass
         else:
-            with socket.create_connection((host, port), timeout=TIMEOUT): pass
+            with socket.create_connection((host, port), timeout=TIMEOUT):
+                pass
 
         latency = int((time.time() - start) * 1000)
         return latency, tag, country, host
-    except:
+
+    except Exception:
         return None, None, None, None
 
-def make_final_key(k_id, latency, country):
-    info_str = f"[{latency}ms {country} {MY_CHANNEL}]"
-    label_encoded = quote(info_str, safe='')
-    return f"{k_id}#{label_encoded}"
 
-def extract_ping(key_str):
+# =============================================================================
+# Финальный ключ: k_id + хвост с пингом, флагом, страной, каналом
+# =============================================================================
+
+def make_final_key(k_id: str, latency: int, country: str) -> str:
+    flag     = country_to_flag(country)
+    info_str = f"[{latency}ms {flag} {country} {MY_CHANNEL}]"
+    return f"{k_id}#{quote(info_str, safe='')}"
+
+
+def extract_ping(key_str: str):
     try:
-        decoded = unquote(key_str)
-        label = decoded.split("#")[-1]
-        match = re.search(r'(\d+)ms', label)  # ✅ ИСПРАВЛЕНО
-        if match:
-            return int(match.group(1))
-        return None
-    except:
+        label = unquote(key_str).split("#")[-1]
+        m = re.search(r"(\d+)ms", label)
+        return int(m.group(1)) if m else None
+    except Exception:
         return None
 
-def save_exact(keys, folder, filename):
+
+# =============================================================================
+# Сохранение файлов
+# =============================================================================
+
+def save_exact(keys: list, folder: str, filename: str) -> str:
     path = os.path.join(folder, filename)
     with open(path, "w", encoding="utf-8") as f:
-        f.write("\n".join(keys) if keys else "")  # ✅ ИСПРАВЛЕНО
+        f.write("\n".join(k for k in keys if k and k.strip()))
     return path
 
-def save_fixed_chunks_ru(keys_list, folder):
-    valid_keys = [k.strip() for k in keys_list if k and k.strip()]
-    chunks = [valid_keys[i:i + CHUNK_LIMIT] for i in range(0, min(len(valid_keys), CHUNK_LIMIT * 4), CHUNK_LIMIT)]
+
+def save_fixed_chunks_ru(keys_list: list, folder: str) -> list:
+    valid = [k.strip() for k in keys_list if k and k.strip()]
+    chunks = [valid[i:i + CHUNK_LIMIT] for i in range(0, min(len(valid), CHUNK_LIMIT * 4), CHUNK_LIMIT)]
     while len(chunks) < 4:
         chunks.append([])
-    for i, filename in enumerate(RU_FILES):
-        save_exact(chunks[i] if i < len(chunks) else [], folder, filename)
-        count = len(chunks[i]) if i < len(chunks) else 0
-        print(f"  {filename}: {count} ключей")
+    for i, fname in enumerate(RU_FILES):
+        chunk = chunks[i] if i < len(chunks) else []
+        save_exact(chunk, folder, fname)
+        print(f"  {fname}: {len(chunk)} ключей")
     return RU_FILES
 
-def save_fixed_chunks_euro(keys_list, folder):
-    valid_keys = [k.strip() for k in keys_list if k and k.strip()]
-    chunks = [valid_keys[i:i + EURO_CHUNK_LIMIT]
-              for i in range(0, min(len(valid_keys), EURO_CHUNK_LIMIT * 3), EURO_CHUNK_LIMIT)]
+
+def save_fixed_chunks_euro(keys_list: list, folder: str) -> list:
+    valid = [k.strip() for k in keys_list if k and k.strip()]
+    chunks = [valid[i:i + EURO_CHUNK_LIMIT]
+              for i in range(0, min(len(valid), EURO_CHUNK_LIMIT * 3), EURO_CHUNK_LIMIT)]
     while len(chunks) < 3:
         chunks.append([])
-    for i, filename in enumerate(EURO_FILES):
-        save_exact(chunks[i] if i < len(chunks) else [], folder, filename)
-        count = len(chunks[i]) if i < len(chunks) else 0
-        print(f"  {filename}: {count} ключей")
+    for i, fname in enumerate(EURO_FILES):
+        chunk = chunks[i] if i < len(chunks) else []
+        save_exact(chunk, folder, fname)
+        print(f"  {fname}: {len(chunk)} ключей")
     return EURO_FILES
 
-def save_chunked(keys_list, folder, base_name, chunk_size=None):
+
+def save_chunked(keys_list: list, folder: str, base_name: str, chunk_size: int = None) -> list:
     if chunk_size is None:
         chunk_size = CHUNK_LIMIT
-    valid_keys = [k.strip() for k in keys_list if k and k.strip()]
-    chunks = [valid_keys[i:i + chunk_size] for i in range(0, len(valid_keys), chunk_size)]
-    file_names = []
+    valid = [k.strip() for k in keys_list if k and k.strip()]
+    chunks = [valid[i:i + chunk_size] for i in range(0, len(valid), chunk_size)]
+    names = []
     for idx, chunk in enumerate(chunks, start=1):
-        filename = f"{base_name}_part{idx}.txt"
-        save_exact(chunk, folder, filename)
-        file_names.append(filename)
-        print(f"  {filename}: {len(chunk)} ключей")
-    return file_names
+        fname = f"{base_name}_part{idx}.txt"
+        save_exact(chunk, folder, fname)
+        names.append(fname)
+        print(f"  {fname}: {len(chunk)} ключей")
+    return names
 
-def generate_subscriptions_list():
+
+# =============================================================================
+# Генерация subscriptions_list.txt
+# =============================================================================
+
+def generate_subscriptions_list() -> str:
     GITHUB_USER_REPO = "kort0881/vpn-checker-backend"
-    BRANCH = "main"
+    BRANCH   = "main"
     BASE_RAW = f"https://raw.githubusercontent.com/{GITHUB_USER_REPO}/{BRANCH}"
 
-    subs_lines = []
+    lines = []
 
-    subs_lines.append("=== 🇷🇺 RUSSIA (FAST) ===")
-    for filename in RU_FILES:
-        subs_lines.append(f"{BASE_RAW}/checked/RU_Best/{filename}")
-    subs_lines.append("")
+    # FAST — фиксированные файлы
+    lines += ["=== 🇷🇺 RUSSIA (FAST) ==="]
+    lines += [f"{BASE_RAW}/checked/RU_Best/{f}" for f in RU_FILES]
+    lines += [""]
 
-    subs_lines.append("=== 🇷🇺 RUSSIA (ALL) ===")
-    ru_all_candidates = sorted(
+    lines += ["=== 🇪🇺 EUROPE (FAST) ==="]
+    lines += [f"{BASE_RAW}/checked/My_Euro/{f}" for f in EURO_FILES]
+    lines += [""]
+
+    # ALL — динамические чанки
+    lines += ["=== 🇷🇺 RUSSIA (ALL) ==="]
+    ru_all = sorted(
         f for f in os.listdir(FOLDER_RU)
         if f.startswith("ru_white_all_part") and f.endswith(".txt")
     )
-    for fname in ru_all_candidates[:2]:
-        subs_lines.append(f"{BASE_RAW}/checked/RU_Best/{fname}")
-    subs_lines.append("")
+    lines += [f"{BASE_RAW}/checked/RU_Best/{f}" for f in ru_all[:2]]
+    lines += [""]
 
-    subs_lines.append("=== 🇪🇺 EUROPE (FAST) ===")
-    for filename in EURO_FILES:
-        subs_lines.append(f"{BASE_RAW}/checked/My_Euro/{filename}")
-    subs_lines.append("")
-
-    subs_lines.append("=== 🇪🇺 EUROPE (ALL) ===")
-    euro_all_candidates = sorted(
+    lines += ["=== 🇪🇺 EUROPE (ALL) ==="]
+    eu_all = sorted(
         f for f in os.listdir(FOLDER_EURO)
         if f.startswith("my_euro_all_part") and f.endswith(".txt")
     )
-    for fname in euro_all_candidates[:2]:
-        subs_lines.append(f"{BASE_RAW}/checked/My_Euro/{fname}")
+    lines += [f"{BASE_RAW}/checked/My_Euro/{f}" for f in eu_all[:2]]
+    lines += [""]
 
-    subs_path = os.path.join(BASE_DIR, "subscriptions_list.txt")
-    with open(subs_path, "w", encoding="utf-8") as f:
-        f.write("\n".join(subs_lines))  # ✅ ИСПРАВЛЕНО
+    # WHITE — ключи, через которые работает белый список РФ
+    lines += ["=== ✅ WHITE RUSSIA (ALL) ==="]
+    lines += [f"{BASE_RAW}/checked/RU_Best/ru_white_all_WHITE.txt", ""]
 
-    print(f"\n📋 subscriptions_list.txt создан ({len([l for l in subs_lines if l.startswith('http')])} ссылок):")
-    for line in subs_lines:
-        if line:
-            print(f"  {line}")
+    lines += ["=== ✅ WHITE EUROPE (ALL) ==="]
+    lines += [f"{BASE_RAW}/checked/My_Euro/my_euro_all_WHITE.txt", ""]
 
-    return subs_path
+    # BLACK — остальные живые ключи (полный доступ)
+    lines += ["=== ⚠️ BLACK RUSSIA (ALL) ==="]
+    lines += [f"{BASE_RAW}/checked/RU_Best/ru_white_all_BLACK.txt", ""]
 
-# ------------------ MAIN ------------------
+    lines += ["=== ⚠️ BLACK EUROPE (ALL) ==="]
+    lines += [f"{BASE_RAW}/checked/My_Euro/my_euro_all_BLACK.txt"]
+
+    path = os.path.join(BASE_DIR, "subscriptions_list.txt")
+    with open(path, "w", encoding="utf-8") as f:
+        f.write("\n".join(lines))
+
+    http_count = sum(1 for l in lines if l.startswith("http"))
+    print(f"\n📋 subscriptions_list.txt: {http_count} ссылок")
+    for l in lines:
+        if l:
+            print(f"  {l}")
+    return path
+
+
+# =============================================================================
+# MAIN
+# =============================================================================
 
 if __name__ == "__main__":
-    print("=== CHECKER v5 (FAST/ALL LAYERS) ===")
-    print(f"Параметры: CACHE={CACHE_HOURS}h, MAX_PING={MAX_PING_MS}ms, FAST={FAST_LIMIT}, HISTORY={MAX_HISTORY_AGE//3600}h")
+    print("=" * 55)
+    print("  CHECKER v5  —  FAST / ALL / WHITE / BLACK")
+    print("=" * 55)
+    print(
+        f"Параметры: CACHE={CACHE_HOURS}h  MAX_PING={MAX_PING_MS}ms  "
+        f"FAST={FAST_LIMIT}  HISTORY={MAX_HISTORY_AGE // 3600}h  "
+        f"WHITE_TEST={MAX_WHITE_TEST}"
+    )
 
-    history = load_json(HISTORY_FILE)
+    # --------------------------------------------------------------------------
+    # Импорт white_checker (graceful fallback)
+    # --------------------------------------------------------------------------
+    try:
+        from white_checker import batch_white_check, xray_available
+        if xray_available():
+            WHITE_CHECK_AVAILABLE = True
+            print("✅ white_checker.py + xray найдены — WHITE/BLACK чек активен")
+        else:
+            WHITE_CHECK_AVAILABLE = False
+            print("⚠️  xray не найден — WHITE/BLACK чек пропущен (все ключи → WHITE)")
+    except ImportError:
+        WHITE_CHECK_AVAILABLE = False
+        print("⚠️  white_checker.py не найден — WHITE/BLACK чек пропущен (все ключи → WHITE)")
+
+    # --------------------------------------------------------------------------
+    # 1. Загрузка ключей
+    # --------------------------------------------------------------------------
     tasks = fetch_keys(URLS_RU, "RU") + fetch_keys(URLS_MY, "MY")
 
-    unique_tasks = {k: tag for k, tag in tasks}
-    all_items = list(unique_tasks.items())
+    # Дедупликация: при дублирующихся ключах берём первый встреченный тег
+    unique_tasks: dict = {}
+    for k, tag in tasks:
+        k_id = k.split("#")[0]
+        if k_id not in unique_tasks:
+            unique_tasks[k_id] = (k, tag)
+    all_items = list(unique_tasks.values())
 
     if len(all_items) > MAX_KEYS_TO_CHECK:
         all_items = all_items[:MAX_KEYS_TO_CHECK]
 
+    print(f"\n📊 Уникальных ключей: {len(all_items)}")
+
+    # --------------------------------------------------------------------------
+    # 2. Кеш
+    # --------------------------------------------------------------------------
+    history = load_json(HISTORY_FILE)
     current_time = time.time()
-    to_check = []
-    res_ru = []
-    res_euro = []
+    to_check: list = []
+    res_ru:   list = []
+    res_euro: list = []
 
-    print(f"\n📊 Всего уникальных ключей: {len(all_items)}")
-
-    # 2. Кэш
     for k, tag in all_items:
-        k_id = k.split("#")[0]
+        k_id   = k.split("#")[0]
         cached = history.get(k_id)
 
-        if cached and (current_time - cached['time'] < CACHE_HOURS * 3600) and cached['alive']:
-            latency = cached['latency']
-            country = cached.get('country', 'UNKNOWN')
-            host = cached.get('host', '')
-            final = make_final_key(k_id, latency, country)
+        if cached and (current_time - cached["time"] < CACHE_HOURS * 3600) and cached["alive"]:
+            latency  = cached["latency"]
+            country  = cached.get("country", "UNKNOWN")
+            host     = cached.get("host", "")
+            final    = make_final_key(k_id, latency, country)
 
             if tag == "RU":
                 res_ru.append(final)
@@ -341,19 +584,22 @@ if __name__ == "__main__":
         else:
             to_check.append((k, tag))
 
-    print(f"✅ Из кэша: RU={len(res_ru)}, EURO={len(res_euro)}")
+    print(f"✅ Из кеша: RU={len(res_ru)}  EURO={len(res_euro)}")
     print(f"🔍 На проверку: {len(to_check)}")
 
-    # 3. Проверка новых ключей
+    # --------------------------------------------------------------------------
+    # 3. Параллельная TCP/TLS/WS-проверка
+    # --------------------------------------------------------------------------
     if to_check:
         checked_count = 0
         with ThreadPoolExecutor(max_workers=THREADS) as executor:
-            future_to_item = {executor.submit(check_single_key, item): item for item in to_check}
-
+            future_to_item = {
+                executor.submit(check_single_key, item): item
+                for item in to_check
+            }
             for future in future_to_item:
                 key, tag = future_to_item[future]
                 res = future.result()
-
                 if not res or res[0] is None:
                     continue
 
@@ -361,11 +607,14 @@ if __name__ == "__main__":
                 k_id = key.split("#")[0]
 
                 history[k_id] = {
-                    'alive': True,
-                    'latency': latency,
-                    'time': time.time(),
-                    'country': country,
-                    'host': host
+                    "alive":   True,
+                    "latency": latency,
+                    "time":    time.time(),
+                    "country": country,
+                    "host":    host,
+                    # Сохраняем существующий белый статус, если есть
+                    "white":      history.get(k_id, {}).get("white"),
+                    "white_time": history.get(k_id, {}).get("white_time", 0),
                 }
 
                 final = make_final_key(k_id, latency, country)
@@ -377,57 +626,145 @@ if __name__ == "__main__":
 
                 checked_count += 1
 
-        print(f"✅ Проверено успешно: {checked_count}")
+        print(f"✅ Успешно проверено: {checked_count}")
 
-    # 4. Чистка истории
+    # --------------------------------------------------------------------------
+    # 4. Очистка истории от устаревших записей
+    # --------------------------------------------------------------------------
     save_json(HISTORY_FILE, {
         k: v for k, v in history.items()
-        if current_time - v['time'] < MAX_HISTORY_AGE
+        if current_time - v["time"] < MAX_HISTORY_AGE
     })
+    # После очистки перечитываем (save_json мог что-то отрезать)
+    history = load_json(HISTORY_FILE)
 
+    # --------------------------------------------------------------------------
     # 5. Фильтрация по пингу + сортировка
-    res_ru_clean = [k for k in res_ru if extract_ping(k) is not None and extract_ping(k) <= MAX_PING_MS]
+    # --------------------------------------------------------------------------
+    res_ru_clean   = [k for k in res_ru   if extract_ping(k) is not None and extract_ping(k) <= MAX_PING_MS]
     res_euro_clean = [k for k in res_euro if extract_ping(k) is not None and extract_ping(k) <= MAX_PING_MS]
 
     res_ru_clean.sort(key=extract_ping)
     res_euro_clean.sort(key=extract_ping)
 
-    print(f"\n📈 После фильтрации (≤ {MAX_PING_MS} ms) и сортировки:")
-    print(f"  RU: {len(res_ru_clean)} ключей")
-    print(f"  EURO: {len(res_euro_clean)} ключей")
+    print(f"\n📈 После фильтрации (≤{MAX_PING_MS}ms):")
+    print(f"  RU:   {len(res_ru_clean)}")
+    print(f"  EURO: {len(res_euro_clean)}")
 
+    # --------------------------------------------------------------------------
     # 6. FAST / ALL слои
-    res_ru_fast = res_ru_clean[:FAST_LIMIT]
+    # --------------------------------------------------------------------------
+    res_ru_fast   = res_ru_clean[:FAST_LIMIT]
     res_euro_fast = res_euro_clean[:FAST_LIMIT]
-    res_ru_all = res_ru_clean
-    res_euro_all = res_euro_clean
+    res_ru_all    = res_ru_clean
+    res_euro_all  = res_euro_clean
 
-    print(f"\n🚀 FAST слои (топ {FAST_LIMIT}):")
-    print(f"  RU FAST: {len(res_ru_fast)}")
+    print(f"\n🚀 FAST (топ {FAST_LIMIT}):")
+    print(f"  RU FAST:   {len(res_ru_fast)}")
     print(f"  EURO FAST: {len(res_euro_fast)}")
 
+    # --------------------------------------------------------------------------
     # 7. Сохранение FAST
-    print(f"\n💾 Сохранение RU FAST → {FOLDER_RU}:")
+    # --------------------------------------------------------------------------
+    print(f"\n💾 RU FAST → {FOLDER_RU}:")
     save_fixed_chunks_ru(res_ru_fast, FOLDER_RU)
 
-    print(f"\n💾 Сохранение EURO FAST → {FOLDER_EURO} (по {EURO_CHUNK_LIMIT} ключей):")
+    print(f"\n💾 EURO FAST → {FOLDER_EURO} (по {EURO_CHUNK_LIMIT}):")
     save_fixed_chunks_euro(res_euro_fast, FOLDER_EURO)
 
-    # 8. Сохранение ALL
-    print(f"\n💾 Сохранение RU ALL → {FOLDER_RU}:")
-    ru_all_files = save_chunked(res_ru_all, FOLDER_RU, "ru_white_all")
+    # --------------------------------------------------------------------------
+    # 7b. WHITE / BLACK split
+    # --------------------------------------------------------------------------
+    # Берём топ MAX_WHITE_TEST ключей (самые быстрые, отсортированы по пингу).
+    # Проверяем через xray: поднимаем туннель, стучимся к WHITE_TEST_DOMAINS.
+    # Непроверенные (за пределами лимита) → BLACK: "не проверено — не гарантирую".
+    # При недоступном xray: все ключи → WHITE (режим совместимости).
+    # --------------------------------------------------------------------------
 
-    print(f"\n💾 Сохранение EURO ALL → {FOLDER_EURO} (по {EURO_CHUNK_LIMIT} ключей):")
-    euro_all_files = save_chunked(res_euro_all, FOLDER_EURO, "my_euro_all",
-                                  chunk_size=EURO_CHUNK_LIMIT)
+    print(f"\n🔬 WHITE / BLACK сплит (лимит {MAX_WHITE_TEST} ключей на направление):")
 
+    if WHITE_CHECK_AVAILABLE:
+        # -- RU --
+        ru_to_test   = res_ru_all[:MAX_WHITE_TEST]
+        ru_untested  = res_ru_all[MAX_WHITE_TEST:]
+
+        ru_white, ru_black = batch_white_check(
+            ru_to_test, history, label="RU"
+        )
+        # Непроверенные честно в BLACK
+        ru_black.extend(ru_untested)
+        if ru_untested:
+            print(f"  [RU] Непроверенных → BLACK: {len(ru_untested)}")
+        print(f"  [RU] Итог: WHITE={len(ru_white)}  BLACK={len(ru_black)}")
+
+        # -- EURO --
+        euro_to_test  = res_euro_all[:MAX_WHITE_TEST]
+        euro_untested = res_euro_all[MAX_WHITE_TEST:]
+
+        euro_white, euro_black = batch_white_check(
+            euro_to_test, history, label="EURO"
+        )
+        euro_black.extend(euro_untested)
+        if euro_untested:
+            print(f"  [EURO] Непроверенных → BLACK: {len(euro_untested)}")
+        print(f"  [EURO] Итог: WHITE={len(euro_white)}  BLACK={len(euro_black)}")
+
+        # Сохраняем обновлённый кеш с белыми статусами
+        save_json(HISTORY_FILE, {
+            k: v for k, v in history.items()
+            if current_time - v["time"] < MAX_HISTORY_AGE
+        })
+
+    else:
+        # Fallback: нет xray / нет white_checker → все в WHITE
+        ru_white,   ru_black   = list(res_ru_all),   []
+        euro_white, euro_black = list(res_euro_all), []
+        print("  ⚠️  xray недоступен — все ключи → WHITE, BLACK пустой")
+
+    # --------------------------------------------------------------------------
+    # 8. Сохранение ALL (чанки)
+    # --------------------------------------------------------------------------
+    print(f"\n💾 RU ALL → {FOLDER_RU}:")
+    save_chunked(res_ru_all, FOLDER_RU, "ru_white_all")
+
+    print(f"\n💾 EURO ALL → {FOLDER_EURO} (по {EURO_CHUNK_LIMIT}):")
+    save_chunked(res_euro_all, FOLDER_EURO, "my_euro_all", chunk_size=EURO_CHUNK_LIMIT)
+
+    # --------------------------------------------------------------------------
+    # 8b. Сохранение WHITE / BLACK файлов
+    # --------------------------------------------------------------------------
+    print(f"\n💾 WHITE/BLACK → {FOLDER_RU}:")
+    save_exact(ru_white, FOLDER_RU, "ru_white_all_WHITE.txt")
+    save_exact(ru_black, FOLDER_RU, "ru_white_all_BLACK.txt")
+    print(f"  ru_white_all_WHITE.txt: {len(ru_white)}")
+    print(f"  ru_white_all_BLACK.txt: {len(ru_black)}")
+
+    print(f"\n💾 WHITE/BLACK → {FOLDER_EURO}:")
+    save_exact(euro_white, FOLDER_EURO, "my_euro_all_WHITE.txt")
+    save_exact(euro_black, FOLDER_EURO, "my_euro_all_BLACK.txt")
+    print(f"  my_euro_all_WHITE.txt: {len(euro_white)}")
+    print(f"  my_euro_all_BLACK.txt: {len(euro_black)}")
+
+    # --------------------------------------------------------------------------
     # 9. Генерация subscriptions_list.txt
+    # --------------------------------------------------------------------------
     generate_subscriptions_list()
 
-    print("\n✅ SUCCESS: FAST/ALL LAYERS GENERATED")
-    print(f"  Префильтр: {len(RU_FILES)} RU + {len(EURO_FILES)} EURO (FAST)")
-    print(f"  Постер: до 8 кнопок (FAST + ограниченные ALL)")
-
+    # --------------------------------------------------------------------------
+    # Итог
+    # --------------------------------------------------------------------------
+    print("\n" + "=" * 55)
+    print("  ✅  SUCCESS")
+    print("=" * 55)
+    print(f"  RU  FAST  : {len(res_ru_fast)}")
+    print(f"  RU  ALL   : {len(res_ru_all)}")
+    print(f"  RU  WHITE : {len(ru_white)}")
+    print(f"  RU  BLACK : {len(ru_black)}")
+    print(f"  EU  FAST  : {len(res_euro_fast)}")
+    print(f"  EU  ALL   : {len(res_euro_all)}")
+    print(f"  EU  WHITE : {len(euro_white)}")
+    print(f"  EU  BLACK : {len(euro_black)}")
+    print("=" * 55)
 
 
 
