@@ -36,6 +36,18 @@ MAX_PING_MS = 3000
 FAST_LIMIT = 3000
 MAX_HISTORY_AGE = 2 * 24 * 3600
 
+HEADER_RU_WHITE = """#profile-title: BS
+#profile-update-interval: 1
+#announce: @attackufeiz
+версия: 22.1.29
+#support-url: attackufeiz"""
+
+HEADER_EURO_WHITE = """#profile-title: vpn
+#profile-update-interval: 1
+#announce: @attackufeiz
+версия: 22.1.29
+#support-url: attackufeiz"""
+
 RU_FILES = ["ru_white_part1.txt", "ru_white_part2.txt", "ru_white_part3.txt", "ru_white_part4.txt"]
 EURO_FILES = ["my_euro_part1.txt", "my_euro_part2.txt", "my_euro_part3.txt"]
 
@@ -281,9 +293,11 @@ def extract_ping(key_str):
     except:
         return None
 
-def save_exact(keys, folder, filename):
+def save_exact(keys, folder, filename, header=None):
     path = os.path.join(folder, filename)
     with open(path, "w", encoding="utf-8") as f:
+        if header:
+            f.write(header + "\n")
         f.write("\n".join(keys) if keys else "")
     return path
 
@@ -512,13 +526,12 @@ if __name__ == "__main__":
     euro_all_files = save_chunked(res_euro_all, FOLDER_EURO, "my_euro_all", chunk_size=EURO_CHUNK_LIMIT)
 
     print(f"\n💾 WHITE/BLACK → {FOLDER_RU}:")
-    save_exact(res_ru_all, FOLDER_RU, "ru_white_all_WHITE.txt")
+    save_exact(res_ru_all, FOLDER_RU, "ru_white_all_WHITE.txt", header=HEADER_RU_WHITE)
     save_exact(dead_ru, FOLDER_RU, "ru_white_all_BLACK.txt")
 
     print(f"\n💾 WHITE/BLACK → {FOLDER_EURO}:")
-    save_exact(res_euro_all, FOLDER_EURO, "my_euro_all_WHITE.txt")
+    save_exact(res_euro_all, FOLDER_EURO, "my_euro_all_WHITE.txt", header=HEADER_EURO_WHITE)
     save_exact(dead_euro, FOLDER_EURO, "my_euro_all_BLACK.txt")
-
     generate_subscriptions_list()
 
     print("\n✅ SUCCESS: FAST/ALL + WHITE/BLACK GENERATED")
