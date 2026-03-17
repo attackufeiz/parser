@@ -8,7 +8,7 @@ import requests
 import base64
 import websocket
 import shutil
-from urllib.parse import quote, unquote
+from urllib.parse import unquote
 from concurrent.futures import ThreadPoolExecutor
 
 # ------------------ Настройки ------------------
@@ -266,20 +266,18 @@ def check_single_key(data):
         return None, None, None, None, key
 
 def make_final_key(k_id, latency, country):
-    title = country_to_title_ru(country)
-    flag = country_to_flag(country)
-    parts = [f"{latency}ms", title]
-    if flag:
-        parts.append(flag)
-    parts.append(MY_CHANNEL)
-    info_str = "[" + " ".join(parts) + "]"
-    label_encoded = quote(info_str, safe="")
-    return f"{k_id}#{label_encoded}"
+    title_ru = country_to_title_ru(country)   # "Польша"
+    flag = country_to_flag(country)          # "🇵🇱"
+    if country and country != "UNKNOWN":
+        title_full = f"{title_ru} {country}"  # "Польша PL"
+    else:
+        title_full = title_ru
+    info_str = f"[{latency}ms {title_full} {flag} {MY_CHANNEL}]"
+    return f"{k_id}#{info_str}"
 
 def extract_ping(key_str):
     try:
-        decoded = unquote(key_str)
-        label = decoded.split("#")[-1]
+        label = key_str.split("#")[-1]
         match = re.search(r"(\d+)ms", label)
         if match:
             return int(match.group(1))
@@ -530,6 +528,7 @@ if __name__ == "__main__":
     print("\n✅ SUCCESS: FAST/ALL + WHITE/BLACK GENERATED")
     print(f"  RU FAST: {len(res_ru_fast)}, RU WHITE: {len(res_ru_all)}, RU BLACK: {len(dead_ru)}")
     print(f"  EURO FAST: {len(res_euro_fast)}, EURO WHITE: {len(res_euro_all)}, EURO BLACK: {len(dead_euro)}")
+
 
 
 
