@@ -57,7 +57,6 @@ URLS_RU = [
     "https://jsnegsukavsos.hb.ru-msk.vkcloud-storage.ru/love",
     "https://etoneya.a9fm.site/1",
     "https://s3c3.001.gpucloud.ru/vahe4xkwi/cjdr"
-    "https://raw.githubusercontent.com/kort0881/vpn-vless-configs-russia/refs/heads/main/githubmirror/new/all_new.txt"
 ]
 
 URLS_MY = [
