@@ -1,1 +1,1 @@
-vless://1235d730-707c-4a11-8ce3-ebb17561564b@45.12.133.207:443?encryption=none&fp=chrome&headerType=none&pbk=0T96I8dvAUF7BxhbwTp0PfFfy9AHFDsXXpwDnP0i224&security=reality&sid=4dd1&sni=yahoo.com&type=tcp#[1310ms Испания ES 🇪🇸 @attackufeiz]
+vless://19ef3d02-1c55-4fec-9794-6def8cbac396@2.56.177.219:443?encryption=none&flow=xtls-rprx-vision&fp=random&headerType=none&pbk=50YV33F0uOrBN7ugFb8LFnSoe3FC305uGBOf2Hpn3A0&security=reality&sid=a1b4e8d2&sni=www.nur.kz&type=tcp#[448ms Германия DE 🇩🇪 @attackufeiz]
