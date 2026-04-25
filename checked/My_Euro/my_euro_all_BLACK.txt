@@ -1,9 +1,14 @@
-trojan://GZOof2R1ej4yML1NxajR2frGQ@hl-freedom-1.undef.network:443?sni=HL-FREEDOM-1.UNDEF.NETWORK&host=hl-freedom-1.undef.network&security=tls&type=ws&path=%2Ff2fc2a1f#%F0%9F%87%B3%F0%9F%87%B1%20The%20Netherlands%2C%20Amsterdam%20%7C%20%5BBL%5D
-trojan://JaFKnqNcvnBT63t3rquidGsln@hl-freedom-1.undef.network:443?sni=HL-FREEDOM-1.UNDEF.NETWORK&host=hl-freedom-1.undef.network&security=tls&type=ws&path=/f2fc2a1f#%F0%9F%87%B3%F0%9F%87%B1%20The%20Netherlands%2C%20Amsterdam%20%7C%20%5BBL%5D
+trojan://8r<[9'l6hAO#8ZQi@104.18.16.56:2096?type=ws&host=Koma-YT.PAGeS.Dev&path=%2Ftr&security=tls&sni=Koma-YT.PAGeS.Dev#[🇩🇪] [tr-tl-ws] [260425-225842.290]
+trojan://gRhMxPMmod@cc.websooj.site:443?type=ws&path=%2Fheh&security=tls&alpn=http%2F1.1&fp=chrome&sni=cc.websooj.site#[🇫🇷] [tr-tl-ws] [260425-225845.237]
+trojan://humanity@188.114.96.3:443?type=ws&host=www.gossipglove.com&path=%2Fassignment&security=tls&fp=chrome&sni=www.gossipglove.com#[🇳🇱] [tr-tl-ws] [260425-225845.331]
+vless://0f4d41cf-0be1-4fcc-ac41-53b843ba0752@h7-83w.pages.dev:443?encryption=none&type=ws&path=%2F&security=tls#[🇸🇪] [vl-tl-ws] [260425-225921.404]
 vless://36d85d65-1b57-4cba-a2a6-f61131b08593@srv120.towersflowerss.com:65000?type=ws&encryption=none#%F0%9F%87%AB%F0%9F%87%B7%20France%2C%20Paris%20%7C%20%5BBL%5D
+vless://36d85d65-1b57-4cba-a2a6-f61131b08593@srv120.towersflowerss.com:65000?type=ws&security=none&encryption=none&fp=chrome#%F0%9F%87%AB%F0%9F%87%B7%20France%2C%20Paris%20%7C%20%5BBL%5D
 vless://36d85d65-1b57-4cba-a2a6-f61131b08593@srv120.towersflowerss.com:65000?type=ws&sni=srv120.towersflowerss.com#%F0%9F%87%AB%F0%9F%87%B7%20France%2C%20Paris%20%7C%20%5BBL%5D
 vless://36d85d65-1b57-4cba-a2a6-f61131b08593@srv120.towersflowerss.com:65000?type=ws&sni=srv120.towersflowerss.com&fp=chrome#%F0%9F%87%AB%F0%9F%87%B7%20France%2C%20Paris%20%7C%20%5BBL%5D
 vless://36d85d65-1b57-4cba-a2a6-f61131b08593@srv152.towersflowerss.com:64534?type=ws&encryption=none#%F0%9F%87%A6%F0%9F%87%B9%20Austria%2C%20Vienna%20%7C%20%5BBL%5D
+vless://36d85d65-1b57-4cba-a2a6-f61131b08593@srv152.towersflowerss.com:64534?type=ws&security=none&encryption=none&fp=chrome&sni=srv152.towersflowerss.com#%F0%9F%87%A6%F0%9F%87%B9%20Austria%2C%20Vienna%20%7C%20%5BBL%5D
+vless://36d85d65-1b57-4cba-a2a6-f61131b08593@srv152.towersflowerss.com:64534?type=ws&sni=srv152.towersflowerss.com#%F0%9F%87%A6%F0%9F%87%B9%20Austria%2C%20Vienna%20%7C%20%5BBL%5D
 vless://36d85d65-1b57-4cba-a2a6-f61131b08593@srv174.towersflowerss.com:65000?type=ws&encryption=none#%F0%9F%87%A8%F0%9F%87%BF%20Czechia%2C%20Prague%20%7C%20%5BBL%5D
 vless://36d85d65-1b57-4cba-a2a6-f61131b08593@srv174.towersflowerss.com:65000?type=ws&security=none&encryption=none&fp=randomized#%F0%9F%87%A8%F0%9F%87%BF%20Czechia%2C%20Prague%20%7C%20%5BBL%5D
 vless://36d85d65-1b57-4cba-a2a6-f61131b08593@srv174.towersflowerss.com:65000?type=ws&sni=srv174.towersflowerss.com#%F0%9F%87%A8%F0%9F%87%BF%20Czechia%2C%20Prague%20%7C%20%5BBL%5D
@@ -17,3 +22,13 @@ vless://36d85d65-1b57-4cba-a2a6-f61131b08593@srv31.towersflowerss.com:443?type=w
 vless://36d85d65-1b57-4cba-a2a6-f61131b08593@srv31.towersflowerss.com:443?type=ws&security=none&encryption=none&fp=randomized#%F0%9F%87%B0%F0%9F%87%BF%20Kazakhstan%2C%20Almaty%20%7C%20%F0%9F%8C%90%20%7C%20%5BIPv6%5D%20%7C%20%5BBL%5D
 vless://36d85d65-1b57-4cba-a2a6-f61131b08593@srv31.towersflowerss.com:443?type=ws&sni=srv31.towersflowerss.com#%F0%9F%87%B0%F0%9F%87%BF%20Kazakhstan%2C%20Almaty%20%7C%20%F0%9F%8C%90%20%7C%20%5BIPv6%5D%20%7C%20%5BBL%5D
 vless://36d85d65-1b57-4cba-a2a6-f61131b08593@srv31.towersflowerss.com:443?type=ws&sni=srv31.towersflowerss.com&fp=randomized#%F0%9F%87%B0%F0%9F%87%BF%20Kazakhstan%2C%20Almaty%20%7C%20%F0%9F%8C%90%20%7C%20%5BIPv6%5D%20%7C%20%5BBL%5D
+vless://394f6981-a782-4779-9a85-e6cf22935d93@152.233.28.198:8443?encryption=none&type=raw&headerType=none&security=tls&alpn=h2&sni=uk1.fromblancwithlove.com#[🇬🇧] [vl-tl-ra] [260425-225946.059]
+vless://40cc9b52-25b8-4cd5-8b45-715ae26e6baf@sc-thenetherlands1.09vpn.com:80?encryption=none&type=ws&path=%2Fvless%2F&security=none#[🇳🇱] [vl-no-ws] [260425-225950.533]
+vless://43488128-319e-f480-64ea-0acdc712e2a8@95.164.85.33:443?encryption=none&flow=xtls-rprx-vision&type=raw&headerType=none&security=reality&fp=chrome&pbk=-n5iY1LH6WNzxc6_sQg_phf04553mzBExCqQzRvoA3U&sni=www.rakuten.co.jp&sid=41427aa565e28984#[🇳🇱] [vl-re-ra] [260425-225952.445]
+vless://5ce84688-f535-46ad-a512-37b17becf6ea@152.228.162.19:80?encryption=none&host=akamaized.net&path=/vless/&security=none&type=ws#🇫🇷
+vless://5fa0466d-417f-4661-924b-dfdfbbd8a08b@purple-forest.ru:443?encryption=none&type=ws&host=purple-forest.ru&path=%2F26608%2FoFQ55tweb_path&security=tls#[🇫🇮] [vl-tl-ws] [260425-230011.764]
+vless://610b4374-6c1b-43e6-ba7f-a89aba596db6@2.27.20.17:443?encryption=none&type=grpc&security=reality&fp=chrome&pbk=N9YEtcvbXxG2GD8cLMlQT35HnX8cmvYPasnqtcBW_XY&sni=vpn.xorealis.com&sid=131df166be01a436#[🇩🇪] [vl-re-gr] [260425-230012.483]
+vless://6202b230-417c-4d8e-b624-0f71afa9c75d@138.124.59.215:443?encryption=none&security=tls&sni=sni.111000.v6.rocks&type=ws&host=sni.111000.v6.rocks&path=%2F%3Fed%3D2560%26https%3A%2F%2Ft.me%2FWangCai2%F0%9F%87%A8%F0%9F%87%B3#🇩🇪
+vless://6202b230-417c-4d8e-b624-0f71afa9c75d@192.200.160.238:2096?encryption=none&type=ws&host=sni.jpmj.dev&path=%2F%3Fed%3D2560&security=tls&sni=sni.jpmj.dev#[🇱🇻] [vl-tl-ws] [260425-230012.964]
+vless://6202b230-417c-4d8e-b624-0f71afa9c75d@194.58.34.124:443?encryption=none&security=tls&sni=sni.111000.v6.rocks&type=ws&host=sni.111000.v6.rocks&path=%2F%3Fed%3D2560%26https%3A%2F%2Ft.me%2FWangCai2%F0%9F%87%A8%F0%9F%87%B3#🇸🇪
+vless://6202b230-417c-4d8e-b624-0f71afa9c75d@194.87.89.41:443?encryption=none&security=tls&sni=sni.111000.v6.rocks&type=ws&host=sni.111000.v6.rocks&path=%2F%3Fed%3D2560%26https%3A%2F%2Ft.me%2FWangCai2%F0%9F%87%A8%F0%9F%87%B3#🇸🇪
