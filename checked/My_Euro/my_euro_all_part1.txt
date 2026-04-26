@@ -1,1 +1,1 @@
-vless://0ea7b717-212a-4c11-b5d2-95c1dee841ce@fr-1.p-esmy.icu:2066?type=tcp&security=reality&encryption=none&flow=xtls-rprx-vision&fp=chrome&pbk=KV8so9DWpOxAh9W5yB6sBduzybLXHb4Q62KN_XI3HTo&sid=1b2a3f&sni=apple.com#[635ms Испания ES 🇪🇸 @attackufeiz]
+vless://36d85d65-1b57-4cba-a2a6-f61131b08593@srv2.towersflowerss.com:443#[161ms Испания ES 🇪🇸 @attackufeiz]
