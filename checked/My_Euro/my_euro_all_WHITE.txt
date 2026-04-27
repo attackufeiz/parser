@@ -5,7 +5,7 @@
 #support-url: attackufeiz
 vless://36d85d65-1b57-4cba-a2a6-f61131b08593@176.98.186.50:443?host=srv2.towersflowerss.com&path=/&type=tcp#[101ms Австрия AT 🇦🇹 @attackufeiz]
 vless://36d85d65-1b57-4cba-a2a6-f61131b08593@176.98.186.50:443?type=tcp&security=none#[108ms Италия IT 🇮🇹 @attackufeiz]
-vless://36d85d65-1b57-4cba-a2a6-f61131b08593@176.98.186.50:443#[116ms Испания ES 🇪🇸 @attackufeiz]
 vless://36d85d65-1b57-4cba-a2a6-f61131b08593@srv2.towersflowerss.com:443#[151ms Испания ES 🇪🇸 @attackufeiz]
-vless://4824b8ff-7075-4860-8e5a-2d06e7b1aedd@144.124.233.103:8443?type=tcp&security=reality&encryption=none&flow=xtls-rprx-vision&fp=chrome&pbk=LX5_NehDidYIMDPvmBPojbWvJ7XHCSRnzleDEgmSWjY&sid=2cafdf81&sni=www.google.com&spx=/#[249ms Швейцария CH 🇨🇭 @attackufeiz]
-vless://1c45e98c-8a4a-45e7-acc5-3a3cc962f463@188.214.129.172:443?type=tcp&security=reality&encryption=none&flow=xtls-rprx-vision&fp=chrome&pbk=h7CCbT_1gwxhQGM-4_pZkNRbAe_I6YFQM6jO9x6uORw&sni=flowwow.com#[309ms Италия IT 🇮🇹 @attackufeiz]
+vless://53821f3c-5b03-456a-89f3-f8379f130752@51.89.229.134:443?encryption=none&fp=chrome&pbk=4e4FI0siWxFtLCRCVDQurn1wLTuvKWhRY0zj1SaUcyw&security=reality&sid=a13a7cc5&sni=www.samsung.com&type=tcp#[193ms Литва LT 🇱🇹 @attackufeiz]
+vless://309fa273-6579-4cb2-9143-7cad50401eba@91.99.106.117:443?security=reality&encryption=none&pbk=gZGVp5PUdafgsmi1gawa1yLuha_XhXRc_W9SvPiGmTY&headerType=none&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=www.cloudflare.com&sid=7cad5040#[312ms Люксембург LU 🇱🇺 @attackufeiz]
+vless://4824b8ff-7075-4860-8e5a-2d06e7b1aedd@144.124.233.103:8443?type=tcp&security=reality&encryption=none&flow=xtls-rprx-vision&fp=chrome&pbk=LX5_NehDidYIMDPvmBPojbWvJ7XHCSRnzleDEgmSWjY&sid=2cafdf81&sni=www.google.com&spx=/#[553ms Германия DE 🇩🇪 @attackufeiz]
