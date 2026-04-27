@@ -1,2 +1,0 @@
-vless://36d85d65-1b57-4cba-a2a6-f61131b08593@srv2.towersflowerss.com:443#[147ms Испания ES 🇪🇸 @attackufeiz]
-vless://36d85d65-1b57-4cba-a2a6-f61131b08593@176.98.186.50:443?host=srv2.towersflowerss.com&path=/&type=tcp#[1169ms Австрия AT 🇦🇹 @attackufeiz]
