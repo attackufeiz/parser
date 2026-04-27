@@ -3,8 +3,9 @@
 #announce: @attackufeiz
 версия: 22.1.29
 #support-url: attackufeiz
+vless://36d85d65-1b57-4cba-a2a6-f61131b08593@176.98.186.50:443?host=srv2.towersflowerss.com&path=/&type=tcp#[101ms Австрия AT 🇦🇹 @attackufeiz]
+vless://36d85d65-1b57-4cba-a2a6-f61131b08593@176.98.186.50:443?type=tcp&security=none#[108ms Италия IT 🇮🇹 @attackufeiz]
 vless://36d85d65-1b57-4cba-a2a6-f61131b08593@176.98.186.50:443#[116ms Испания ES 🇪🇸 @attackufeiz]
-vless://36d85d65-1b57-4cba-a2a6-f61131b08593@srv2.towersflowerss.com:443#[119ms Испания ES 🇪🇸 @attackufeiz]
-vless://309fa273-6579-4cb2-9143-7cad50401eba@188.34.193.153:443?encryption=none&flow=xtls-rprx-vision&security=reality&sni=www.cloudflare.com&fp=chrome&pbk=gZGVp5PUdafgsmi1gawa1yLuha_XhXRc_W9SvPiGmTY&sid=7cad5040&type=tcp&headerType=none#[232ms Испания ES 🇪🇸 @attackufeiz]
-vless://36d85d65-1b57-4cba-a2a6-f61131b08593@srv162.towersflowerss.com:443?encryption=none&security=none&type=tcp#[261ms Испания ES 🇪🇸 @attackufeiz]
-vless://37253a6a-2a9b-42bb-992c-b5f1b1ef1791@vruaz.mostserv.xyz:443?security=reality&type=tcp&headerType=&path=&host=&flow=xtls-rprx-vision&sni=vruaz.mostserv.xyz&fp=&pbk=3WzSgL8uXA3vE3IHrfdBpJmOO4MYrsWpczDSY_jJRjI&sid=226509f017e4c36d#[286ms Испания ES 🇪🇸 @attackufeiz]
+vless://36d85d65-1b57-4cba-a2a6-f61131b08593@srv2.towersflowerss.com:443#[151ms Испания ES 🇪🇸 @attackufeiz]
+vless://4824b8ff-7075-4860-8e5a-2d06e7b1aedd@144.124.233.103:8443?type=tcp&security=reality&encryption=none&flow=xtls-rprx-vision&fp=chrome&pbk=LX5_NehDidYIMDPvmBPojbWvJ7XHCSRnzleDEgmSWjY&sid=2cafdf81&sni=www.google.com&spx=/#[249ms Швейцария CH 🇨🇭 @attackufeiz]
+vless://1c45e98c-8a4a-45e7-acc5-3a3cc962f463@188.214.129.172:443?type=tcp&security=reality&encryption=none&flow=xtls-rprx-vision&fp=chrome&pbk=h7CCbT_1gwxhQGM-4_pZkNRbAe_I6YFQM6jO9x6uORw&sni=flowwow.com#[309ms Италия IT 🇮🇹 @attackufeiz]
