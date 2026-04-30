@@ -3,5 +3,5 @@
 #announce: @attackufeiz
 версия: 22.1.29
 #support-url: attackufeiz
-vless://4649d681-7f26-4959-a3f2-02eb8866230f@144.31.5.23:9443?flow=xtls-rprx-vision&encryption=none&type=tcp&security=reality&fp=chrome&sni=yahoo.com&pbk=wAYsJ6RJXFy94w_WaTIhp1ZfCePAPoZmP27RarvUqXg&sid=2344766a270a6298#[682ms Норвегия NO 🇳🇴 @attackufeiz]
-vless://37253a6a-2a9b-42bb-992c-b5f1b1ef1791@vruaz.mostserv.xyz:443?type=tcp&security=reality&encryption=none&flow=xtls-rprx-vision&fp=chrome&pbk=3WzSgL8uXA3vE3IHrfdBpJmOO4MYrsWpczDSY_jJRjI&sid=226509f017e4c36d&sni=vruaz.mostserv.xyz#[1027ms Швеция SE 🇸🇪 @attackufeiz]
+vless://256c5f48-4908-4255-83d1-c86cb58f22b4@austria.denditop.site:443?type=tcp&security=reality&encryption=none&flow=xtls-rprx-vision&fp=chrome&pbk=wgoLhL4pRP0y6fu6He4qW_ElohCM_ANWJF3HEoUhNz4&sid=9c2378562188c3cb&sni=austria.denditop.site&spx=/#[314ms Италия IT 🇮🇹 @attackufeiz]
+vless://4649d681-7f26-4959-a3f2-02eb8866230f@144.31.5.23:9443?mode=multi&security=reality&encryption=none&type=tcp&flow=xtls-rprx-vision&pbk=wAYsJ6RJXFy94w_WaTIhp1ZfCePAPoZmP27RarvUqXg&sid=2344766a270a6298&sni=yahoo.com&servername=yahoo.com&spx=%2F&fp=chrome#[1336ms Германия DE 🇩🇪 @attackufeiz]
