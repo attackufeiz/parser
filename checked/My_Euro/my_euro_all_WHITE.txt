@@ -3,4 +3,4 @@
 #announce: @attackufeiz
 версия: 22.1.29
 #support-url: attackufeiz
-vless://256c5f48-4908-4255-83d1-c86cb58f22b4@fr.denditop.site:443?security=reality&encryption=none&pbk=wgoLhL4pRP0y6fu6He4qW_ElohCM_ANWJF3HEoUhNz4&headerType=none&fp=chrome&spx=/&type=tcp&flow=xtls-rprx-vision&sni=fr.denditop.site&sid=9c2378562188c3cb#[299ms Испания ES 🇪🇸 @attackufeiz]
+vless://0bc59ed3-f64f-406c-b04a-3d11f33ab7f1@45.15.128.122:4443?encryption=none&fp=chrome&pbk=KXrCLOog-54F6MPcbz1eT6QhYrLFlST_2G_DFZd1C20&security=reality&sid=aa5473&sni=www.icloud.com&type=tcp#[306ms Норвегия NO 🇳🇴 @attackufeiz]
