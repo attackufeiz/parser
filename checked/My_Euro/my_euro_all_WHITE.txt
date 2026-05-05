@@ -3,4 +3,4 @@
 #announce: @attackufeiz
 версия: 22.1.29
 #support-url: attackufeiz
-trojan://JaFKnqNcvnBT63t3rquidGsln@91.210.108.201:443?security=tls&sni=HL-FREEDOM-1.UNDEF.NETWORK&type=tcp#[766ms Италия IT 🇮🇹 @attackufeiz]
+trojan://JaFKnqNcvnBT63t3rquidGsln@91.210.108.201:443?security=tls&sni=HL-FREEDOM-1.UNDEF.NETWORK&type=tcp#[690ms Италия IT 🇮🇹 @attackufeiz]
