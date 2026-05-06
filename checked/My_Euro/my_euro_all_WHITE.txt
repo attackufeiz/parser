@@ -3,3 +3,4 @@
 #announce: @attackufeiz
 версия: 22.1.29
 #support-url: attackufeiz
+vless://256c5f48-4908-4255-83d1-c86cb58f22b4@fr.denditop.site:443?security=reality&encryption=none&pbk=wgoLhL4pRP0y6fu6He4qW_ElohCM_ANWJF3HEoUhNz4&headerType=none&fp=chrome&spx=/&type=tcp&flow=xtls-rprx-vision&sni=fr.denditop.site&sid=9c2378562188c3cb#[278ms Италия IT 🇮🇹 @attackufeiz]
