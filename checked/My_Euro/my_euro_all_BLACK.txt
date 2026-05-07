@@ -1,1 +1,0 @@
-trojan://fc1e67fa@45.15.128.5:443/?type=tcp&security=tls&sni=watchapp.store&fp=random#%F0%9F%87%B5%F0%9F%87%B1%20Poland%2C%20Warsaw%20%7C%20%5BBL%5D
