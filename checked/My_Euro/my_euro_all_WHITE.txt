@@ -3,11 +3,4 @@
 #announce: @attackufeiz
 версия: 22.1.29
 #support-url: attackufeiz
-vless://0d4cef0e-5508-4271-8153-5dd7f5791bb2@170.168.103.143:8081?encryption=none&type=raw&headerType=http&host=www.speedtest.net&path=%2F&security=none#[202ms Италия IT 🇮🇹 @attackufeiz]
-vless://3744b1fc-1fa5-4bd9-a901-d97a4214ae70@45.15.129.32:443?encryption=none&type=raw&headerType=none&security=reality&pbk=qsT9UM8_tjOILuNP9skeOZ0SfXfnj1oTRG-kKoCfqXs&sni=google.com&sid=d0000000#[231ms Италия IT 🇮🇹 @attackufeiz]
-trojan://JaFKnqNcvnBT63t3rquidGsln@91.210.108.201:443?type=raw&headerType=none&security=tls&sni=HL-FREEDOM-1.UNDEF.NETWORK#[249ms Италия IT 🇮🇹 @attackufeiz]
-vless://11348c0f-b646-446a-bad7-b2b39c6de767@138.124.9.190:16558?encryption=none&flow=xtls-rprx-vision&type=raw&headerType=none&security=reality&fp=chrome&pbk=vDKgmefC_2JaSrrvQSsb7DU3KBeKUlXG1V0vgdjv_i4&sni=gpuopen.com&sid=0a856e071790b1#[310ms Италия IT 🇮🇹 @attackufeiz]
-vless://1235d730-707c-4a11-8ce3-ebb17561564b@45.12.133.207:443?encryption=none&type=raw&headerType=none&security=reality&fp=chrome&pbk=0T96I8dvAUF7BxhbwTp0PfFfy9AHFDsXXpwDnP0i224&sni=yahoo.com&sid=4dd1#[530ms Италия IT 🇮🇹 @attackufeiz]
-vless://416560bf-9ebb-4a43-96b6-e353e3d3572a@45.140.204.121:443?type=tcp&security=reality&fp=chrome&pbk=MYU0vSA5rfofPjIwynqoPsr60F_swjCHCDX0yJPKwT0&sid=08bf&sni=yahoo.com&spx=/#[568ms Бельгия BE 🇧🇪 @attackufeiz]
-vless://079c1b04-7ef9-4c49-8a7a-849a18ba7b9b@83.222.20.64:17910?encryption=none&type=raw&headerType=none&security=reality&fp=chrome&pbk=KUhrhiJBplVCVCrAKP2KjIA_asOgkkvEEAxUJVofjgc&sni=yahoo.com&sid=8c09fb78b12f&spx=%2F#[639ms Польша PL 🇵🇱 @attackufeiz]
-vless://2a9ed01e-5455-44b4-a66a-76ee8165f0ac@77.73.232.61:19747?encryption=none&type=raw&headerType=none&security=reality&fp=chrome&pbk=ZO9dTeg1slvTXgVsBsaJ1BDvz_YUImTLJjbHs-GdVyM&sni=yahoo.com&sid=2001#[778ms Италия IT 🇮🇹 @attackufeiz]
+vless://416560bf-9ebb-4a43-96b6-e353e3d3572a@45.140.204.121:443?fp=chrome&pbk=MYU0vSA5rfofPjIwynqoPsr60F_swjCHCDX0yJPKwT0&security=reality&sid=08bf0000&sni=yahoo.com&spx=&type=tcp#[530ms Швеция SE 🇸🇪 @attackufeiz]
