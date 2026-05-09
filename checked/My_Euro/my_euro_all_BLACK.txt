@@ -1,1 +1,1 @@
-trojan://humanity@185.18.250.245:443?path=%2Fassignment&security=tls&host=www.calmlunch.com&fp=chrome&type=ws&sni=www.calmlunch.com#%F0%9F%87%AB%F0%9F%87%B7%20France%2C%20Paris%20%7C%20%5BBL%5D
+vless://3d168767-6e7e-463d-8739-a6e6cc4ae508@45.86.74.93:443?flow=xtls-rprx-vision&fp=chrome&headertype=none&pbk=Vyh7Kf4o8NdoqzGHkvZZvs_CayHEW_u7bHxl9ByGU2k&security=reality&sid=9b1c7e3a5d0f4826&sni=usa02.grani.site&type=tcp#%F0%9F%87%AB%F0%9F%87%B7%20France%2C%20Paris%20%7C%20%5BBL%5D

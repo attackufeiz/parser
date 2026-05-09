@@ -3,5 +3,6 @@
 #announce: @attackufeiz
 версия: 22.1.29
 #support-url: attackufeiz
-vless://48ff2b70-e180-582f-8866-d9a2edeed5f5@51.158.206.97:23576?security=reality&encryption=none&pbk=1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s&headerType=none&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=fuck.rkn&sid=01#[352ms Германия DE 🇩🇪 @attackufeiz]
-vless://221d6ffa-6f8e-495a-a604-6972b6b93a0c@185.21.11.199:8443?type=tcp&security=reality&fp=chrome&pbk=-c6RbjMXXWbHe7xRZGZrUIDUaKmi3PFRlR66roMufg0&sid=4590f8d60dcb3686&sni=www.microsoft.com#[2191ms Италия IT 🇮🇹 @attackufeiz]
+vless://3d168767-6e7e-463d-8739-a6e6cc4ae508@45.136.125.106:443?flow=xtls-rprx-vision&fp=chrome&headertype=none&pbk=TEOE7OWzJGrOxoJm0mVB2PbI_Ne7FmrPLoKLdNIjEwo&security=reality&sid=6e1b4a9c7f3d2085&sni=nl01-geo.grani.site&type=tcp#[377ms Италия IT 🇮🇹 @attackufeiz]
+vless://416560bf-9ebb-4a43-96b6-e353e3d3572a@45.140.204.121:443?type=tcp&security=reality&fp=chrome&pbk=MYU0vSA5rfofPjIwynqoPsr60F_swjCHCDX0yJPKwT0&sid=08bf&sni=yahoo.com&spx=/#[462ms Италия IT 🇮🇹 @attackufeiz]
+vless://221d6ffa-6f8e-495a-a604-6972b6b93a0c@185.21.11.199:8443?type=tcp&security=reality&fp=chrome&pbk=-c6RbjMXXWbHe7xRZGZrUIDUaKmi3PFRlR66roMufg0&sid=4590f8d60dcb3686&sni=www.microsoft.com#[2057ms Италия IT 🇮🇹 @attackufeiz]
