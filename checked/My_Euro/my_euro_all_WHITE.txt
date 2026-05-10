@@ -3,5 +3,5 @@
 #announce: @attackufeiz
 версия: 22.1.29
 #support-url: attackufeiz
-vless://416560bf-9ebb-4a43-96b6-e353e3d3572a@45.140.204.121:443?fp=chrome&pbk=MYU0vSA5rfofPjIwynqoPsr60F_swjCHCDX0yJPKwT0&security=reality&sid=08bf0000&sni=yahoo.com&spx=&type=tcp#[551ms Швеция SE 🇸🇪 @attackufeiz]
-vless://416560bf-9ebb-4a43-96b6-e353e3d3572a@45.140.204.121:443?type=tcp&security=reality&fp=chrome&pbk=MYU0vSA5rfofPjIwynqoPsr60F_swjCHCDX0yJPKwT0&sid=08bf&sni=yahoo.com&spx=/#[656ms Швеция SE 🇸🇪 @attackufeiz]
+vless://416560bf-9ebb-4a43-96b6-e353e3d3572a@45.140.204.121:443?fp=chrome&pbk=MYU0vSA5rfofPjIwynqoPsr60F_swjCHCDX0yJPKwT0&security=reality&sid=08bf0000&sni=yahoo.com&spx=&type=tcp#[450ms Италия IT 🇮🇹 @attackufeiz]
+vless://416560bf-9ebb-4a43-96b6-e353e3d3572a@45.140.204.121:443?type=tcp&security=reality&fp=chrome&pbk=MYU0vSA5rfofPjIwynqoPsr60F_swjCHCDX0yJPKwT0&sid=08bf&sni=yahoo.com&spx=/#[499ms Италия IT 🇮🇹 @attackufeiz]
