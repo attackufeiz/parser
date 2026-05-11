@@ -3,5 +3,14 @@
 #announce: @attackufeiz
 версия: 22.1.29
 #support-url: attackufeiz
-vless://256c5f48-4908-4255-83d1-c86cb58f22b4@fr.denditop.site:443?security=reality&encryption=none&pbk=wgoLhL4pRP0y6fu6He4qW_ElohCM_ANWJF3HEoUhNz4&headerType=none&fp=chrome&spx=/&type=tcp&flow=xtls-rprx-vision&sni=fr.denditop.site&sid=9c2378562188c3cb#[336ms Италия IT 🇮🇹 @attackufeiz]
-vless://1235d730-707c-4a11-8ce3-ebb17561564b@45.12.133.207:443?security=reality&type=tcp&sni=yahoo.com&fp=chrome&sid=4dd1&pbk=0T96I8dvAUF7BxhbwTp0PfFfy9AHFDsXXpwDnP0i224#[483ms Италия IT 🇮🇹 @attackufeiz]
+vless://2de34838-1270-4fb0-bbe5-dfc9aa5c01a1@5.180.54.54:443?encryption=none&flow=xtls-rprx-vision&type=raw&headerType=none&security=reality&pbk=ztJq-ujdckOvXgiARRnTean6syVqoBBWw0s5tL5IkhE&sni=www.microsoft.com#[257ms Италия IT 🇮🇹 @attackufeiz]
+vless://3744b1fc-1fa5-4bd9-a901-d97a4214ae70@45.15.129.32:443?encryption=none&type=raw&headerType=none&security=reality&pbk=qsT9UM8_tjOILuNP9skeOZ0SfXfnj1oTRG-kKoCfqXs&sni=google.com&sid=d0#[288ms Италия IT 🇮🇹 @attackufeiz]
+trojan://JaFKnqNcvnBT63t3rquidGsln@91.210.108.201:443?type=raw&headerType=none&security=tls&sni=HL-FREEDOM-1.UNDEF.NETWORK#[293ms Италия IT 🇮🇹 @attackufeiz]
+vless://256c5f48-4908-4255-83d1-c86cb58f22b4@fr.denditop.site:443?security=reality&encryption=none&pbk=wgoLhL4pRP0y6fu6He4qW_ElohCM_ANWJF3HEoUhNz4&headerType=none&fp=chrome&spx=/&type=tcp&flow=xtls-rprx-vision&sni=fr.denditop.site&sid=9c2378562188c3cb#[318ms Италия IT 🇮🇹 @attackufeiz]
+vless://11348c0f-b646-446a-bad7-b2b39c6de767@138.124.9.190:16558?encryption=none&flow=xtls-rprx-vision&type=raw&headerType=none&security=reality&fp=chrome&pbk=vDKgmefC_2JaSrrvQSsb7DU3KBeKUlXG1V0vgdjv_i4&sni=gpuopen.com&sid=0a856e071790b1#[335ms Италия IT 🇮🇹 @attackufeiz]
+vless://2bdf5db2-da78-4b5a-8a1f-8deb6c9b00df@93.77.167.35:443?encryption=none&type=xhttp&mode=auto&host=vk.com&path=%2Fuserapi&security=reality&fp=chrome&pbk=pxnzbJKyXFslwW8ZUNp04hP8BnBC7vpgvKhLpdwZvUk&sni=vk.com&sid=1a5cdc31a8649874#[415ms Италия IT 🇮🇹 @attackufeiz]
+vless://1235d730-707c-4a11-8ce3-ebb17561564b@45.12.133.207:443?security=reality&type=tcp&sni=yahoo.com&fp=chrome&sid=4dd1&pbk=0T96I8dvAUF7BxhbwTp0PfFfy9AHFDsXXpwDnP0i224#[460ms Италия IT 🇮🇹 @attackufeiz]
+vless://1235d730-707c-4a11-8ce3-ebb17561564b@45.12.133.207:443?encryption=none&type=raw&headerType=none&security=reality&fp=chrome&pbk=0T96I8dvAUF7BxhbwTp0PfFfy9AHFDsXXpwDnP0i224&sni=yahoo.com&sid=4dd1#[545ms Италия IT 🇮🇹 @attackufeiz]
+vless://079c1b04-7ef9-4c49-8a7a-849a18ba7b9b@83.222.20.64:17910?encryption=none&type=raw&headerType=none&security=reality&fp=chrome&pbk=KUhrhiJBplVCVCrAKP2KjIA_asOgkkvEEAxUJVofjgc&sni=yahoo.com&sid=8c09fb78b12f&spx=%2F#[556ms Италия IT 🇮🇹 @attackufeiz]
+vless://2a9ed01e-5455-44b4-a66a-76ee8165f0ac@77.73.232.61:19747?encryption=none&type=raw&headerType=none&security=reality&fp=chrome&pbk=ZO9dTeg1slvTXgVsBsaJ1BDvz_YUImTLJjbHs-GdVyM&sni=yahoo.com&sid=2001#[776ms Италия IT 🇮🇹 @attackufeiz]
+vless://39e282e0-5ae4-4ff4-8848-4b9346505c78@217.16.21.98:27472?encryption=none&flow=xtls-rprx-vision&type=raw&headerType=none&security=reality&fp=chrome&pbk=tfBYj32NRb7oc8lmVjr0nlote_rqpe_vd367HlcwxVs&sni=www.samsung.com&sid=b0#[2220ms Италия IT 🇮🇹 @attackufeiz]
