@@ -1,1 +1,1 @@
-vless://1235d730-707c-4a11-8ce3-ebb17561564b@45.12.133.207:443?security=reality&type=tcp&sni=yahoo.com&fp=chrome&sid=4dd1&pbk=0T96I8dvAUF7BxhbwTp0PfFfy9AHFDsXXpwDnP0i224#[602ms Италия IT 🇮🇹 @attackufeiz]
+vless://256c5f48-4908-4255-83d1-c86cb58f22b4@fr.denditop.site:443?security=reality&encryption=none&pbk=wgoLhL4pRP0y6fu6He4qW_ElohCM_ANWJF3HEoUhNz4&headerType=none&fp=chrome&spx=/&type=tcp&flow=xtls-rprx-vision&sni=fr.denditop.site&sid=9c2378562188c3cb#[290ms Франция FR 🇫🇷 @attackufeiz]
