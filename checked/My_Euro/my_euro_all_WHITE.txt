@@ -3,3 +3,5 @@
 #announce: @attackufeiz
 версия: 22.1.29
 #support-url: attackufeiz
+vless://3bd48b98-b398-448a-8a63-5771057e0135@147.45.111.65:443?fp=chrome&sid=ca5096&sni=apple.com&flow=xtls-rprx-vision&spx=/&type=tcp&security=reality&pbk=GsKY4XpP6sr905aHvCrj0JEHhgcAD5aEcmbjyLSNjAU#[292ms Италия IT 🇮🇹 @attackufeiz]
+vless://079c1b04-7ef9-4c49-8a7a-849a18ba7b9b@83.222.20.64:17910?encryption=none&fp=chrome&pbk=KUhrhiJBplVCVCrAKP2KjIA_asOgkkvEEAxUJVofjgc&security=reality&sid=8c09fb78b12f&sni=yahoo.com&type=tcp#[648ms Италия IT 🇮🇹 @attackufeiz]
