@@ -1,13 +1,3 @@
-trojan://8r<[9'l6hAO#8ZQi@104.20.6.134:2096?type=ws&host=Koma-YT.PAGeS.Dev&path=%2Ftr&security=tls&sni=Koma-YT.PAGeS.Dev#[🇬🇧] [tr-tl-ws] [260516-173653.636]
+trojan://humanity@185.18.250.245:443?path=%2Fassignment&security=tls&host=www.calmlunch.com&fp=chrome&type=ws&sni=www.calmlunch.com#%F0%9F%87%AB%F0%9F%87%B7%20France%2C%20Paris%20%7C%20%5BBL%5D
+trojan://humanity@185.18.250.252:443?alpn=h2%2Chttp%2F1.1&host=www.creationlong.org&path=%2Fassignment&security=tls&sni=www.creationlong.org&type=ws#%F0%9F%87%B5%F0%9F%87%B1%20Poland%2C%20Warsaw%20%7C%20%5BBL%5D
 trojan://humanity@185.18.250.252:443?security=tls&sni=www.creationlong.org&alpn=h2%2Chttp%2F1.1&fp=chrome&type=ws&host=www.creationlong.org&path=%2Fassignment#%F0%9F%87%B5%F0%9F%87%B1%20Poland%2C%20Warsaw%20%7C%20%5BBL%5D
-trojan://humanity@188.114.96.3:443?type=ws&host=www.gossipglove.com&path=%2Fassignment&security=tls&fp=chrome&sni=www.gossipglove.com#[🇫🇷] [tr-tl-ws] [260516-173656.008]
-vless://0f4d41cf-0be1-4fcc-ac41-53b843ba0752@172.66.44.118:443?encryption=none&type=ws&host=H7-83W.pAgeS.deV&path=%2F&security=tls&sni=H7-83W.pAgeS.deV#[🇩🇪] [vl-tl-ws] [260516-173739.154]
-vless://11d0d474-3cd1-4693-8a63-9228c9ccac54@144.31.57.101:443?type=tcp&headerType=none&security=reality&encryption=none&sni=www.nvidia.com&fp=chrome&pbk=ucxBjwTdSXQmmMKMBMv5JxIqdqN9MWKgLiXp_KSHels&sid=402c18554c1ed0&flow=xtls-rprx-vision#%F0%9F%87%B3%F0%9F%87%B1%20The%20Netherlands%2C%20Amsterdam%20%7C%20%5BBL%5D
-vless://13ebfdbb-8548-4468-905a-2d2265ae7cae@104.20.6.134:443?encryption=none&type=ws&host=thisisverytemp.bananalegends.com&path=%2Fwss%3Fed%3D2048&security=tls&alpn=http%2F1.1&fp=chrome&sni=thisisverytemp.bananalegends.com#[🇩🇪] [vl-tl-ws] [260516-173742.040]
-vless://18535741-e8b3-4b43-9348-785b55936751@57.129.41.216:80?encryption=none&type=ws&path=%2Fvless%2F&security=none#[🇩🇪] [vl-no-ws] [260516-173744.657]
-vless://18f88fb7-470f-fade-8da9-b57f35009c6d@195.209.88.216:443?encryption=none&type=ws&host=s28233.cdn.ngenix.net&path=%2F&security=tls&alpn=h2%2Chttp%2F1.1&fp=qq&sni=s28233.cdn.ngenix.net#[🇦🇹] [vl-tl-ws] [260516-173744.976]
-vless://25f86cb1-2140-4085-abcb-c3a0ea7a4be0@152.228.162.19:80?encryption=none&type=ws&path=%2Fvless%2F&security=none#[🇫🇷] [vl-no-ws] [260516-173753.168]
-vless://394f6981-a782-4779-9a85-e6cf22935d93@152.233.28.198:8443?encryption=none&type=raw&headerType=none&security=tls&sni=uk1.fromblancwithlove.com#[🇬🇧] [vl-tl-ra] [260516-173804.772]
-vless://3ddce082-7e03-429c-8af8-9a873d23f0ba@91.244.70.205:443?encryption=none&type=ws&path=%2F&security=none#[🇦🇹] [vl-no-ws] [260516-173807.709]
-vless://43488128-319e-f480-64ea-0acdc712e2a8@95.164.85.33:443?encryption=none&flow=xtls-rprx-vision&type=raw&headerType=none&security=reality&pbk=-n5iY1LH6WNzxc6_sQg_phf04553mzBExCqQzRvoA3U&sni=www.rakuten.co.jp&sid=41427aa565e28984#[🇳🇱] [vl-re-ra] [260516-173811.137]
-vless://4350fd8e-9f5d-47e7-a5f6-6161e0f7db9b@77.239.126.152:7443?encryption=none&flow=xtls-rprx-vision&type=raw&headerType=none&security=reality&pbk=5QAO98ot2U7TcGs_f6EEaQjCzNOJLNHqPf6smYsdFVI&sni=chat.deepseek.com&sid=be0ce047#[🇪🇪] [vl-re-ra] [260516-173811.177]
