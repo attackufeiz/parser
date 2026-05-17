@@ -3,3 +3,4 @@
 #announce: @attackufeiz
 версия: 22.1.29
 #support-url: attackufeiz
+vless://2815b6ce-2967-48ad-b996-6967a3f917ae@2.58.56.131:39800?type=xhttp&headerType=none&security=reality&encryption=none&sni=apple.com&fp=ios&pbk=bpHDYJWkA0h_nOqRBLUbuJJXfqmIZIMGcv07zcFpdCs&sid=dc27d60c096413b5&path=%2F#[381ms Швеция SE 🇸🇪 @attackufeiz]
