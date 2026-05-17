@@ -3,8 +3,4 @@
 #announce: @attackufeiz
 версия: 22.1.29
 #support-url: attackufeiz
-vless://11348c0f-b646-446a-bad7-b2b39c6de767@138.124.9.190:16558?encryption=none&flow=xtls-rprx-vision&type=raw&headerType=none&security=reality&fp=chrome&pbk=vDKgmefC_2JaSrrvQSsb7DU3KBeKUlXG1V0vgdjv_i4&sni=gpuopen.com&sid=0a856e071790b1#[257ms Швеция SE 🇸🇪 @attackufeiz]
-vless://2de34838-1270-4fb0-bbe5-dfc9aa5c01a1@5.180.54.54:443?encryption=none&flow=xtls-rprx-vision&type=raw&headerType=none&security=reality&pbk=ztJq-ujdckOvXgiARRnTean6syVqoBBWw0s5tL5IkhE&sni=www.microsoft.com#[289ms Испания ES 🇪🇸 @attackufeiz]
-trojan://JaFKnqNcvnBT63t3rquidGsln@91.210.108.201:443?type=raw&headerType=none&security=tls&sni=HL-FREEDOM-1.UNDEF.NETWORK#[315ms Швеция SE 🇸🇪 @attackufeiz]
-vless://30980fc4-8789-42df-80d1-0c8e5cd26881@cdn.veilvpn.fans:443?encryption=none&type=httpupgrade&host=cdn.veilvpn.fans&path=%2Fvpnhu&security=tls&fp=chrome&sni=cdn.veilvpn.fans#[375ms Испания ES 🇪🇸 @attackufeiz]
-vless://1235d730-707c-4a11-8ce3-ebb17561564b@45.12.133.207:443?encryption=none&type=raw&headerType=none&security=reality&fp=chrome&pbk=0T96I8dvAUF7BxhbwTp0PfFfy9AHFDsXXpwDnP0i224&sni=yahoo.com&sid=4dd1#[426ms Швеция SE 🇸🇪 @attackufeiz]
+vless://3e4694ad-c0f8-4ddc-ba03-6222cbe5f988@lt.safepass.click:443?type=xhttp&security=reality&fp=chrome&pbk=ELp9PUvVnkoFJYiscWrbnPXRnsYdELSCbIz9wNmMRRw&sni=www.samsung.com&mode=auto#[504ms Италия IT 🇮🇹 @attackufeiz]
