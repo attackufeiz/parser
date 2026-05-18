@@ -3,4 +3,10 @@
 #announce: @attackufeiz
 версия: 22.1.29
 #support-url: attackufeiz
-vless://3e4694ad-c0f8-4ddc-ba03-6222cbe5f988@lt.safepass.click:443?type=xhttp&security=reality&fp=chrome&pbk=ELp9PUvVnkoFJYiscWrbnPXRnsYdELSCbIz9wNmMRRw&sni=www.samsung.com&mode=auto#[504ms Италия IT 🇮🇹 @attackufeiz]
+vless://2de34838-1270-4fb0-bbe5-dfc9aa5c01a1@5.180.54.54:443?encryption=none&flow=xtls-rprx-vision&type=raw&headerType=none&security=reality&pbk=ztJq-ujdckOvXgiARRnTean6syVqoBBWw0s5tL5IkhE&sni=www.microsoft.com#[236ms Испания ES 🇪🇸 @attackufeiz]
+trojan://JaFKnqNcvnBT63t3rquidGsln@91.210.108.201:443?type=raw&headerType=none&security=tls&sni=HL-FREEDOM-1.UNDEF.NETWORK#[295ms Франция FR 🇫🇷 @attackufeiz]
+vless://11348c0f-b646-446a-bad7-b2b39c6de767@138.124.9.190:16558?encryption=none&flow=xtls-rprx-vision&type=raw&headerType=none&security=reality&fp=chrome&pbk=vDKgmefC_2JaSrrvQSsb7DU3KBeKUlXG1V0vgdjv_i4&sni=gpuopen.com&sid=0a856e071790b1#[557ms Дания DK 🇩🇰 @attackufeiz]
+vless://1235d730-707c-4a11-8ce3-ebb17561564b@45.12.133.207:443?encryption=none&type=raw&headerType=none&security=reality&pbk=0T96I8dvAUF7BxhbwTp0PfFfy9AHFDsXXpwDnP0i224&sni=yahoo.com&sid=4dd1#[570ms Испания ES 🇪🇸 @attackufeiz]
+vless://079c1b04-7ef9-4c49-8a7a-849a18ba7b9b@83.222.20.64:17910?encryption=none&type=raw&headerType=none&security=reality&fp=chrome&pbk=KUhrhiJBplVCVCrAKP2KjIA_asOgkkvEEAxUJVofjgc&sni=yahoo.com&sid=8c09fb78b12f&spx=%2F#[618ms Польша PL 🇵🇱 @attackufeiz]
+vless://2a9ed01e-5455-44b4-a66a-76ee8165f0ac@77.73.232.61:19747?encryption=none&type=raw&headerType=none&security=reality&fp=chrome&pbk=ZO9dTeg1slvTXgVsBsaJ1BDvz_YUImTLJjbHs-GdVyM&sni=yahoo.com&sid=2001#[829ms Латвия LV 🇱🇻 @attackufeiz]
+vless://2bfea3fd-6826-480c-917d-e3bc99b47a0f@193.233.133.55:443?encryption=none&type=raw&headerType=none&security=reality&pbk=13qS12jjsHCQpQfL3tEL2nHltgoTp1i-8kVcJ6odrEQ&sni=yahoo.com&sid=6635#[911ms Испания ES 🇪🇸 @attackufeiz]
