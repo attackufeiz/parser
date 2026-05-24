@@ -3,4 +3,3 @@
 #announce: @attackufeiz
 версия: 22.1.29
 #support-url: attackufeiz
-vless://02ca6335-4c91-412c-956f-f7f9e5630b6c@151.247.219.166:8443?encryption=none&flow=xtls-rprx-vision&type=raw&headerType=none&security=reality&pbk=g3m27BDO4X4sUsRkm5PcrqNxEH1stxgrrCAuUdFKHHo&sni=www.microsoft.com&sid=e0251211bd#[359ms Испания ES 🇪🇸 @attackufeiz]
