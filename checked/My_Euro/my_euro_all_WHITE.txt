@@ -3,8 +3,4 @@
 #announce: @attackufeiz
 версия: 22.1.29
 #support-url: attackufeiz
-vless://05e09c8a-a3a9-4bd5-acf9-2c3c87bab827@145.239.173.163:443?encryption=none&type=raw&headerType=none&security=none#[156ms Испания ES 🇪🇸 @attackufeiz]
-vless://01ef96b4-e7ec-4218-8ffe-a59e1cdfd836@downlod.musicribvar.com:45029?#[180ms Нидерланды NL 🇳🇱 @attackufeiz]
-vless://01ef96b4-e7ec-4218-8ffe-a59e1cdfd836@downlod.musicribvar.com:45029?encryption=none&type=raw&headerType=none&security=none#[188ms Нидерланды NL 🇳🇱 @attackufeiz]
-vless://04ae1b04-86a0-4bbf-bfb7-2132d10a6b8e@downlod.musicribvar.com:2010?encryption=none&type=grpc&security=none#[235ms Нидерланды NL 🇳🇱 @attackufeiz]
-vless://079c1b04-7ef9-4c49-8a7a-849a18ba7b9b@83.222.20.64:17910?encryption=none&type=raw&headerType=none&security=reality&fp=chrome&pbk=KUhrhiJBplVCVCrAKP2KjIA_asOgkkvEEAxUJVofjgc&sni=yahoo.com&sid=8c09fb78b12f&spx=%2F#[500ms Швейцария CH 🇨🇭 @attackufeiz]
+vless://079c1b04-7ef9-4c49-8a7a-849a18ba7b9b@83.222.20.64:17910?security=reality&encryption=none&pbk=KUhrhiJBplVCVCrAKP2KjIA_asOgkkvEEAxUJVofjgc&headerType=none&fp=chrome&spx=%2F&type=tcp&sni=yahoo.com&sid=8c09fb78b12f#[514ms Швейцария CH 🇨🇭 @attackufeiz]
