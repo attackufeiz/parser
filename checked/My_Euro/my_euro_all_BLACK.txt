@@ -1,5 +1,3 @@
-trojan://humanity@104.16.7.70:443?type=ws&host=www.calmlunch.com&path=%2Fassignment&security=tls&sni=www.calmlunch.com#[🇫🇷] [tr-tl-ws] [260528-140917.438]
-vless://027ddfdf-59c3-4cce-b75a-d6cec7ace390@89.125.37.77:443?encryption=none&flow=xtls-rprx-vision&type=raw&headerType=none&security=reality&fp=chrome&pbk=mO8C8IMouuBMVJA63JnS4xcdY7knrc7Hg_IclJR_MnE&sni=www.nvidia.com&sid=75#[🇫🇮] [vl-re-ra] [260528-140959.571]
-vless://049e56d8-0ba0-49e3-b764-ee04122b9f00@ov-italy1.09vpn.com:80?encryption=none&type=ws&path=%2Fvless%2F&security=none#[🇮🇹] [vl-no-ws] [260528-141000.740]
-vless://05e9d254-8ea8-4097-9450-d4aefc44bd7e@31.76.120.162:443?encryption=none&flow=xtls-rprx-vision&type=raw&headerType=none&security=reality&fp=chrome&pbk=MBkIKCORF_f5gqwnugFO7K4HUR8HAKPUuYVIarrQNU0&sni=www.sony.com&sid=bfc5#[🇫🇮] [vl-re-ra] [260528-141001.698]
-vless://09627a91-8d28-4bc3-b409-6359002d8fbb@18.185.37.5:443?encryption=none&type=raw&headerType=none&security=none#[🇩🇪] [vl-no-ra] [260528-141004.177]
+trojan://humanity@104.16.7.70:443?type=ws&host=www.calmlunch.com&path=%2Fassignment&security=tls&sni=www.calmlunch.com#[🇫🇷] [tr-tl-ws] [260528-200948.884]
+vless://027ddfdf-59c3-4cce-b75a-d6cec7ace390@89.125.37.77:443?encryption=none&flow=xtls-rprx-vision&type=raw&headerType=none&security=reality&fp=chrome&pbk=mO8C8IMouuBMVJA63JnS4xcdY7knrc7Hg_IclJR_MnE&sni=www.nvidia.com&sid=75#[🇫🇮] [vl-re-ra] [260528-201044.027]
+vless://049e56d8-0ba0-49e3-b764-ee04122b9f00@ov-italy1.09vpn.com:80?encryption=none&type=ws&path=%2Fvless%2F&security=none#[🇮🇹] [vl-no-ws] [260528-201045.556]
