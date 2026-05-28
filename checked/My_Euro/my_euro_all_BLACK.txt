@@ -1,3 +1,0 @@
-trojan://humanity@104.16.7.70:443?type=ws&host=www.calmlunch.com&path=%2Fassignment&security=tls&sni=www.calmlunch.com#[🇫🇷] [tr-tl-ws] [260528-200948.884]
-vless://027ddfdf-59c3-4cce-b75a-d6cec7ace390@89.125.37.77:443?encryption=none&flow=xtls-rprx-vision&type=raw&headerType=none&security=reality&fp=chrome&pbk=mO8C8IMouuBMVJA63JnS4xcdY7knrc7Hg_IclJR_MnE&sni=www.nvidia.com&sid=75#[🇫🇮] [vl-re-ra] [260528-201044.027]
-vless://049e56d8-0ba0-49e3-b764-ee04122b9f00@ov-italy1.09vpn.com:80?encryption=none&type=ws&path=%2Fvless%2F&security=none#[🇮🇹] [vl-no-ws] [260528-201045.556]
