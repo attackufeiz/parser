@@ -3,6 +3,7 @@
 #announce: @attackufeiz
 версия: 22.1.29
 #support-url: attackufeiz
-vless://04ae1b04-86a0-4bbf-bfb7-2132d10a6b8e@downlod.musicribvar.com:2010?encryption=none&type=grpc&security=none#[172ms Италия IT 🇮🇹 @attackufeiz]
+vless://04ae1b04-86a0-4bbf-bfb7-2132d10a6b8e@downlod.musicribvar.com:2010?encryption=none&type=grpc&security=none#[177ms Италия IT 🇮🇹 @attackufeiz]
+vless://08523efe-4923-4ea9-9adf-572aa14b0d9c@ger3.md-teach.com:32075?security=&encryption=none&host=play.google.com&headerType=http&type=tcp#[184ms Италия IT 🇮🇹 @attackufeiz]
 trojan://lpfAiPjB00@193.168.197.76:39425?type=raw&headerType=none&security=reality&fp=chrome&pbk=DoKBudC7Cd1TXpRPWAu7ClkqwEzEPVgfteqs7c0XwXk&sni=www.amazon.com&sid=8d0e8a871f53&spx=%2F#[419ms Италия IT 🇮🇹 @attackufeiz]
 vless://079c1b04-7ef9-4c49-8a7a-849a18ba7b9b@83.222.20.64:17910?encryption=none&type=raw&headerType=none&security=reality&fp=chrome&pbk=KUhrhiJBplVCVCrAKP2KjIA_asOgkkvEEAxUJVofjgc&sni=yahoo.com&sid=8c09fb78b12f&spx=%2F#[649ms Италия IT 🇮🇹 @attackufeiz]
