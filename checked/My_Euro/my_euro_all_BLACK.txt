@@ -1,2 +1,5 @@
-trojan://ESYEIBhqTR@138.124.182.202:39141?type=grpc&security=reality&fp=chrome&pbk=Fs_7mopOjYhbST1UIfhkwMEMG4d60WT7P6RiJLCvqBE&sni=www.sony.com&sid=fd46#[🇱🇻] [tr-re-gr] [260529-022515.696]
-vless://027ddfdf-59c3-4cce-b75a-d6cec7ace390@89.125.37.77:443?encryption=none&flow=xtls-rprx-vision&type=raw&headerType=none&security=reality&fp=chrome&pbk=mO8C8IMouuBMVJA63JnS4xcdY7knrc7Hg_IclJR_MnE&sni=www.nvidia.com&sid=75#[🇫🇮] [vl-re-ra] [260529-022613.850]
+trojan://ESYEIBhqTR@138.124.182.202:39141?type=grpc&security=reality&fp=chrome&pbk=Fs_7mopOjYhbST1UIfhkwMEMG4d60WT7P6RiJLCvqBE&sni=www.sony.com&sid=fd46#[🇱🇻] [tr-re-gr] [260529-082501.372]
+trojan://jprlmigrrmcmeu1u@104.18.32.47:2053?type=ws&host=ai999.seemed369.xyz&path=%2F%3Fed%3D2048&security=tls&alpn=h2%2Chttp%2F1.1&fp=chrome&sni=ai999.seemed369.xyz#[🇩🇪] [tr-tl-ws] [260529-082506.375]
+vless://027ddfdf-59c3-4cce-b75a-d6cec7ace390@89.125.37.77:443?encryption=none&flow=xtls-rprx-vision&type=raw&headerType=none&security=reality&fp=chrome&pbk=mO8C8IMouuBMVJA63JnS4xcdY7knrc7Hg_IclJR_MnE&sni=www.nvidia.com&sid=75#[🇫🇮] [vl-re-ra] [260529-082609.318]
+vless://04ac1574-583b-408b-a18f-259b62410ee3@199.232.57.91:80?encryption=none&type=ws&host=FIjjI.gloBal.sSl.faStly.NeT.&path=%2F&security=none#[🇳🇱] [vl-no-ws] [260529-082611.169]
+vless://04ac1574-583b-408b-a18f-259b62410ee3@199.232.57.91:80?encryption=none&type=ws&path=/&host=FIjjI.gloBal.sSl.faStly.NeT.#%F0%9F%87%B3%F0%9F%87%B1%20The%20Netherlands%2C%20Amsterdam%20%7C%20%5BBL%5D
