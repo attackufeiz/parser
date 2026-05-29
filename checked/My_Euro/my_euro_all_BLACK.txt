@@ -1,0 +1,2 @@
+trojan://ESYEIBhqTR@138.124.182.202:39141?type=grpc&security=reality&fp=chrome&pbk=Fs_7mopOjYhbST1UIfhkwMEMG4d60WT7P6RiJLCvqBE&sni=www.sony.com&sid=fd46#[🇱🇻] [tr-re-gr] [260529-022515.696]
+vless://027ddfdf-59c3-4cce-b75a-d6cec7ace390@89.125.37.77:443?encryption=none&flow=xtls-rprx-vision&type=raw&headerType=none&security=reality&fp=chrome&pbk=mO8C8IMouuBMVJA63JnS4xcdY7knrc7Hg_IclJR_MnE&sni=www.nvidia.com&sid=75#[🇫🇮] [vl-re-ra] [260529-022613.850]
