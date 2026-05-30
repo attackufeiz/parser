@@ -1,4 +1,7 @@
-trojan://ESYEIBhqTR@138.124.182.202:39141?type=grpc&security=reality&fp=chrome&pbk=Fs_7mopOjYhbST1UIfhkwMEMG4d60WT7P6RiJLCvqBE&sni=www.sony.com&sid=fd46#[🇱🇻] [tr-re-gr] [260530-002935.333]
-vless://027ddfdf-59c3-4cce-b75a-d6cec7ace390@89.125.37.77:443?encryption=none&flow=xtls-rprx-vision&type=raw&headerType=none&security=reality&fp=chrome&pbk=mO8C8IMouuBMVJA63JnS4xcdY7knrc7Hg_IclJR_MnE&sni=www.nvidia.com&sid=75#[🇫🇮] [vl-re-ra] [260530-003024.972]
+trojan://ESYEIBhqTR@138.124.182.202:39141?type=grpc&security=reality&fp=chrome&pbk=Fs_7mopOjYhbST1UIfhkwMEMG4d60WT7P6RiJLCvqBE&sni=www.sony.com&sid=fd46#[🇱🇻] [tr-re-gr] [260530-022312.345]
+trojan://Q40WHz2g1k-dqYqraBP6Ow@178.63.244.9:8443?type=raw&headerType=none&security=none#[🇩🇪] [tr-no-ra] [260530-022313.075]
+trojan://Tel:Arshiacomplus@45.154.96.35:14456?type=ws&host=oof.acp.us.ci&path=%2Fjdjsjeje&security=tls&alpn=h2%2Chttp%2F1.1&fp=chrome&sni=oof.acp.us.ci#%F0%9F%8C%90%20Anycast-IP%20%7C%20%F0%9F%87%AB%F0%9F%87%B7%20%7C%20%5BBL%5D
+trojan://humanity@104.18.8.83:443?type=ws&host=www.calmlunch.com&path=%2Fassignment&security=tls&sni=www.calmlunch.com#[🇫🇷] [tr-tl-ws] [260530-022315.518]
+vless://027ddfdf-59c3-4cce-b75a-d6cec7ace390@89.125.37.77:443?encryption=none&flow=xtls-rprx-vision&type=raw&headerType=none&security=reality&fp=chrome&pbk=mO8C8IMouuBMVJA63JnS4xcdY7knrc7Hg_IclJR_MnE&sni=www.nvidia.com&sid=75#[🇫🇮] [vl-re-ra] [260530-022412.897]
 vless://027ddfdf-59c3-4cce-b75a-d6cec7ace390@89.125.37.77:443?type=tcp&security=reality&flow=xtls-rprx-vision&fp=chrome&pbk=mO8C8IMouuBMVJA63JnS4xcdY7knrc7Hg_IclJR_MnE&sid=75&sni=www.nvidia.com#🇸🇪
-vless://05e9d254-8ea8-4097-9450-d4aefc44bd7e@31.76.120.162:443?encryption=none&flow=xtls-rprx-vision&type=raw&headerType=none&security=reality&fp=chrome&pbk=MBkIKCORF_f5gqwnugFO7K4HUR8HAKPUuYVIarrQNU0&sni=www.sony.com&sid=bfc5#[🇫🇮] [vl-re-ra] [260530-003027.580]
+vless://05e9d254-8ea8-4097-9450-d4aefc44bd7e@31.76.120.162:443?encryption=none&flow=xtls-rprx-vision&type=raw&headerType=none&security=reality&pbk=MBkIKCORF_f5gqwnugFO7K4HUR8HAKPUuYVIarrQNU0&sni=www.sony.com&sid=bfc5#[🇫🇮] [vl-re-ra] [260530-022416.085]
