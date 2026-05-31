@@ -498,23 +498,23 @@
   },
   "ss://YWVzLTI1Ni1jZmI6UzdLd1V1N3lCeTU4UzNHYQ@217.30.10.70:9042": {
     "alive": true,
-    "latency": 101,
-    "time": 1780199726.7865148,
-    "country": "LT",
+    "latency": 105,
+    "time": 1780235345.8453512,
+    "country": "SE",
     "host": "217.30.10.70"
   },
   "ss://YWVzLTI1Ni1jZmI6VFBxWDhlZGdiQVVSY0FNYg@217.30.10.70:9079": {
     "alive": true,
-    "latency": 101,
-    "time": 1780199727.9043636,
-    "country": "LT",
+    "latency": 105,
+    "time": 1780235348.8711705,
+    "country": "SE",
     "host": "217.30.10.70"
   },
   "ss://YWVzLTI1Ni1jZmI6VVdaUWVMUldua3Fna3NlcQ@217.30.10.70:9032": {
     "alive": true,
-    "latency": 102,
-    "time": 1780199733.0586965,
-    "country": "LT",
+    "latency": 105,
+    "time": 1780235353.0403006,
+    "country": "NL",
     "host": "217.30.10.70"
   },
   "ss://YWVzLTI1Ni1jZmI6VWtYUnNYdlI2YnVETUcyWQ@217.30.10.70:9001": {
@@ -540,9 +540,9 @@
   },
   "ss://YWVzLTI1Ni1jZmI6YmY3djMzNEtLRFYzWURoSA@217.30.10.70:9070": {
     "alive": true,
-    "latency": 105,
-    "time": 1780199767.714083,
-    "country": "LT",
+    "latency": 106,
+    "time": 1780235384.5430715,
+    "country": "PL",
     "host": "217.30.10.70"
   },
   "ss://YWVzLTI1Ni1jZmI6YzNOdEhKNXVqVjJ0R0Rmag@217.30.10.70:9084": {
@@ -555,8 +555,8 @@
   "ss://YWVzLTI1Ni1jZmI6ZkcyYXJ0VW1IZk5UMmNYNw@217.30.10.70:9018": {
     "alive": true,
     "latency": 105,
-    "time": 1780199798.023045,
-    "country": "LT",
+    "time": 1780235414.8229814,
+    "country": "SE",
     "host": "217.30.10.70"
   },
   "ss://YWVzLTI1Ni1jZmI6a1NQbXZ3ZEZ6R01NVzVwWQ@217.30.10.70:9007": {
@@ -708,9 +708,9 @@
   },
   "ss://YWVzLTI1Ni1jZmI6YUxwUXRmRVplNDQ1UXlIaw@217.30.10.70:9098": {
     "alive": true,
-    "latency": 105,
-    "time": 1780199742.1765282,
-    "country": "LT",
+    "latency": 106,
+    "time": 1780235359.184233,
+    "country": "SE",
     "host": "217.30.10.70"
   },
   "ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo0YTJyZml4b3BoZGpmZmE4S1ZBNEFh@193.29.139.157:8080": {
@@ -750,15 +750,15 @@
   },
   "ss://YWVzLTI1Ni1jZmI6UzdLd1V1N3lCeTU4UzNHYQ@5.188.181.201:9042": {
     "alive": true,
-    "latency": 73,
-    "time": 1780199726.7865298,
-    "country": "ES",
+    "latency": 74,
+    "time": 1780235345.8453653,
+    "country": "LT",
     "host": "5.188.181.201"
   },
   "ss://YWVzLTI1Ni1jZmI6VTZxbllSaGZ5RG1uOHNnbg@5.188.181.201:9041": {
     "alive": true,
-    "latency": 132,
-    "time": 1780174907.3699305,
+    "latency": 75,
+    "time": 1780235349.289669,
     "country": "LT",
     "host": "5.188.181.201"
   },
@@ -1555,9 +1555,9 @@
   },
   "ss://YWVzLTI1Ni1jZmI6UzdLd1V1N3lCeTU4UzNHYQ==@5.188.181.201:9042": {
     "alive": true,
-    "latency": 79,
-    "time": 1780199724.214866,
-    "country": "ES",
+    "latency": 74,
+    "time": 1780235344.9887812,
+    "country": "LT",
     "host": "5.188.181.201"
   },
   "ss://YWVzLTI1Ni1jZmI6VE4yWXFnaHhlRkRLWmZMVQ==@5.188.181.201:9037": {
@@ -1745,8 +1745,8 @@
   "ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpQV3BqUG8zdHFoUE40eVJa@8.209.74.72:20001": {
     "alive": true,
     "latency": 89,
-    "time": 1780199586.7257018,
-    "country": "DE",
+    "time": 1780235220.6782968,
+    "country": "AT",
     "host": "8.209.74.72"
   },
   "ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpSRkszOENnN0FQbmVTQjVjV0RjcGJt@switcher-nick-croquet.freesocks.work:443": {
@@ -3571,9 +3571,9 @@
   },
   "ss://YWVzLTI1Ni1jZmI6ZjhucEtnTnpka3NzMnl0bg@217.30.10.70:9088": {
     "alive": true,
-    "latency": 110,
-    "time": 1780161014.970881,
-    "country": "PL",
+    "latency": 105,
+    "time": 1780235414.593057,
+    "country": "SE",
     "host": "217.30.10.70"
   },
   "ss://YWVzLTI1Ni1jZmI6cVlFTjVIWDRKS2VWQ2RFQw@195.238.126.84:9039": {
@@ -3823,22 +3823,22 @@
   },
   "ss://bf92bdef-ab8d-4481-8798-2d39023357b2@net2.intfreed.ru:443?security=reality&amp;encryption=none&amp;pbk=JxwG7rAbNCd_C82p9K69AZDWh51fri2nm3wLHHrfyiw&amp;headerType=none&amp;fp=qq&amp;type=tcp&amp;flow=xtls-rprx-vision&amp;sni=video.intfreed.ru&amp;sid=7755e972daf8eec8": {
     "alive": true,
-    "latency": 15897,
-    "time": 1780199988.982344,
+    "latency": 421,
+    "time": 1780235603.7443924,
     "country": "RU",
     "host": "net2.intfreed.ru"
   },
   "ss://bf92bdef-ab8d-4481-8798-2d39023357b2@net2.intfreed.ru:443?security=reality&amp;encryption=none&amp;pbk=JxwG7rAbNCd_C82p9K69AZDWh51fri2nm3wLHHrfyiw&amp;host=%2F%3FBIA_TELEGRAM%40MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI&amp;headerType=none&amp;fp=qq&amp;type=tcp&amp;flow=xtls-rprx-vision&amp;sni=video.intfreed.ru&amp;sid=7755e972daf8eec8": {
     "alive": true,
-    "latency": 15841,
-    "time": 1780199988.9823534,
+    "latency": 5254,
+    "time": 1780235603.744408,
     "country": "RU",
     "host": "net2.intfreed.ru"
   },
   "ss://bf92bdef-ab8d-4481-8798-2d39023357b2@net2.intfreed.ru:443?security=reality&encryption=none&pbk=JxwG7rAbNCd_C82p9K69AZDWh51fri2nm3wLHHrfyiw&headerType=none&fp=qq&type=tcp&flow=xtls-rprx-vision&sni=video.intfreed.ru&sid=7755e972daf8eec8": {
     "alive": true,
-    "latency": 20571,
-    "time": 1780161215.1639743,
+    "latency": 5530,
+    "time": 1780235603.7444134,
     "country": "RU",
     "host": "net2.intfreed.ru"
   },
@@ -5237,9 +5237,9 @@
   },
   "ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpDSm1UQ0N4N0x0dWQ@108.181.58.239:8388": {
     "alive": true,
-    "latency": 86,
-    "time": 1780199586.724763,
-    "country": "NL",
+    "latency": 101,
+    "time": 1780235220.6777918,
+    "country": "AT",
     "host": "108.181.58.239"
   },
   "ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNToyOG1lUWRWcG1hN0prQ3RzRVVXY1M2Z2llS21GWGlhd0N3Z0ZNY0pxQ1hNcVMyZDlXckdwdWN5bk5haXk2bVVhc2Ria01pUlZESjVCaFNyckF1Z0N1Q0puWHViUkJIZXo@185.5.38.111:55988": {
@@ -5258,9 +5258,9 @@
   },
   "ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpDSm1UQ0N4N0x0dWQ=@108.181.58.239:8388": {
     "alive": true,
-    "latency": 85,
-    "time": 1780199586.7247484,
-    "country": "NL",
+    "latency": 111,
+    "time": 1780235220.6777692,
+    "country": "AT",
     "host": "108.181.58.239"
   },
   "ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTppQm55dUJ4WUZnSkYzUnJRWWlSVlFtaFlGdWZYTUdSMXp3cVI1TUxKQUtwYzNRTDRHRjNpTkM3eTJFM2t2UFFxWXg2ajdwbUNEV0R6dnV6Yk5GTGRyQjdhejdmN3lzM0M@185.5.38.111:55988": {
@@ -5335,9 +5335,9 @@
   },
   "ss://YWVzLTI1Ni1nY206S2l4THZLendqZWtHMDBybQ@38.180.197.41:8080": {
     "alive": true,
-    "latency": 103,
-    "time": 1780199823.5472243,
-    "country": "LT",
+    "latency": 105,
+    "time": 1780235443.010828,
+    "country": "IE",
     "host": "38.180.197.41"
   },
   "ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTp4NkVLYUNoSzF6RVlWZmN0eVhlVGZ5Q1NQUkZGSGNEUTFuYWg1VEVrblJQZTdCTmRkd2lqckdEWDd4YVlSNE5STlJmQ0s5THRRTEVnYWhNZkFHQ1RxWlR4Q2R6VktHZzk@185.5.38.111:55988?": {
@@ -6889,9 +6889,9 @@
   },
   "ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpDSm1UQ0N4N0x0dWQ=@108.181.126.122:8388": {
     "alive": true,
-    "latency": 92,
-    "time": 1780199586.7247353,
-    "country": "DE",
+    "latency": 103,
+    "time": 1780235220.6777494,
+    "country": "AT",
     "host": "108.181.126.122"
   },
   "ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpidkdhMDU0TWF1eUNPbWFlWXRXdU9K@195.93.253.240:14130": {
@@ -6945,8 +6945,8 @@
   },
   "ss://69a2af58-d74a-44ca-864a-e09b493f4274@lv-geo.dataload-cdn.ru:8443?encryption=none&amp;flow=xtls-rprx-vision&amp;fp=&amp;pbk=mgIiNnujl3pahea0WW3bCFqmdwofldk85e9XD3rQcQc&amp;security=reality&amp;sid=d8d900&amp;sni=www.vk.com&amp;type=tcp": {
     "alive": true,
-    "latency": 756,
-    "time": 1780199586.7211285,
+    "latency": 803,
+    "time": 1780235220.676308,
     "country": "RU",
     "host": "lv-geo.dataload-cdn.ru"
   },
@@ -7106,9 +7106,9 @@
   },
   "ss://YWVzLTI1Ni1nY206YTc0MmJkODUtMGY5Ny00MmJkLTg5MWYtYWEwMGRiZDFhNDYx@84.200.91.158:443": {
     "alive": true,
-    "latency": 129,
-    "time": 1780111878.0406744,
-    "country": "ES",
+    "latency": 88,
+    "time": 1780235499.6014993,
+    "country": "LT",
     "host": "84.200.91.158"
   },
   "ss://a5e746f7-328f-4b65-a65f-e2e2a4a5b1a9@212.34.142.191:8443?encryption=none&flow=xtls-rprx-vision&fp=&pbk=wNcFqVd4_PkgJbfgJJeouSU6Pn_Swuce4q4Chw5T0hY&security=reality&sid=f7aa9e61197d3ac6&sni=tradingview.com&type=tcp": {
@@ -7708,16 +7708,16 @@
   },
   "ss://YWVzLTI1Ni1jZmI6S0JHalpZY3k0U3lSU2htQQ==@217.30.10.70:9044": {
     "alive": true,
-    "latency": 103,
-    "time": 1780199712.0209713,
-    "country": "LT",
+    "latency": 105,
+    "time": 1780235333.214171,
+    "country": "PL",
     "host": "217.30.10.70"
   },
   "ss://YWVzLTI1Ni1jZmI6S0JHalpZY3k0U3lSU2htQQ@217.30.10.70:9044": {
     "alive": true,
-    "latency": 102,
-    "time": 1780199712.020979,
-    "country": "LT",
+    "latency": 106,
+    "time": 1780235333.214178,
+    "country": "PL",
     "host": "217.30.10.70"
   },
   "ss://bcc39590-45d5-4e21-95d9-184c188dea3e@158.160.186.6:443?security=reality&amp;encryption=none&amp;pbk=oqRus6Z_Q1jqJaTEPu7ENbRL0-XKOw54K0jwCCGLtEk&amp;headerType=none&amp;fp=qq&amp;type=tcp&amp;flow=xtls-rprx-vision&amp;sni=ads.x5.ru&amp;sid=c31f9a0e7d4b52": {
@@ -7855,9 +7855,9 @@
   },
   "vless://0e3a9376-1bf0-4b9e-a328-f28083bf6c34@193.56.3.125:8443?encryption=none&flow=xtls-rprx-vision&fp=&pbk=f1kpVFY3EHaR41TCKGqSWzZq7HG-WpyE2g_tlMm2US0&security=reality&sid=844dfa3681e4c4&sni=nl1.skysafe.online&type=tcp": {
     "alive": true,
-    "latency": 1245,
-    "time": 1780092872.5824084,
-    "country": "ES",
+    "latency": 1902,
+    "time": 1780236495.0668478,
+    "country": "SE",
     "host": "193.56.3.125"
   },
   "vless://1068d6c4-cdf3-4b68-8159-99d367af5f64@95.128.157.251:8443?flow=xtls-rprx-vision&security=reality&encryption=none&sni=ozone.ru&fp=chrome&pbk=J1HIxQSniHBlaSUXTLTWyUUpiaeyE8MWmA2evyFZbFQ&sid=9d32c1&type=tcp&headerType=none&host=%2f%3fBIA_TELEGRAM%40MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI&path=%2f": {
@@ -7925,9 +7925,9 @@
   },
   "ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpDSm1UQ0N4N0x0dWQ%3D@108.181.126.122:8388": {
     "alive": true,
-    "latency": 92,
-    "time": 1780199586.7247148,
-    "country": "NL",
+    "latency": 94,
+    "time": 1780235220.6777344,
+    "country": "AT",
     "host": "108.181.126.122"
   },
   "ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpRQ1hEeHVEbFRUTUQ3anRnSFVqSW9q@193.29.139.157:8080": {
@@ -8357,13 +8357,6 @@
     "country": "DE",
     "host": "83.222.23.81"
   },
-  "ss://5921e091-fd96-473e-ed51-626e6b61f089@3.127.218.176:443?encryption=none&type=tcp&headerType=none&security=none": {
-    "alive": true,
-    "latency": 151,
-    "time": 1780054397.0814455,
-    "country": "IT",
-    "host": "3.127.218.176"
-  },
   "ss://6c36723b-75a3-4816-9c19-1ccd3fde83fe@5.188.115.153:443?mode=gun&security=reality&encryption=none&pbk=FDrNbkUYPJS7uzUhgVsNuT8-TqXNeDm7bc24NgTM5GY&fp=firefox&spx=%2F&type=grpc&sni=ads.x5.ru&sid=846229eb47b3a5c9": {
     "alive": true,
     "latency": 284,
@@ -8784,13 +8777,6 @@
     "country": "CH",
     "host": "130.49.219.126"
   },
-  "ss://5fef98e5-955f-41dc-a816-6a5b6593471a@nl.dfsdfsawre.blog:443?security=reality&encryption=none&pbk=YLSRUKO-sm6In4ckqgVjagHKrWcA5r2aV7khO5brOUQ&headerType=none&fp=firefox&spx=%2FSeyyedMT&type=tcp&sni=p30afzar.com&sid=e3c5c005cae07eb7": {
-    "alive": true,
-    "latency": 458,
-    "time": 1780054397.081522,
-    "country": "IT",
-    "host": "nl.dfsdfsawre.blog"
-  },
   "ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo0THVTUWx1V3MzbWVBeTV2T283aWta@80.208.229.172:443": {
     "alive": true,
     "latency": 113,
@@ -9063,13 +9049,6 @@
     "time": 1780111585.918971,
     "country": "FR",
     "host": "185.5.38.111"
-  },
-  "ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNToyODVFY0M0Y0MzNmlZdEx1ZmVob1BodmdlQk1kUFRzMUZLU0tHdEVnaWZnVUVqRDN3QWN4dm0xMzR4ZG85WGVkeVpLQ0p5VU10WG83ZDJneUZqSnpBU2h2NURjeFA5Mjc=@46.249.109.128:56594": {
-    "alive": true,
-    "latency": 174,
-    "time": 1780054397.0837026,
-    "country": "AT",
-    "host": "46.249.109.128"
   },
   "ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNToyQTNvY3pFc25tVHl6c0dHQ1BncGQxRGhzdHNkUnFOdkdXR29NM0VMYUN5OE00OU1rQ1R6eG1ZRzMxdUhFQ3ZOM3VNbm1Za3p5MURab3RVNUhFVUxTaFVHcncxN0VTelQ@185.5.38.111:55988": {
     "alive": true,
@@ -9358,13 +9337,6 @@
     "country": "RU",
     "host": "nl-tx.sbrf-cdn342.ru"
   },
-  "vless://01ea3b87-b7b1-4aef-b24a-9c43fbd3b26f@nl-tx.sbrf-cdn342.ru:443?security=tls&alpn=http/1.1&encryption=none&insecure=0&host=/?BIA_TELEGRAM@MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI&headerType=none&fp=qq&type=tcp&allowInsecure=0&flow=xtls-rprx-vision&sni=sub.sbrf-cdn342.ru": {
-    "alive": true,
-    "latency": 379,
-    "time": 1780055605.2014415,
-    "country": "RU",
-    "host": "nl-tx.sbrf-cdn342.ru"
-  },
   "vless://01ea3b87-b7b1-4aef-b24a-9c43fbd3b26f@nl-tx.sbrf-cdn342.ru:443?security=tls&amp;alpn=http/1.1&amp;encryption=none&amp;headerType=none&amp;fp=qq&amp;type=tcp&amp;flow=xtls-rprx-vision&amp;sni=sub.sbrf-cdn342.ru": {
     "alive": true,
     "latency": 492,
@@ -9512,20 +9484,6 @@
     "country": "RU",
     "host": "uae.sbrf-cdn342.ru"
   },
-  "ss://01ef96b4-e7ec-4218-8ffe-a59e1cdfd836@downlod.musicribvar.com:45029?security=&amp;encryption=none&amp;headerType=none&amp;type=tcp": {
-    "alive": true,
-    "latency": 223,
-    "time": 1780054251.5171149,
-    "country": "IT",
-    "host": "downlod.musicribvar.com"
-  },
-  "ss://04ae1b04-86a0-4bbf-bfb7-2132d10a6b8e@downlod.musicribvar.com:2010?security=&amp;encryption=none&amp;type=grpc": {
-    "alive": true,
-    "latency": 200,
-    "time": 1780054251.5171611,
-    "country": "IT",
-    "host": "downlod.musicribvar.com"
-  },
   "ss://787b481b-06c1-40f6-83fe-9077924f078c@91.107.179.62:443?security=&amp;encryption=none&amp;headerType=none&amp;type=tcp": {
     "alive": true,
     "latency": 113,
@@ -9570,9 +9528,9 @@
   },
   "ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo0YTA1NWU5ZTkwMzEyOGEx@57.129.129.247:19308": {
     "alive": true,
-    "latency": 78,
-    "time": 1780199586.7223966,
-    "country": "DE",
+    "latency": 81,
+    "time": 1780235220.6769872,
+    "country": "AT",
     "host": "57.129.129.247"
   },
   "ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTotamQ0M2F5bjFteHpRNHQ2ZEVJN09R@45.91.171.108:157": {
@@ -9673,13 +9631,6 @@
     "country": "SE",
     "host": "uk.connfull.org"
   },
-  "ss://t-me-kinsta_service@91.107.179.224:47411?security=&amp;encryption=none&amp;headerType=none&amp;type=tcp": {
-    "alive": true,
-    "latency": 155,
-    "time": 1780054870.9308455,
-    "country": "IT",
-    "host": "91.107.179.224"
-  },
   "trojan://0FMrl2zi9o@138.124.182.202:56338?type=tcp&security=reality&pbk=Hbg-UI9nXbK55b92yQ_keS2wQY4HGBL075aklMOItlk&fp=chrome&sni=www.intel.com&sid=77&spx=/": {
     "alive": true,
     "latency": 404,
@@ -9701,55 +9652,6 @@
     "country": "IT",
     "host": "193.168.197.76"
   },
-  "trojan://telegram-id-privatevpns@15.188.222.65:22222?security=tls&alpn=http/1.1&headerType=none&type=tcp&sni=trojan.burgerip.co.uk": {
-    "alive": true,
-    "latency": 321,
-    "time": 1780055224.7100441,
-    "country": "IT",
-    "host": "15.188.222.65"
-  },
-  "trojan://telegram-id-privatevpns@15.188.222.65:22222?security=tls&amp%3Balpn=http/1.1&amp%3BheaderType=none&amp%3Btype=tcp&amp%3Bsni=trojan.burgerip.co.uk": {
-    "alive": true,
-    "latency": 309,
-    "time": 1780055224.710055,
-    "country": "IT",
-    "host": "15.188.222.65"
-  },
-  "trojan://telegram-id-privatevpns@15.188.222.65:22222?security=tls&amp;alpn=http/1.1&amp;headerType=none&amp;type=tcp&amp;sni=trojan.burgerip.co.uk": {
-    "alive": true,
-    "latency": 325,
-    "time": 1780055224.7100894,
-    "country": "IT",
-    "host": "15.188.222.65"
-  },
-  "trojan://telegram-id-privatevpns@15.188.222.65:22222?sni=trojan.burgerip.co.uk&peer=trojan.burgerip.co.uk&security=tls": {
-    "alive": true,
-    "latency": 313,
-    "time": 1780055224.710099,
-    "country": "IT",
-    "host": "15.188.222.65"
-  },
-  "trojan://telegram-id-v2rayvpnchannel@15.188.222.65:22223?security=tls&alpn=http/1.1&headerType=none&type=tcp&sni=trojan.burgerip.co.uk": {
-    "alive": true,
-    "latency": 332,
-    "time": 1780055530.4601502,
-    "country": "IT",
-    "host": "15.188.222.65"
-  },
-  "trojan://telegram-id-v2rayvpnchannel@15.188.222.65:22223?security=tls&amp%3Balpn=http/1.1&amp%3BheaderType=none&amp%3Btype=tcp&amp%3Bsni=trojan.burgerip.co.uk": {
-    "alive": true,
-    "latency": 324,
-    "time": 1780055530.460185,
-    "country": "IT",
-    "host": "15.188.222.65"
-  },
-  "trojan://telegram-id-v2rayvpnchannel@15.188.222.65:22223?security=tls&amp;alpn=http/1.1&amp;headerType=none&amp;type=tcp&amp;sni=trojan.burgerip.co.uk": {
-    "alive": true,
-    "latency": 304,
-    "time": 1780055530.460199,
-    "country": "IT",
-    "host": "15.188.222.65"
-  },
   "vless://01ea3b87-b7b1-4aef-b24a-9c43fbd3b26f@37.49.225.189:443?security=tls&alpn=http/1.1&encryption=none&headerType=none&fp=chrome&type=tcp&flow=xtls-rprx-vision-udp443&sni=sub.sbrf-cdn342.ru": {
     "alive": true,
     "latency": 334,
@@ -9768,13 +9670,6 @@
     "alive": true,
     "latency": 328,
     "time": 1780136581.6412177,
-    "country": "IT",
-    "host": "37.49.225.189"
-  },
-  "vless://01ea3b87-b7b1-4aef-b24a-9c43fbd3b26f@37.49.225.189:443?security=tls&alpn=http/1.1&encryption=none&insecure=1&headerType=none&fp=chrome&type=tcp&allowInsecure=1&flow=xtls-rprx-vision-udp443&sni=sub.sbrf-cdn342.ru": {
-    "alive": true,
-    "latency": 6924,
-    "time": 1780055595.6988955,
     "country": "IT",
     "host": "37.49.225.189"
   },
@@ -9866,13 +9761,6 @@
     "alive": true,
     "latency": 630,
     "time": 1780223969.2047317,
-    "country": "RU",
-    "host": "uae.sbrf-cdn342.ru"
-  },
-  "vless://01ea3b87-b7b1-4aef-b24a-9c43fbd3b26f@uae.sbrf-cdn342.ru:443?security=tls&alpn=http/1.1&encryption=none&insecure=0&headerType=none&fp=random&type=tcp&allowInsecure=0&flow=xtls-rprx-vision&sni=sub.sbrf-cdn342.ru": {
-    "alive": true,
-    "latency": 799,
-    "time": 1780055605.4198182,
     "country": "RU",
     "host": "uae.sbrf-cdn342.ru"
   },
@@ -11416,20 +11304,6 @@
     "country": "ES",
     "host": "159.69.118.154"
   },
-  "ss://01ea3b87-b7b1-4aef-b24a-9c43fbd3b26f@fr-tx.sbrf-cdn342.ru:443?security=tls&encryption=none&insecure=0&headerType=none&type=tcp&allowInsecure=0&flow=xtls-rprx-vision&sni=sub.sbrf-cdn342.ru": {
-    "alive": true,
-    "latency": 2166,
-    "time": 1780054247.6629562,
-    "country": "RU",
-    "host": "fr-tx.sbrf-cdn342.ru"
-  },
-  "ss://01ea3b87-b7b1-4aef-b24a-9c43fbd3b26f@fr-tx.sbrf-cdn342.ru:443?security=tls&encryption=none&insecure=1&headerType=none&type=tcp&allowInsecure=1&flow=xtls-rprx-vision-udp443&sni=sub.sbrf-cdn342.ru": {
-    "alive": true,
-    "latency": 2083,
-    "time": 1780054247.6629703,
-    "country": "RU",
-    "host": "fr-tx.sbrf-cdn342.ru"
-  },
   "ss://3ea2d8f2-12c1-4189-8cc5-91d0ee9f5ca0@185.228.232.150:443?type=tcp&security=reality&flow=xtls-rprx-vision&fp=chrome&pbk=C1hW1bTA9WOacIK-fHHg-HLkDZ3FY7FhEhAyldMSUEA&sid=a1b2c3d4e5f6&sni=queuev4.vk.com": {
     "alive": true,
     "latency": 1527,
@@ -11439,9 +11313,9 @@
   },
   "ss://4a26a7f0-ceca-440b-bc1a-577aab41a6e0@uk.connfull.org:2052?encryption=auto&headerType=http&path=%2F&security=none&type=tcp": {
     "alive": true,
-    "latency": 261,
-    "time": 1780199586.72044,
-    "country": "DE",
+    "latency": 253,
+    "time": 1780235220.6758525,
+    "country": "SE",
     "host": "uk.connfull.org"
   },
   "ss://4accc4fb-9ec3-41ae-ac3e-cc5d3dabe156@cdn10.cloud-vk.com:8443?security=reality&encryption=none&pbk=FGCQJa66btmmsTEqC-vhSUN9INHarHwKNyhLi131fAQ&headerType=&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=max.ru&sid=63992a9a07179bb2": {
@@ -11457,20 +11331,6 @@
     "time": 1780111585.916646,
     "country": "CZ",
     "host": "cdn16.cloud-vk.com"
-  },
-  "ss://TELEGRAM-CONFiGLiNE-73@151.101.195.8:80?mode=auto&path=/telegram-CONFiGLiNE,telegram-CONFiGLiNE,telegram-CONFiGLiNE,telegram-CONFiGLiNE,telegram-CONFiGLiNE,telegram-CONFiGLiNE,telegram-CONFiGLiNE,telegram-CONFiGLiNE?ed=2048&security=&encryption=none&host=swedensnew.global.ssl.fastly.net&type=xhttp": {
-    "alive": true,
-    "latency": 0,
-    "time": 1780054397.082608,
-    "country": "IT",
-    "host": "151.101.195.8"
-  },
-  "ss://TELEGRAM-CONFiGLiNE-73@151.101.195.8:80?mode=auto&path=/telegram-CONFiGLiNE,telegram-CONFiGLiNE,telegram-CONFiGLiNE,telegram-CONFiGLiNE,telegram-CONFiGLiNE,telegram-CONFiGLiNE,telegram-CONFiGLiNE,telegram-CONFiGLiNE?ed=2048&security=none&encryption=none&host=swedensnew.global.ssl.fastly.net&type=xhttp": {
-    "alive": true,
-    "latency": 0,
-    "time": 1780054397.0826116,
-    "country": "IT",
-    "host": "151.101.195.8"
   },
   "ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNToyQTFCWVU3SlJCUW1ZVXNzRDRpaHN1UzloZWhFWkdlYzVOZ2hpUmJXYU1QZW1lQVFxTVdmVWpmVlBSWkdRNGVaaDVVTWlWSkRjN1F6a2RqbUhIcWhGV3hGN1VBQ2FkNTc@185.5.38.111:55988": {
     "alive": true,
@@ -11514,13 +11374,6 @@
     "country": "FR",
     "host": "45.95.233.55"
   },
-  "ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpWM2l5cjNIVERBT0xxMVhuM0N6TUFD@176.97.65.164:8554": {
-    "alive": true,
-    "latency": 168,
-    "time": 1780054397.0865958,
-    "country": "AT",
-    "host": "176.97.65.164"
-  },
   "ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpjSlFScXVGUjNyVmtreWNCcHdiYnlIRWd5YzdTS2p3S3JCQ2JLUEZKWFo2ZnVoeWV2QUFXYjlUQVNBN0g4Mnh2QzIydmJBQjVRNnJOVTlKVUhxN0hEeFFrUEUxU3VRQjc@185.5.38.111:55988": {
     "alive": true,
     "latency": 164,
@@ -11541,13 +11394,6 @@
     "time": 1780213905.119872,
     "country": "LT",
     "host": "it5.taskflowhub.org"
-  },
-  "ss://YWVzLTI1Ni1nY206YW1hem9uc2tyMDU@3.67.67.95:443": {
-    "alive": true,
-    "latency": 148,
-    "time": 1780054687.7212408,
-    "country": "FI",
-    "host": "3.67.67.95"
   },
   "ss://YWVzLTI1Ni1nY206b1NxaUlhdHR4ZXdJeUJ3Q1dWOTNnNl9DTkZqZF84THI=@de1.3erveronline.com:443": {
     "alive": true,
@@ -11633,152 +11479,12 @@
     "country": "SE",
     "host": "172.238.120.124"
   },
-  "trojan://telegram-id-directvpn@51.44.104.68:22223?security=tls&alpn=http/1.1&headerType=none&type=tcp&sni=trojan.burgerip.co.uk": {
-    "alive": true,
-    "latency": 321,
-    "time": 1780055079.0323286,
-    "country": "IT",
-    "host": "51.44.104.68"
-  },
-  "trojan://telegram-id-directvpn@51.44.104.68:22223?security=tls&amp;alpn=http/1.1&amp;headerType=none&amp;type=tcp&amp;sni=trojan.burgerip.co.uk": {
-    "alive": true,
-    "latency": 321,
-    "time": 1780055079.032354,
-    "country": "IT",
-    "host": "51.44.104.68"
-  },
-  "trojan://telegram-id-directvpn@63.179.214.248:22223?security=tls&alpn=http/1.1&headerType=none&type=tcp&sni=trojan.burgerip.co.uk": {
-    "alive": true,
-    "latency": 329,
-    "time": 1780055126.2901676,
-    "country": "IT",
-    "host": "63.179.214.248"
-  },
-  "trojan://telegram-id-directvpn@63.179.214.248:22223?security=tls&amp;alpn=http/1.1&amp;headerType=none&amp;type=tcp&amp;sni=trojan.burgerip.co.uk": {
-    "alive": true,
-    "latency": 340,
-    "time": 1780055126.290209,
-    "country": "IT",
-    "host": "63.179.214.248"
-  },
-  "trojan://telegram-id-directvpn@63.180.99.32:22223?security=tls&alpn=http/1.1&headerType=none&type=tcp&sni=trojan.burgerip.co.uk": {
-    "alive": true,
-    "latency": 331,
-    "time": 1780055135.0243611,
-    "country": "IT",
-    "host": "63.180.99.32"
-  },
-  "trojan://telegram-id-directvpn@63.180.99.32:22223?security=tls&amp;alpn=http/1.1&amp;headerType=none&amp;type=tcp&amp;sni=trojan.burgerip.co.uk": {
-    "alive": true,
-    "latency": 333,
-    "time": 1780055135.0243735,
-    "country": "IT",
-    "host": "63.180.99.32"
-  },
-  "trojan://telegram-id-privatevpns@51.44.104.68:22222?Telegram=@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad&amp;security=tls&amp;alpn=http/1.1&amp;headerType=none&amp;type=tcp&amp;sni=trojan.burgerip.co.uk": {
-    "alive": true,
-    "latency": 330,
-    "time": 1780055427.7058787,
-    "country": "IT",
-    "host": "51.44.104.68"
-  },
-  "trojan://telegram-id-privatevpns@51.44.104.68:22222?security=tls&alpn=http/1.1&headerType=none&type=tcp&sni=trojan.burgerip.co.uk": {
-    "alive": true,
-    "latency": 321,
-    "time": 1780055427.7059426,
-    "country": "IT",
-    "host": "51.44.104.68"
-  },
-  "trojan://telegram-id-privatevpns@51.44.104.68:22222?security=tls&amp;alpn=http/1.1&amp;headerType=none&amp;type=tcp&amp;sni=trojan.burgerip.co.uk": {
-    "alive": true,
-    "latency": 333,
-    "time": 1780055427.705968,
-    "country": "IT",
-    "host": "51.44.104.68"
-  },
-  "trojan://telegram-id-privatevpns@63.179.214.248:22222?security=tls&alpn=http/1.1&headerType=none&type=tcp&sni=trojan.burgerip.co.uk": {
-    "alive": true,
-    "latency": 316,
-    "time": 1780055494.2510765,
-    "country": "IT",
-    "host": "63.179.214.248"
-  },
-  "trojan://telegram-id-privatevpns@63.179.214.248:22222?security=tls&amp;alpn=http/1.1&amp;headerType=none&amp;type=tcp&amp;sni=trojan.burgerip.co.uk": {
-    "alive": true,
-    "latency": 346,
-    "time": 1780055494.2511241,
-    "country": "IT",
-    "host": "63.179.214.248"
-  },
-  "trojan://telegram-id-privatevpns@63.180.99.32:22222?security=tls&alpn=http/1.1&headerType=none&type=tcp&sni=trojan.burgerip.co.uk": {
-    "alive": true,
-    "latency": 325,
-    "time": 1780055505.9970896,
-    "country": "IT",
-    "host": "63.180.99.32"
-  },
-  "trojan://telegram-id-privatevpns@63.180.99.32:22222?security=tls&amp;alpn=http/1.1&amp;headerType=none&amp;type=tcp&amp;sni=trojan.burgerip.co.uk": {
-    "alive": true,
-    "latency": 330,
-    "time": 1780055505.9971454,
-    "country": "IT",
-    "host": "63.180.99.32"
-  },
-  "trojan://telegram-id-privatevpns@63.180.99.32:22222?sni=trojan.burgerip.co.uk&peer=trojan.burgerip.co.uk&security=tls": {
-    "alive": true,
-    "latency": 353,
-    "time": 1780055505.9971573,
-    "country": "IT",
-    "host": "63.180.99.32"
-  },
-  "trojan://telegram-id-v2rayvpnchannel@51.44.104.68:22223?security=tls&amp;alpn=http/1.1&amp;headerType=none&amp;type=tcp&amp;sni=trojan.burgerip.co.uk": {
-    "alive": true,
-    "latency": 1426,
-    "time": 1780055554.6536887,
-    "country": "IT",
-    "host": "51.44.104.68"
-  },
-  "trojan://telegram-id-v2rayvpnchannel@63.179.214.248:22223?security=tls&alpn=http/1.1&headerType=none&type=tcp&sni=trojan.burgerip.co.uk": {
-    "alive": true,
-    "latency": 339,
-    "time": 1780055563.5738873,
-    "country": "IT",
-    "host": "63.179.214.248"
-  },
-  "trojan://telegram-id-v2rayvpnchannel@63.179.214.248:22223?security=tls&amp;alpn=http/1.1&amp;headerType=none&amp;type=tcp&amp;sni=trojan.burgerip.co.uk": {
-    "alive": true,
-    "latency": 339,
-    "time": 1780055563.5739048,
-    "country": "IT",
-    "host": "63.179.214.248"
-  },
-  "trojan://telegram-id-v2rayvpnchannel@63.180.99.32:22223?security=tls&alpn=http/1.1&headerType=none&type=tcp&sni=trojan.burgerip.co.uk": {
-    "alive": true,
-    "latency": 334,
-    "time": 1780055564.6291509,
-    "country": "IT",
-    "host": "63.180.99.32"
-  },
-  "trojan://telegram-id-v2rayvpnchannel@63.180.99.32:22223?security=tls&amp;alpn=http/1.1&amp;headerType=none&amp;type=tcp&amp;sni=trojan.burgerip.co.uk": {
-    "alive": true,
-    "latency": 331,
-    "time": 1780055564.6291656,
-    "country": "IT",
-    "host": "63.180.99.32"
-  },
   "vless://01ea3b87-b7b1-4aef-b24a-9c43fbd3b26f@37.49.225.189:443?security=tls&alpn=http/1.1&encryption=none&insecure=0&host=/?BIA_TELEGRAM@MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI&headerType=none&fp=chrome&type=tcp&allowInsecure=0&flow=xtls-rprx-vision-udp443&sni=sub.sbrf-cdn342.ru": {
     "alive": true,
     "latency": 242,
     "time": 1780080893.3751948,
     "country": "IT",
     "host": "37.49.225.189"
-  },
-  "vless://01ea3b87-b7b1-4aef-b24a-9c43fbd3b26f@fr-tx.sbrf-cdn342.ru:443?Telegram=@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad&security=tls&encryption=none&insecure=0&headerType=none&type=tcp&allowInsecure=0&flow=xtls-rprx-vision&sni=sub.sbrf-cdn342.ru": {
-    "alive": true,
-    "latency": 1470,
-    "time": 1780055595.6990585,
-    "country": "RU",
-    "host": "fr-tx.sbrf-cdn342.ru"
   },
   "vless://01ea3b87-b7b1-4aef-b24a-9c43fbd3b26f@fr-tx.sbrf-cdn342.ru:443?allow_insecure=0&flow=xtls-rprx-vision&fp=chrome&host=fr-tx.sbrf-cdn342.ru&security=tls&sni=sub.sbrf-cdn342.ru": {
     "alive": true,
@@ -11815,24 +11521,10 @@
     "country": "RU",
     "host": "fr-tx.sbrf-cdn342.ru"
   },
-  "vless://01ea3b87-b7b1-4aef-b24a-9c43fbd3b26f@nl-tx.sbrf-cdn342.ru:443?Telegram=@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad&security=tls&alpn=http%2F1.1&encryption=none&headerType=none&fp=qq&type=tcp&flow=xtls-rprx-vision&sni=sub.sbrf-cdn342.ru": {
-    "alive": true,
-    "latency": 713,
-    "time": 1780055595.699893,
-    "country": "RU",
-    "host": "nl-tx.sbrf-cdn342.ru"
-  },
   "vless://01ea3b87-b7b1-4aef-b24a-9c43fbd3b26f@nl-tx.sbrf-cdn342.ru:443?allow_insecure=0&flow=xtls-rprx-vision&fp=qq&host=nl-tx.sbrf-cdn342.ru&security=tls&sni=sub.sbrf-cdn342.ru": {
     "alive": true,
     "latency": 792,
     "time": 1780112759.4484556,
-    "country": "RU",
-    "host": "nl-tx.sbrf-cdn342.ru"
-  },
-  "vless://01ea3b87-b7b1-4aef-b24a-9c43fbd3b26f@nl-tx.sbrf-cdn342.ru:443?encryption=none&amp;flow=xtls-rprx-vision&amp;type=tcp&amp;headerType=none&amp;security=tls&amp;fp=qq&amp;sni=sub.sbrf-cdn342.ru&amp;alpn=http/1.1": {
-    "alive": true,
-    "latency": 2575,
-    "time": 1780055598.1786773,
     "country": "RU",
     "host": "nl-tx.sbrf-cdn342.ru"
   },
@@ -11920,13 +11612,6 @@
     "country": "FI",
     "host": "158.160.57.73"
   },
-  "vless://040ec0c5-5349-4720-8ffc-e3572751fc06@51.250.102.69:443?flow=xtls-rprx-vision&encryption=none&type=tcp&security=reality&fp=safari&sni=cdp.x5.ru&pbk=wgXD4k3A16WR0aL63N9Mx8xoqFigJLyQWJXi-l3MPXI&sid=8ec792bfd725be8a": {
-    "alive": true,
-    "latency": 1485,
-    "time": 1780055620.0515702,
-    "country": "IT",
-    "host": "51.250.102.69"
-  },
   "vless://040ec0c5-5349-4720-8ffc-e3572751fc06@51.250.103.104:443?flow=xtls-rprx-vision&encryption=none&type=tcp&security=reality&fp=safari&sni=cdp.x5.ru&pbk=wgXD4k3A16WR0aL63N9Mx8xoqFigJLyQWJXi-l3MPXI&sid=8ec792bfd725be8a": {
     "alive": true,
     "latency": 458,
@@ -11940,13 +11625,6 @@
     "time": 1780080918.5792928,
     "country": "FI",
     "host": "51.250.24.232"
-  },
-  "vless://040ec0c5-5349-4720-8ffc-e3572751fc06@51.250.97.18:443?flow=xtls-rprx-vision&encryption=none&type=tcp&security=reality&fp=safari&sni=cdp.x5.ru&pbk=wgXD4k3A16WR0aL63N9Mx8xoqFigJLyQWJXi-l3MPXI&sid=8ec792bfd725be8a": {
-    "alive": true,
-    "latency": 862,
-    "time": 1780055620.051604,
-    "country": "IT",
-    "host": "51.250.97.18"
   },
   "vless://040ec0c5-5349-4720-8ffc-e3572751fc06@84.201.136.5:443?flow=xtls-rprx-vision&encryption=none&type=tcp&security=reality&fp=safari&sni=cdp.x5.ru&pbk=wgXD4k3A16WR0aL63N9Mx8xoqFigJLyQWJXi-l3MPXI&sid=8ec792bfd725be8a": {
     "alive": true,
@@ -11997,18 +11675,11 @@
     "country": "ES",
     "host": "host.xoroute.com"
   },
-  "vless://086e23e0-7930-4ea2-b3e9-dbe70ea155d6@51.250.18.25:443?flow=xtls-rprx-vision&amp;encryption=none&amp;type=tcp&amp;security=reality&amp;fp=chrome&amp;sni=ads.x5.ru&amp;pbk=oqRus6Z_Q1jqJaTEPu7ENbRL0-XKOw54K0jwCCGLtEk&amp;sid=5d8e1a9c4f72b3": {
-    "alive": true,
-    "latency": 499,
-    "time": 1780055634.6662107,
-    "country": "IT",
-    "host": "51.250.18.25"
-  },
   "vless://08c47303-afce-47ba-9b0e-64d9abc033b7@193.168.46.180:443?flow=xtls-rprx-vision&encryption=none&type=tcp&security=reality&fp=qq&sni=rruu.persik.host&pbk=D0FqzTuVSzCF8IcFo64SFIpMsaGV47LW3el2GCCVoFY&sid=c1a7e9b4711d5f60": {
     "alive": true,
-    "latency": 368,
-    "time": 1780200821.2847495,
-    "country": "ES",
+    "latency": 282,
+    "time": 1780236472.0108988,
+    "country": "SE",
     "host": "193.168.46.180"
   },
   "ss://01ea3b87-b7b1-4aef-b24a-9c43fbd3b26f@fr-tx.sbrf-cdn342.ru:443?security=tls&amp;encryption=none&amp;insecure=1&amp;headerType=none&amp;type=tcp&amp;allowInsecure=1&amp;flow=xtls-rprx-vision-udp443&amp;sni=sub.sbrf-cdn342.": {
@@ -12608,9 +12279,9 @@
   },
   "ss://YWVzLTI1Ni1jZmI6YmY3djMzNEtLRFYzWURoSA==@217.30.10.70:9070": {
     "alive": true,
-    "latency": 103,
-    "time": 1780199767.7140694,
-    "country": "LT",
+    "latency": 105,
+    "time": 1780235384.5430567,
+    "country": "PL",
     "host": "217.30.10.70"
   },
   "ss://YWVzLTI1Ni1jZmI6ZjYzZ2c4RXJ1RG5Vcm16NA==@217.30.10.70:9010": {
@@ -13343,37 +13014,37 @@
   },
   "vless://04b6249e-7375-4263-b47c-6a9e7ad01b54@212.100.171.194:17567?encryption=none&type=raw&headerType=none&security=reality&fp=chrome&pbk=4aKrDEJaWz_lNRA02ltvjqzh1GvI5wzB-ZPhANYYYU8&sni=www.speedtest.net&sid=9891d7&spx=%2F": {
     "alive": true,
-    "latency": 214,
-    "time": 1780200811.6288483,
-    "country": "DE",
+    "latency": 554,
+    "time": 1780236464.4932075,
+    "country": "SE",
     "host": "212.100.171.194"
   },
   "vless://04b6249e-7375-4263-b47c-6a9e7ad01b54@212.100.171.194:17567?security=reality&amp;encryption=none&amp;pbk=4aKrDEJaWz_lNRA02ltvjqzh1GvI5wzB-ZPhANYYYU8&amp;host=v2rayNplus-v2rayNplus-v2rayNplus&amp;headerType=none&amp;fp=chrome&amp;spx=/&amp;type=tcp&amp;sni=www.speedtest.net&amp;sid=9891d7": {
     "alive": true,
-    "latency": 229,
-    "time": 1780200811.628887,
-    "country": "DE",
+    "latency": 499,
+    "time": 1780236464.4932265,
+    "country": "SE",
     "host": "212.100.171.194"
   },
   "vless://04b6249e-7375-4263-b47c-6a9e7ad01b54@212.100.171.194:17567?security=reality&encryption=none&pbk=4aKrDEJaWz_lNRA02ltvjqzh1GvI5wzB-ZPhANYYYU8&headerType=none&fp=chrome&spx=/&type=tcp&sni=www.speedtest.net&sid=9891d7": {
     "alive": true,
-    "latency": 293,
-    "time": 1780200811.6289306,
-    "country": "DE",
+    "latency": 477,
+    "time": 1780236464.493251,
+    "country": "SE",
     "host": "212.100.171.194"
   },
   "vless://04b6249e-7375-4263-b47c-6a9e7ad01b54@212.100.171.194:17567?security=reality&encryption=none&pbk=4aKrDEJaWz_lNRA02ltvjqzh1GvI5wzB-ZPhANYYYU8&host=v2rayNplus-v2rayNplus-v2rayNplus&headerType=none&fp=chrome&spx=/&type=tcp&sni=www.speedtest.net&sid=9891d7": {
     "alive": true,
-    "latency": 261,
-    "time": 1780200811.6289594,
-    "country": "DE",
+    "latency": 486,
+    "time": 1780236464.4932728,
+    "country": "SE",
     "host": "212.100.171.194"
   },
   "vless://04b6249e-7375-4263-b47c-6a9e7ad01b54@212.100.171.194:17567?type=tcp&security=reality&pbk=4aKrDEJaWz_lNRA02ltvjqzh1GvI5wzB-ZPhANYYYU8&fp=chrome&sni=www.speedtest.net&sid=9891d7&spx=%2F": {
     "alive": true,
-    "latency": 248,
-    "time": 1780200811.6289732,
-    "country": "DE",
+    "latency": 466,
+    "time": 1780236464.4932795,
+    "country": "SE",
     "host": "212.100.171.194"
   },
   "vless://04b6249e-7375-4263-b47c-6a9e7ad01b54@212.100.171.194:17567?type=tcp&security=reality&pbk=4aKrDEJaWz_lNRA02ltvjqzh1GvI5wzB-ZPhANYYYU8&fp=chrome&sni=www.speedtest.net&sid=9891d7&spx=/": {
@@ -13602,9 +13273,9 @@
   },
   "vless://107d9e9e-5634-44ef-a90b-c5118832fae6@nider01.lumixvpn.org:443?type=tcp&headerType=none&security=reality&encryption=none&sni=nider01.lumixvpn.org&fp=qq&pbk=IQ3026lP53IQEqYiIqQXhyImHFt9VbPRDGOcFDTVmD4&sid=ac956cdfcdbc35af&spx=%2F&flow=xtls-rprx-vision": {
     "alive": true,
-    "latency": 1499,
-    "time": 1780176015.4093199,
-    "country": "LU",
+    "latency": 412,
+    "time": 1780236505.3795533,
+    "country": "SE",
     "host": "nider01.lumixvpn.org"
   },
   "vless://1099da52-a516-40fc-9f4c-743b4d55231a@server.leedsroastery.com:80?alpn=h2%2Chttp%2F1.1&encryption=none&fp=chrome&security=tls&sni=&type=tcp": {
@@ -13756,8 +13427,8 @@
   },
   "vless://110d7bad-5e17-4ce3-afd0-2cf2ebc71787@la1.zqwerty.ru:2053?encryption=none&fp=chrome&pbk=aFsY-EZjSNTomlAFShKwQIQMJ5pHiZQXXJpWvcz8WkQ&security=reality&sid=0858af97f4e7324d&sni=music.yandex.ru&type=tcp": {
     "alive": true,
-    "latency": 717,
-    "time": 1780162081.2653368,
+    "latency": 794,
+    "time": 1780236510.2207334,
     "country": "RU",
     "host": "la1.zqwerty.ru"
   },
@@ -13791,9 +13462,9 @@
   },
   "vless://11beaf11-726d-4c11-8ce9-27308c1c608c@157.173.127.225:443?security=reality&encryption=none&pbk=v3EwzA9RIIh5Ndxm-gypRY6RCJhOpQ-2WO7KaH8nsC8&headerType=none&fp=random&type=tcp&sni=analytics.google.com&sid=eab26c4a32": {
     "alive": true,
-    "latency": 255,
-    "time": 1780200865.7103078,
-    "country": "BE",
+    "latency": 330,
+    "time": 1780236514.3403008,
+    "country": "SE",
     "host": "157.173.127.225"
   },
   "vless://11ca0eac-aad7-46b0-af44-6208c9514bfa@51.250.31.108:443?security=reality&encryption=none&pbk=MzCnOHWYm3Bgl-VtgDq4sPFVOHG2lEw_KhIH5EXAvEQ&headerType=none&fp=qq&type=tcp&flow=xtls-rprx-vision&sni=ads.x5.ru": {
@@ -14246,9 +13917,9 @@
   },
   "vless://180a65ce-f309-47ec-b8ee-2f7a9a8a0fe2@45.15.152.167:443?type=tcp&security=reality&fp=chrome&pbk=2lReHLDD5UCpT8FyBLPyrrIbi6MNKDBTArtCwI3NUQA&sid=4b1b&sni=yahoo.com": {
     "alive": true,
-    "latency": 537,
-    "time": 1780200890.3289042,
-    "country": "DE",
+    "latency": 596,
+    "time": 1780236535.2731752,
+    "country": "SE",
     "host": "45.15.152.167"
   },
   "vless://180a65ce-f309-47ec-b8ee-2f7a9a8a0fe2@45.15.152.167:443?type=tcp&security=reality&fp=chrome&pbk=2lReHLDD5UCpT8FyBLPyrrIbi6MNKDBTArtCwI3NUQA&sid=4b1b&sni=yahoo.com&spx=/": {
@@ -14274,16 +13945,16 @@
   },
   "vless://18664eed-9d0f-475b-a5d6-0842239a6b1d@62.192.174.198:443?security=reality&encryption=none&pbk=HkLK62c3szw51gYtORRnPlO0v6kxOSd_aCd0J4rTKzo&headerType=none&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=gosuslugi.ru&sid=2ee3a5b4ed37e2": {
     "alive": true,
-    "latency": 254,
-    "time": 1780200890.6574135,
-    "country": "DE",
+    "latency": 246,
+    "time": 1780236537.3551838,
+    "country": "SE",
     "host": "62.192.174.198"
   },
   "vless://18664eed-9d0f-475b-a5d6-0842239a6b1d@62.192.174.198:443?type=tcp&encryption=none&flow=xtls-rprx-vision&sni=gosuslugi.ru&fp=chrome&security=reality&pbk=HkLK62c3szw51gYtORRnPlO0v6kxOSd_aCd0J4rTKzo&sid=2ee3a5b4ed37e2": {
     "alive": true,
-    "latency": 251,
-    "time": 1780200890.6574323,
-    "country": "ES",
+    "latency": 254,
+    "time": 1780236537.355202,
+    "country": "SE",
     "host": "62.192.174.198"
   },
   "ss://01ea3b87-b7b1-4aef-b24a-9c43fbd3b26f@uae.sbrf-cdn342.ru:443?security=tls&encryption=none&insecure=0&headerType=none&fp=random&type=tcp&allowInsecure=0&flow=xtls-rprx-vision&sni=sub.sbrf-cdn342.ru": {
@@ -17235,9 +16906,9 @@
   },
   "vless://16f443d1-bf0d-4841-bad2-92796c429b70@fr.vpber.info:443?security=reality&encryption=none&pbk=fhacrLdXUT3a0PjnL5EVARAmGiNBn_0ysfCJfL3n_gQ&headerType=none&fp=chrome&allowinsecure=0&type=tcp&flow=xtls-rprx-vision&sni=fr.vpber.info&sid=4be4130078ebed0a": {
     "alive": true,
-    "latency": 403,
-    "time": 1780200884.5885048,
-    "country": "BE",
+    "latency": 385,
+    "time": 1780236529.7677267,
+    "country": "SE",
     "host": "fr.vpber.info"
   },
   "vless://16f443d1-bf0d-4841-bad2-92796c429b70@ru.vpber.store:443?security=reality&encryption=none&pbk=fhacrLdXUT3a0PjnL5EVARAmGiNBn_0ysfCJfL3n_gQ&headerType=none&fp=chrome&allowinsecure=0&type=tcp&flow=xtls-rprx-vision&sni=ru.vpber.store&sid=4be4130078ebed0a": {
@@ -18152,9 +17823,9 @@
   },
   "ss://8dc7722c-2767-4eea-a28b-2f8daacc07e3@sca11.myfymain.com:8880?mode=gun&security=none&encryption=none&authority=%2F%3FBIA_TELEGRAM%40MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI&type=grpc": {
     "alive": true,
-    "latency": 159,
-    "time": 1780199586.721758,
-    "country": "DE",
+    "latency": 4239,
+    "time": 1780235220.676664,
+    "country": "SE",
     "host": "sca11.myfymain.com"
   },
   "ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTp1Uk91RXFzTDhJVU1NVmI0d0R3bkdV@57.129.121.230:10443?type=tcp&amp;headerType=none": {
@@ -18376,9 +18047,9 @@
   },
   "vless://01ea3b87-b7b1-4aef-b24a-9c43fbd3b26f@5.253.31.13:443?allowInsecure=1&alpn=http%2F1.1&encryption=none&flow=xtls-rprx-vision&fp=random&security=tls&sni=sub.sbrf-cdn342.ru&type=tcp": {
     "alive": true,
-    "latency": 384,
-    "time": 1780136581.6412718,
-    "country": "IT",
+    "latency": 280,
+    "time": 1780236401.398385,
+    "country": "SE",
     "host": "5.253.31.13"
   },
   "vless://01ea3b87-b7b1-4aef-b24a-9c43fbd3b26f@nl-tx.sbrf-cdn342.ru:443?Telegram=@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad&Telegram=@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad&security=tls&encryption=none&alpn=http/1.1&headerType=none&fp=safari&type=tcp&flow=xtls-rprx-vision&sni=sub.sbrf-cdn342.ru": {
@@ -18726,9 +18397,9 @@
   },
   "vless://0ca31b9b-e360-4d04-8bde-9ec4f286abbb@de.atlasl.ir:443?security=reality&encryption=none&pbk=V1wO60MfptJ9jzeo94f1RKIcUPq6frrKoFWPp2Jutlo&headerType=none&fp=firefox&type=tcp&flow=xtls-rprx-vision&sni=play.google.com&sid=3bbaf2c984e16a31": {
     "alive": true,
-    "latency": 644,
-    "time": 1780136635.1298227,
-    "country": "IT",
+    "latency": 419,
+    "time": 1780236483.3881128,
+    "country": "SE",
     "host": "de.atlasl.ir"
   },
   "vless://0ca31b9b-e360-4d04-8bde-9ec4f286abbb@www.iranapplecenter.com:443?mode=packet-up&path=/&security=tls&encryption=none&extra={\"xPaddingBytes\":\"100-1000\"}&insecure=0&host=cp.shahanpet.ir&fp=chrome&type=xhttp&allowInsecure=0&sni=cp.shahanpet.ir": {
@@ -18817,9 +18488,9 @@
   },
   "vless://1ef15939-7ec4-427f-9d47-eed9ced4c96f@62.84.96.96:8443?security=reality&encryption=none&pbk=Cxvc5bVMKln6RxPs5MtviUZNDsmpfuYUK8UFBlcBaS0&headerType=none&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=sun6-22.userapi.com&sid=808e2d36726ee97e": {
     "alive": true,
-    "latency": 363,
-    "time": 1780136725.4981136,
-    "country": "IT",
+    "latency": 248,
+    "time": 1780236570.2287686,
+    "country": "SE",
     "host": "62.84.96.96"
   },
   "vless://1ef15939-7ec4-427f-9d47-eed9ced4c96f@77.246.97.229:8443?security=reality&encryption=none&pbk=Cxvc5bVMKln6RxPs5MtviUZNDsmpfuYUK8UFBlcBaS0&headerType=none&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=sun6-22.userapi.com&sid=808e2d36726ee97e": {
@@ -18831,9 +18502,9 @@
   },
   "vless://1f3204b67ce648829e532745dd97e4b4@176.125.240.190:8443?encryption=none&type=xhttp&path=%2Fx&security=reality&sni=apple.com&pbk=jlj2q6pDEAIDl-kELIB3_Lf7hePJVNBBnBVUUm0Hgk8&sid=aabbccdd&fp=random": {
     "alive": true,
-    "latency": 270,
-    "time": 1780200926.1222763,
-    "country": "DE",
+    "latency": 262,
+    "time": 1780236570.2288747,
+    "country": "SE",
     "host": "176.125.240.190"
   },
   "vless://1f678d60-48d7-4eb0-9f85-35ed154d1cd5@chus.nodes.rocketnetwork.ru:443?encryption=none&flow=xtls-rprx-vision&type=tcp&security=reality&sni=cyberdrift.ru&fp=chrome&pbk=Mn0DIMKW6zu0_D3E1qKO7xMlIVZvB-rqO_-f7Le2vAs&sid=428ef87fd47a3a32": {
@@ -22254,8 +21925,8 @@
   },
   "vless://072baf2f-574e-4939-8b20-ccd89c17fefb@64.188.77.140:8443?type=tcp&security=reality&fp=chrome&pbk=GzQr6fDhigtRAr0n2Y7Nk3snhdytYyOvaYo9zYe1Xn4&sid=b3a1cc510a2001c6&sni=eh.vk.com": {
     "alive": true,
-    "latency": 233,
-    "time": 1780147757.6831403,
+    "latency": 208,
+    "time": 1780236469.2547412,
     "country": "SE",
     "host": "64.188.77.140"
   },
@@ -26958,9 +26629,9 @@
   },
   "ss://YWVzLTI1Ni1jZmI6UzdLd1V1N3lCeTU4UzNHYQ==@217.30.10.70:9042": {
     "alive": true,
-    "latency": 102,
-    "time": 1780199724.094723,
-    "country": "LT",
+    "latency": 105,
+    "time": 1780235344.5642178,
+    "country": "PL",
     "host": "217.30.10.70"
   },
   "ss://YWVzLTI1Ni1jZmI6VE4yWXFnaHhlRkRLWmZMVQ==@217.30.10.70:9037": {
@@ -26972,16 +26643,16 @@
   },
   "ss://YWVzLTI1Ni1jZmI6VFBxWDhlZGdiQVVSY0FNYg==@217.30.10.70:9079": {
     "alive": true,
-    "latency": 102,
-    "time": 1780199727.6874878,
-    "country": "LT",
+    "latency": 106,
+    "time": 1780235348.62289,
+    "country": "PL",
     "host": "217.30.10.70"
   },
   "ss://YWVzLTI1Ni1jZmI6VVdaUWVMUldua3Fna3NlcQ==@217.30.10.70:9032": {
     "alive": true,
-    "latency": 105,
-    "time": 1780199732.9096034,
-    "country": "LT",
+    "latency": 106,
+    "time": 1780235352.7997026,
+    "country": "NL",
     "host": "217.30.10.70"
   },
   "ss://YWVzLTI1Ni1jZmI6VWtYUnNYdlI2YnVETUcyWQ==@217.30.10.70:9001": {
@@ -27000,23 +26671,23 @@
   },
   "ss://YWVzLTI1Ni1jZmI6YUxwUXRmRVplNDQ1UXlIaw==@217.30.10.70:9098": {
     "alive": true,
-    "latency": 101,
-    "time": 1780199742.000964,
-    "country": "LT",
+    "latency": 105,
+    "time": 1780235359.0924177,
+    "country": "PL",
     "host": "217.30.10.70"
   },
   "ss://YWVzLTI1Ni1jZmI6ZjhucEtnTnpka3NzMnl0bg==@217.30.10.70:9088": {
     "alive": true,
-    "latency": 107,
-    "time": 1780161014.928494,
-    "country": "PL",
+    "latency": 105,
+    "time": 1780235414.5525243,
+    "country": "NL",
     "host": "217.30.10.70"
   },
   "ss://YWVzLTI1Ni1jZmI6ZkcyYXJ0VW1IZk5UMmNYNw==@217.30.10.70:9018": {
     "alive": true,
     "latency": 105,
-    "time": 1780199797.91623,
-    "country": "LT",
+    "time": 1780235414.6862397,
+    "country": "PL",
     "host": "217.30.10.70"
   },
   "ss://YWVzLTI1Ni1jZmI6cDl6NUJWQURIMllGczNNTg==@217.30.10.70:9040": {
@@ -27931,16 +27602,16 @@
   },
   "vless://22661b4c-ee2c-4219-b7b6-b8b130bd279d@193.168.46.180:443?type=tcp&security=reality&flow=xtls-rprx-vision&fp=chrome&pbk=D0FqzTuVSzCF8IcFo64SFIpMsaGV47LW3el2GCCVoFY&sid=c1a7e9b4711d5f60&sni=rruu.persik.host": {
     "alive": true,
-    "latency": 415,
-    "time": 1780162155.9071426,
-    "country": "IT",
+    "latency": 397,
+    "time": 1780236576.2782638,
+    "country": "SE",
     "host": "193.168.46.180"
   },
   "vless://2271c50f-ac7a-4d7f-8b04-64085b0daa56@172.64.152.23:2052?mode=auto&path=/pabloping&security=none&encryption=none&host=s1.nakosgol.com&type=xhttp&note=@FreeOnlineVPN": {
     "alive": true,
-    "latency": 7,
-    "time": 1780200933.9675486,
-    "country": "DE",
+    "latency": 16,
+    "time": 1780236576.2782922,
+    "country": "SE",
     "host": "172.64.152.23"
   },
   "ss://959b4df5-15bc-4eb8-8b93-95f6af50cd80@by.api-yandex.net:443?encryption=none&amp;flow=xtls-rprx-vision&amp;fp=chrome&amp;pbk=DjRqjdBkJgAG_le5Q14JXTki6m9XCsNKxgw74IB0kR4&amp;security=reality&amp;sid=0f4dacf62211e75f&amp;sni=by.api-yandex.net&amp;type=tcp": {
@@ -28099,9 +27770,9 @@
   },
   "trojan://iGccGWTMHtoXtBhGYK4mogg7iIUhGbcvCf@64.176.65.85:443?fp=chrome": {
     "alive": true,
-    "latency": 260,
-    "time": 1780200064.6578376,
-    "country": "CH",
+    "latency": 273,
+    "time": 1780235666.3400624,
+    "country": "EE",
     "host": "64.176.65.85"
   },
   "trojan://s_WEN9lMmufG+qDIsn-4C7JOVAnDdbS3Ui@172.236.220.10:443?security=tls&insecure=1&headerType=none&fp=chrome&type=tcp&allowInsecure=1&sni=172.236.220.10": {
@@ -28365,23 +28036,23 @@
   },
   "vless://1b43419a-b711-40d4-a0ee-eb5c73e60c92@den.n1etwork.prostosetup.org:443?encryption=none&flow=xtls-rprx-vision&type=raw&headerType=none&security=reality&fp=chrome&pbk=K1pl5IAOi7N5MUQIvv-35fQcpxgz9uLW5Dv45a2tmRc&sni=github.com&sid=50": {
     "alive": true,
-    "latency": 1623,
-    "time": 1780200907.108712,
-    "country": "DE",
+    "latency": 735,
+    "time": 1780236552.6670456,
+    "country": "SE",
     "host": "den.n1etwork.prostosetup.org"
   },
   "vless://1b43419a-b711-40d4-a0ee-eb5c73e60c92@den.n1etwork.prostosetup.org:443?encryption=none&flow=xtls-rprx-vision&type=raw&headerType=none&security=reality&fp=qq&pbk=K1pl5IAOi7N5MUQIvv-35fQcpxgz9uLW5Dv45a2tmRc&sni=github.com&sid=50": {
     "alive": true,
-    "latency": 1555,
-    "time": 1780200907.1087239,
-    "country": "DE",
+    "latency": 738,
+    "time": 1780236552.667129,
+    "country": "SE",
     "host": "den.n1etwork.prostosetup.org"
   },
   "vless://1b43419a-b711-40d4-a0ee-eb5c73e60c92@den.n1etwork.prostosetup.org:443?security=reality&encryption=none&pbk=K1pl5IAOi7N5MUQIvv-35fQcpxgz9uLW5Dv45a2tmRc&headerType=none&fp=qq&type=tcp&flow=xtls-rprx-vision&sni=github.com&sid=50": {
     "alive": true,
-    "latency": 1558,
-    "time": 1780200907.1087372,
-    "country": "DE",
+    "latency": 744,
+    "time": 1780236552.6671395,
+    "country": "SE",
     "host": "den.n1etwork.prostosetup.org"
   },
   "vless://1b43419a-b711-40d4-a0ee-eb5c73e60c92@den.n1etwork.prostosetup.org:443?security=reality&type=tcp&sni=github.com&fp=qq&flow=xtls-rprx-vision&sid=50&pbk=K1pl5IAOi7N5MUQIvv-35fQcpxgz9uLW5Dv45a2tmRc&encryption=none": {
@@ -28512,23 +28183,23 @@
   },
   "trojan://BSs5IAVMQdYuykvDsOYZoa6gNPSGBjAbLL@185.126.236.44:443?security=tls&sni=www.mesaly.click&fp=chrome&type=tcp&headerType=none&path=/": {
     "alive": true,
-    "latency": 273,
-    "time": 1780200064.656157,
-    "country": "DE",
+    "latency": 363,
+    "time": 1780235666.3390164,
+    "country": "SE",
     "host": "185.126.236.44"
   },
   "trojan://BSs5IAVMQdYuykvDsOYZoa6gNPSGBjAbLL@185.126.236.44:443?security=tls&sni=www.mesaly.click&fp=chrome&type=tcp&headerType=none&path=/&allow_insecure=1": {
     "alive": true,
-    "latency": 300,
-    "time": 1780200064.6561606,
-    "country": "DE",
+    "latency": 370,
+    "time": 1780235666.339027,
+    "country": "SE",
     "host": "185.126.236.44"
   },
   "trojan://BSs5IAVMQdYuykvDsOYZoa6gNPSGBjAbLL@185.126.236.44:443?security=tls&sni=www.mesaly.click&fp=chrome&type=tcp&path=/": {
     "alive": true,
-    "latency": 312,
-    "time": 1780200064.65617,
-    "country": "ES",
+    "latency": 391,
+    "time": 1780235666.339033,
+    "country": "SE",
     "host": "185.126.236.44"
   },
   "trojan://Tel%3DArshiacomplus@45.154.96.35:58035?mode=stream-one&path=%2Ffkcidiekei&security=tls&alpn=h2%2Chttp%2F1.1&insecure=0&fp=firefox&type=xhttp&allowInsecure=0&sni=oof.acp.us.ci": {
@@ -28925,8 +28596,8 @@
   },
   "vless://1f678d60-48d7-4eb0-9f85-35ed154d1cd5@chus.nodes.rocketnetwork.ru:443?type=tcp&security=reality&sni=cyberdrift.ru&fp=chrome&flow=xtls-rprx-vision&pbk=Mn0DIMKW6zu0_D3E1qKO7xMlIVZvB-rqO_-f7Le2vAs&sid=428ef87fd47a3a32": {
     "alive": true,
-    "latency": 354,
-    "time": 1780200926.1224008,
+    "latency": 215,
+    "time": 1780236570.2288961,
     "country": "RU",
     "host": "chus.nodes.rocketnetwork.ru"
   },
@@ -32394,5 +32065,411 @@
     "time": 1780224096.1243658,
     "country": "SE",
     "host": "berlin.myho.ir"
+  },
+  "ss://3af11c26-c589-4a9c-b811-f068d741a877@193.163.203.76:50580?encryption=none&flow=xtls-rprx-vision&fp=&pbk=ot_qLvMZOPCyVWFt0w8pC-nZT9RRzkdqNFtRtGpB220&security=reality&sid=93290645e01c92f4&sni=kinopoisk.ru&type=tcp": {
+    "alive": true,
+    "latency": 393,
+    "time": 1780235220.6756518,
+    "country": "SE",
+    "host": "193.163.203.76"
+  },
+  "ss://3af11c26-c589-4a9c-b811-f068d741a877@193.163.203.76:50580?security=reality&encryption=none&pbk=ot_qLvMZOPCyVWFt0w8pC-nZT9RRzkdqNFtRtGpB220&headerType=none&type=tcp&flow=xtls-rprx-vision&sni=kinopoisk.ru&sid=93290645e01c92f4": {
+    "alive": true,
+    "latency": 370,
+    "time": 1780235220.67567,
+    "country": "SE",
+    "host": "193.163.203.76"
+  },
+  "ss://3bfbdeba-90db-4372-80c8-22f1eaf800cd@199.247.27.134:44065?security=none&encryption=mlkem768x25519plus.native.0rtt.EKqcUMXJR9WsZYMW2ca2htef8eK8DCVeiRKlOmRSJVJ1oRrG0qIkvJuCD6m7tKlGczaUotimHbnNIbQQFrNAYogrSMy7qolB8uqMvQaR8-sS1rJxNcUbv-iBzvYq7uaXzzwNTjmZzVONTUrCZeC7ArpgCvG97iEq3gh6VUvBz6d35Lo5pKlEd4CAaMwiApQAZyVX4mChcImP1gUivFE-l4yuR24Vm-FtBAigIhSQdr45krg_XL6IVy4tZwsym02ANZM6xGOQueX9s_oCzE9zEp9VXJy6BEdIwrcEBazVGu-yFhEspKtAovmgaHndRf7qS4VxYkIWq5mPZfSTrI-MKGQRijh4XLNSE3HDmfFDIMzYeF0YxbRzxFiQBoNjR8z8eEOjNUF5iS2iSrjDhpYoEFYTYjHiQfcgK5t4LAxQKdpya6JwGFIcHFDNoxlOtG54SwdhNvwWXCCHolQOS7ZEmOClAlk0U-W8SNv-JNkft_y5asrusa5AJWRSEY2Sc3ndnG43gdkihNX6OidvyQ4wpE-MkWzhSSaJIUZWwH9aAJPkxQ8nmKmwS4nSgMcJRaCuJxQvuSVzYgEDhSSHKSnWcI61NesQtFW3FMcsOm5yELlfsWCKmzmiS5QuB6jvY3P7avS8xTsNF8p6J4mRmKDabOjTlFoAwYJMMos5FySEQ-GGNOr2e_K3BkcbxeXpsRyFaRvysRYHhZmTJl8CE_nDa8Q5Qia0C1hFEzlEFiSkc-RsliU1ouzvoGU4fG3kOth_USB0svUFNZx0VmBep2BMg9w1mB0yYtnGLJ3IZ6n7sg9aKorUSm37hOcSWKdUiq_OJSlTMgtPuXyGys1TAcCUdjJNYYC6WQE8rLUaS8EzwjqIGjtzEJeYRPyfIP0xNnMtyEBKyqvHawwhRGO1ifDUAUnEknyzxRs-lz7-d6EMV6uCUJVYkFl9ItTdDPibOKJqIZY0mme0qEm6UThHfLyhD_IeqjRUM3s14tMQ4ZuzU2g9diVK3lMrL3IxwgmnrFS8BqkMJGFdAnsCi_HIhMnDr5VZgwnCS1fEgNYR7WmTCVVuSikK1Zh5Fjw8W3SwthK3dqmtY4eFTjyqNxs58eq0LGoZqHpdjzCNjiQ21coOK9sKDYEk9QID3Gi17aF8kMQOs3SqZxS_TBO1ceGE_LNDp-oW7mOplIwGOzahW9uzd2iz2lKO_wE1JPVP5JCWOqg8dEksYqJfWWI1hTMDCDFoSnjIfdGQHAVwC0sOX1mLIkM-wEdE8oQCTwLQZ2iUdKcAstWtXcAPNABykFakhFWwGIAlDqQqDHrMXoWWqRlg2KaVdwS9qCoE4pOlkBGfhfWTbeencHoo5bx268dYYKASxKlAGzEXoVA5vUkSYmXF0sdXYkEpUEJUQIZvetMZ-NyjS1B8n6E563uT_1k5YLbF0Kee4YUDW5m7kFgx5ao6jDYLRhwGVWZ0iSlnJ2en-PnMLfojBOtmL1aWiUGNW7K4wjuwdyURDRpcpqiIrtsemJue8Qd3FiuK-VAS1_gSDxeKZWSSQkXQKxrCKtTAg_jjvhCdKD2hcuKa5ZgVJvQ&headerType=none&type=tcp": {
+    "alive": true,
+    "latency": 86,
+    "time": 1780235220.6756957,
+    "country": "CZ",
+    "host": "199.247.27.134"
+  },
+  "ss://4c2ab735-ffc4-45eb-81af-2756a88600dd@aust.astra-vpn.com:443?encryption=none&security=reality&sni=yandex.ru&fp=chrome&pbk=zjv3djnsCKDqP7zZFIrJ9ImzgdPE3zFMCYrOvdWqkEE&sid=79&type=tcp&headerType=none": {
+    "alive": true,
+    "latency": 408,
+    "time": 1780235220.6758997,
+    "country": "SE",
+    "host": "aust.astra-vpn.com"
+  },
+  "ss://9aeeb856-b813-43d0-bc87-8dd0d6565725@dl2.baguvix.xyz:8080?security=&encryption=none&host=play.google.com&headerType=http&type=tcp": {
+    "alive": true,
+    "latency": 124,
+    "time": 1780235220.6768017,
+    "country": "SE",
+    "host": "dl2.baguvix.xyz"
+  },
+  "ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpIS2N3R1dSRVQyRXNwNmpFMDZkMFpB@c8811f70481d6448c8811f70481d6448.dadnode.ir:33699": {
+    "alive": true,
+    "latency": 104,
+    "time": 1780235220.678065,
+    "country": "AT",
+    "host": "c8811f70481d6448c8811f70481d6448.dadnode.ir"
+  },
+  "ss://YWVzLTI1Ni1nY206YzVmY2RmNzgyOTExMmNiNA==@45.140.169.216:30129": {
+    "alive": true,
+    "latency": 136,
+    "time": 1780235499.601508,
+    "country": "LT",
+    "host": "45.140.169.216"
+  },
+  "ss://YWVzLTI1Ni1nY206YzVmY2RmNzgyOTExMmNiNA@45.140.169.216:30129": {
+    "alive": true,
+    "latency": 130,
+    "time": 1780235499.6015177,
+    "country": "LT",
+    "host": "45.140.169.216"
+  },
+  "ss://a0269f4a-dea0-4f17-8393-e3bf5a2403e6@de1.olampiavarz.ir:6606?encryption=none&amp;headerType=http&amp;host=varzesh3.com&amp;security=none&amp;type=tcp": {
+    "alive": true,
+    "latency": 269,
+    "time": 1780235575.3066857,
+    "country": "SE",
+    "host": "de1.olampiavarz.ir"
+  },
+  "ss://eyJhZGQiOiIxMDQuMTguMzIuNDciLCJhaWQiOiIwIiwiYWxwbiI6IiIsImZwIjoiY2hyb21lIiwiaG9zdCI6Im5vdGF0aGluZy5kYWRjbG91ZC5pciIsImlkIjoiZDY1YTI0M2YtYTZhMy00NDliLWE3MmMtMzQyNmEyOTEwMDY5IiwibmV0Ijoid3MiLCJwYXRoIjoiIiwicG9ydCI6IjIwOTYiLCJwcyI6IkBhcHBzb29uZXIg2qnYp9mG2KfZhCDYqtmE2q_Ysdin2YUg8J-Viu-4jyIsInNjeSI6ImF1dG8iLCJzbmkiOiJub3RhdGhpbmcuZGFkY2xvdWQuaXIiLCJ0bHMiOiJ0bHMiLCJ0eXBlIjoiLS0tIiwidiI6IjIifQ@c8811f70481d6448c8811f70481d6448.dadnode.ir:33699": {
+    "alive": true,
+    "latency": 189,
+    "time": 1780235666.3372679,
+    "country": "ES",
+    "host": "c8811f70481d6448c8811f70481d6448.dadnode.ir"
+  },
+  "trojan://LSS6HLnp7IeEEJUcox@nl-1.tr202607.com:443?type=tcp&amp;security=tls&amp;headerType=none&amp;allowInsecure=1": {
+    "alive": true,
+    "latency": 312,
+    "time": 1780235666.339123,
+    "country": "IE",
+    "host": "nl-1.tr202607.com"
+  },
+  "trojan://LSS6HLnp7IeEEJUcox@nl-1.tr202607.com:443?type=tcp&security=tls&headerType=none&allowInsecure=1": {
+    "alive": true,
+    "latency": 287,
+    "time": 1780235666.3391342,
+    "country": "IE",
+    "host": "nl-1.tr202607.com"
+  },
+  "trojan://LSS6HLnp7IeEEJUcox@uk-1.tr202607.com:443?security=tls": {
+    "alive": true,
+    "latency": 332,
+    "time": 1780235666.3391442,
+    "country": "IE",
+    "host": "uk-1.tr202607.com"
+  },
+  "trojan://YGWIMlg.W1wRWQkRDcKfjZY7sng09aC=Yh@217.69.2.107:443?allowInsecure=0&sni=www.weavenet.click": {
+    "alive": true,
+    "latency": 204,
+    "time": 1780235666.3393352,
+    "country": "SE",
+    "host": "217.69.2.107"
+  },
+  "trojan://YGWIMlg.W1wRWQkRDcKfjZY7sng09aC=Yh@217.69.2.107:443?fp=chrome&sni=www.weavenet.click": {
+    "alive": true,
+    "latency": 220,
+    "time": 1780235666.3393393,
+    "country": "CH",
+    "host": "217.69.2.107"
+  },
+  "trojan://iGccGWTMHtoXtBhGYK4mogg7iIUhGbcvCf@64.176.65.85:443?sni=64.176.65.85": {
+    "alive": true,
+    "latency": 277,
+    "time": 1780235666.3400667,
+    "country": "PL",
+    "host": "64.176.65.85"
+  },
+  "trojan://iGccGWTMHtoXtBhGYK4mogg7iIUhGbcvCf@64.176.65.85:443?sni=64.176.65.85&fp=chrome&type=tcp&security=tls": {
+    "alive": true,
+    "latency": 257,
+    "time": 1780235666.3400753,
+    "country": "SE",
+    "host": "64.176.65.85"
+  },
+  "trojan://r-_YbwF.j0TtHVewoFIppramjAnmSfqYzJ@172.238.120.124:443?allowInsecure=0": {
+    "alive": true,
+    "latency": 298,
+    "time": 1780235666.3401985,
+    "country": "SE",
+    "host": "172.238.120.124"
+  },
+  "trojan://rYuChHcwQZskq9E0zdoR@103.45.245.208:2053?sni=vpn5.rnmcnm.com": {
+    "alive": true,
+    "latency": 263,
+    "time": 1780235666.3402038,
+    "country": "GB",
+    "host": "103.45.245.208"
+  },
+  "trojan://telegram-id-directvpn@13.37.65.174:22223?security=tls&alpn=http/1.1&headerType=none&type=tcp&sni=trojan.burgerip.co.uk": {
+    "alive": true,
+    "latency": 201,
+    "time": 1780235683.2713058,
+    "country": "SE",
+    "host": "13.37.65.174"
+  },
+  "trojan://telegram-id-directvpn@13.37.65.174:22223?security=tls&amp;alpn=http/1.1&amp;headerType=none&amp;type=tcp&amp;sni=trojan.burgerip.co.uk": {
+    "alive": true,
+    "latency": 202,
+    "time": 1780235683.2713144,
+    "country": "SE",
+    "host": "13.37.65.174"
+  },
+  "trojan://telegram-id-directvpn@15.188.97.116:22223?security=tls&alpn=http/1.1&headerType=none&type=tcp&sni=trojan.burgerip.co.uk": {
+    "alive": true,
+    "latency": 312,
+    "time": 1780235724.3760238,
+    "country": "SE",
+    "host": "15.188.97.116"
+  },
+  "trojan://telegram-id-directvpn@15.188.97.116:22223?security=tls&amp;alpn=http/1.1&amp;headerType=none&amp;type=tcp&amp;sni=trojan.burgerip.co.uk": {
+    "alive": true,
+    "latency": 275,
+    "time": 1780235724.376033,
+    "country": "SE",
+    "host": "15.188.97.116"
+  },
+  "trojan://telegram-id-directvpn@3.75.20.183:22223?security=tls&alpn=http/1.1&headerType=none&type=tcp&sni=trojan.burgerip.co.uk": {
+    "alive": true,
+    "latency": 204,
+    "time": 1780235818.9684064,
+    "country": "SE",
+    "host": "3.75.20.183"
+  },
+  "trojan://telegram-id-directvpn@3.75.20.183:22223?security=tls&amp;alpn=http/1.1&amp;headerType=none&amp;type=tcp&amp;sni=trojan.burgerip.co.uk": {
+    "alive": true,
+    "latency": 203,
+    "time": 1780235818.9684172,
+    "country": "SE",
+    "host": "3.75.20.183"
+  },
+  "trojan://telegram-id-privatevpns@13.37.65.174:22222?security=tls&alpn=http/1.1&headerType=none&type=tcp&sni=trojan.burgerip.co.uk": {
+    "alive": true,
+    "latency": 844,
+    "time": 1780235974.7842832,
+    "country": "SE",
+    "host": "13.37.65.174"
+  },
+  "trojan://telegram-id-privatevpns@13.37.65.174:22222?security=tls&amp%3Balpn=http/1.1&amp%3BheaderType=none&amp%3Btype=tcp&amp%3Bsni=trojan.burgerip.co.uk": {
+    "alive": true,
+    "latency": 868,
+    "time": 1780235974.7842875,
+    "country": "SE",
+    "host": "13.37.65.174"
+  },
+  "trojan://telegram-id-privatevpns@13.37.65.174:22222?security=tls&amp;alpn=http/1.1&amp;headerType=none&amp;type=tcp&amp;sni=trojan.burgerip.co.uk": {
+    "alive": true,
+    "latency": 483,
+    "time": 1780235974.7843075,
+    "country": "SE",
+    "host": "13.37.65.174"
+  },
+  "trojan://telegram-id-privatevpns@15.188.97.116:22222?security=tls&alpn=http/1.1&headerType=none&type=tcp&sni=trojan.burgerip.co.uk": {
+    "alive": true,
+    "latency": 1816,
+    "time": 1780236032.37941,
+    "country": "SE",
+    "host": "15.188.97.116"
+  },
+  "trojan://telegram-id-privatevpns@15.188.97.116:22222?security=tls&amp%3Balpn=http/1.1&amp%3BheaderType=none&amp%3Btype=tcp&amp%3Bsni=trojan.burgerip.co.uk": {
+    "alive": true,
+    "latency": 1816,
+    "time": 1780236032.3794184,
+    "country": "SE",
+    "host": "15.188.97.116"
+  },
+  "trojan://telegram-id-privatevpns@15.188.97.116:22222?security=tls&amp;alpn=http/1.1&amp;headerType=none&amp;type=tcp&amp;sni=trojan.burgerip.co.uk": {
+    "alive": true,
+    "latency": 1789,
+    "time": 1780236032.3794246,
+    "country": "SE",
+    "host": "15.188.97.116"
+  },
+  "trojan://telegram-id-v2rayvpnchannel@13.37.65.174:22223?security=tls&alpn=http/1.1&headerType=none&type=tcp&sni=trojan.burgerip.co.uk": {
+    "alive": true,
+    "latency": 237,
+    "time": 1780236325.812845,
+    "country": "SE",
+    "host": "13.37.65.174"
+  },
+  "trojan://telegram-id-v2rayvpnchannel@13.37.65.174:22223?security=tls&amp%3Balpn=http/1.1&amp%3BheaderType=none&amp%3Btype=tcp&amp%3Bsni=trojan.burgerip.co.uk": {
+    "alive": true,
+    "latency": 304,
+    "time": 1780236325.8128514,
+    "country": "SE",
+    "host": "13.37.65.174"
+  },
+  "trojan://telegram-id-v2rayvpnchannel@13.37.65.174:22223?security=tls&amp;alpn=http/1.1&amp;headerType=none&amp;type=tcp&amp;sni=trojan.burgerip.co.uk": {
+    "alive": true,
+    "latency": 238,
+    "time": 1780236325.8128648,
+    "country": "SE",
+    "host": "13.37.65.174"
+  },
+  "trojan://telegram-id-v2rayvpnchannel@3.75.20.183:22223?security=tls&alpn=http/1.1&headerType=none&type=tcp&sni=trojan.burgerip.co.uk": {
+    "alive": true,
+    "latency": 234,
+    "time": 1780236351.6203103,
+    "country": "SE",
+    "host": "3.75.20.183"
+  },
+  "trojan://telegram-id-v2rayvpnchannel@3.75.20.183:22223?security=tls&amp%3Balpn=http/1.1&amp%3BheaderType=none&amp%3Btype=tcp&amp%3Bsni=trojan.burgerip.co.uk": {
+    "alive": true,
+    "latency": 233,
+    "time": 1780236351.6203198,
+    "country": "SE",
+    "host": "3.75.20.183"
+  },
+  "trojan://telegram-id-v2rayvpnchannel@3.75.20.183:22223?security=tls&amp;alpn=http/1.1&amp;headerType=none&amp;type=tcp&amp;sni=trojan.burgerip.co.uk": {
+    "alive": true,
+    "latency": 240,
+    "time": 1780236351.6203341,
+    "country": "SE",
+    "host": "3.75.20.183"
+  },
+  "vless://01421c0a-d2c6-4f0d-948d-6aa2c4973b41@45.77.141.4:2052?path=%2F&security=tls&encryption=none&insecure=1&host=tgju.org&type=httpupgrade&allowInsecure=1&sni=srv1.quantumflow.ir": {
+    "alive": true,
+    "latency": 219,
+    "time": 1780236397.4037297,
+    "country": "SE",
+    "host": "45.77.141.4"
+  },
+  "vless://01c0530f-168d-4645-a74c-f2b3b015c217@77.90.60.136:2053?security=reality&amp%3Bencryption=none&amp%3Bpbk=pFRfJJDY6TYJq-OVgAqFXhdaeur7gJWJM-RZT8g8yAA&amp%3BheaderType=none&amp%3Bfp=random&amp%3Bspx=/&amp%3Btype=tcp&amp%3Bflow=xtls-rprx-vision&amp%3Bsni=jhol.in&amp%3Bsid=b85e293fa1": {
+    "alive": true,
+    "latency": 236,
+    "time": 1780236397.8101888,
+    "country": "SE",
+    "host": "77.90.60.136"
+  },
+  "vless://02b5c72e-b345-4d34-9df6-c7f6c578aa43@5.35.69.164:55443?flow=xtls-rprx-vision&fp=chrome&pbk=bfBj_6i0gYWCbWnmOxZcZW0Fa8bNIkU120xKmzl-NAk&security=reality&sid=c6cc&sni=google.com&type=tcp": {
+    "alive": true,
+    "latency": 311,
+    "time": 1780236449.8141325,
+    "country": "CZ",
+    "host": "5.35.69.164"
+  },
+  "vless://0ca31b9b-e360-4d04-8bde-9ec4f286abbb@www.iranapplecenter.com:443?mode=packet-up&path=%2F&security=tls&encryption=none&extra=%7B%22xPaddingBytes%22%3A%22100-1000%22%7D&insecure=0&host=cp.shahanpet.ir&fp=random&type=xhttp&allowInsecure=0&sni=cp.shahanpet.ir": {
+    "alive": true,
+    "latency": 311,
+    "time": 1780236483.3881555,
+    "country": "SE",
+    "host": "www.iranapplecenter.com"
+  },
+  "vless://157bb36f-035e-405c-b8c6-67fa1a7c0640@147.45.71.176:6443?extra={\"scMaxEachPostBytes\":+1000000,+\"scMaxConcurrentPosts\":+100,+\"scMinPostsIntervalMs\":+30,+\"xPaddingBytes\":+\"100-1000\",+\"noGRPCHeader\":+false}&fp=chrome&mode=auto&pbk=YJ9I6GzZ_xT_Rk8We8iR1CwEMbzF4I30i_EH2VOVY0Y&security=reality&sid=abab34c40ed6c10a&sni=github.com&type=xhttp": {
+    "alive": true,
+    "latency": 3184,
+    "time": 1780236524.2299633,
+    "country": "SE",
+    "host": "147.45.71.176"
+  },
+  "vless://157bb36f-035e-405c-b8c6-67fa1a7c0640@162.248.162.249:443?fp=chrome&pbk=YJ9I6GzZ_xT_Rk8We8iR1CwEMbzF4I30i_EH2VOVY0Y&security=reality&sid=abab34c40ed6c10a&sni=github.com&type=tcp": {
+    "alive": true,
+    "latency": 5414,
+    "time": 1780236524.4535484,
+    "country": "SE",
+    "host": "162.248.162.249"
+  },
+  "vless://157bb36f-035e-405c-b8c6-67fa1a7c0640@162.248.162.249:6443?extra={\"scMaxEachPostBytes\":+1000000,+\"scMaxConcurrentPosts\":+100,+\"scMinPostsIntervalMs\":+30,+\"xPaddingBytes\":+\"100-1000\",+\"noGRPCHeader\":+false}&fp=chrome&mode=auto&pbk=YJ9I6GzZ_xT_Rk8We8iR1CwEMbzF4I30i_EH2VOVY0Y&security=reality&sid=abab34c40ed6c10a&sni=github.com&type=xhttp": {
+    "alive": true,
+    "latency": 290,
+    "time": 1780236524.4535728,
+    "country": "SE",
+    "host": "162.248.162.249"
+  },
+  "vless://157bb36f-035e-405c-b8c6-67fa1a7c0640@213.165.37.30:6443?extra={\"scMaxEachPostBytes\":+1000000,+\"scMaxConcurrentPosts\":+100,+\"scMinPostsIntervalMs\":+30,+\"xPaddingBytes\":+\"100-1000\",+\"noGRPCHeader\":+false}&fp=chrome&mode=auto&pbk=YJ9I6GzZ_xT_Rk8We8iR1CwEMbzF4I30i_EH2VOVY0Y&security=reality&sid=abab34c40ed6c10a&sni=github.com&type=xhttp": {
+    "alive": true,
+    "latency": 1363,
+    "time": 1780236524.4535956,
+    "country": "SE",
+    "host": "213.165.37.30"
+  },
+  "vless://157bb36f-035e-405c-b8c6-67fa1a7c0640@213.165.43.213:6443?extra={\"scMaxEachPostBytes\":+1000000,+\"scMaxConcurrentPosts\":+100,+\"scMinPostsIntervalMs\":+30,+\"xPaddingBytes\":+\"100-1000\",+\"noGRPCHeader\":+false}&fp=chrome&mode=auto&pbk=YJ9I6GzZ_xT_Rk8We8iR1CwEMbzF4I30i_EH2VOVY0Y&security=reality&sid=abab34c40ed6c10a&sni=github.com&type=xhttp": {
+    "alive": true,
+    "latency": 214,
+    "time": 1780236524.4536116,
+    "country": "SE",
+    "host": "213.165.43.213"
+  },
+  "vless://157bb36f-035e-405c-b8c6-67fa1a7c0640@79.137.184.170:6443?extra={\"scMaxEachPostBytes\":+1000000,+\"scMaxConcurrentPosts\":+100,+\"scMinPostsIntervalMs\":+30,+\"xPaddingBytes\":+\"100-1000\",+\"noGRPCHeader\":+false}&fp=chrome&mode=auto&pbk=YJ9I6GzZ_xT_Rk8We8iR1CwEMbzF4I30i_EH2VOVY0Y&security=reality&sid=abab34c40ed6c10a&sni=github.com&type=xhttp": {
+    "alive": true,
+    "latency": 339,
+    "time": 1780236524.4536161,
+    "country": "SE",
+    "host": "79.137.184.170"
+  },
+  "vless://157bb36f-035e-405c-b8c6-67fa1a7c0640@81.19.137.63:6443?extra={\"scMaxEachPostBytes\":+1000000,+\"scMaxConcurrentPosts\":+100,+\"scMinPostsIntervalMs\":+30,+\"xPaddingBytes\":+\"100-1000\",+\"noGRPCHeader\":+false}&fp=chrome&mode=auto&pbk=YJ9I6GzZ_xT_Rk8We8iR1CwEMbzF4I30i_EH2VOVY0Y&security=reality&sid=abab34c40ed6c10a&sni=github.com&type=xhttp": {
+    "alive": true,
+    "latency": 2076,
+    "time": 1780236524.4536316,
+    "country": "SE",
+    "host": "81.19.137.63"
+  },
+  "vless://16c6faa4-1162-49ca-acf7-059afdf1ecd3@91.107.189.143:29039?encryption=none&security=none&type=tcp&headerType=none": {
+    "alive": true,
+    "latency": 94,
+    "time": 1780236529.7676673,
+    "country": "SE",
+    "host": "91.107.189.143"
+  },
+  "vless://17aae0f2-914c-40e3-8ed3-38ab1c83ec74@fi3.coconutstrip.co:443?encryption=none&type=tcp&security=reality&sni=fi3.coconutstrip.co&fp=chrome&pbk=a5QIMi0TI7lT9aVcARTQWn22yVYLkBBZ1oQORqiRpAg&flow=xtls-rprx-vision": {
+    "alive": true,
+    "latency": 353,
+    "time": 1780236534.6231875,
+    "country": "SE",
+    "host": "fi3.coconutstrip.co"
+  },
+  "vless://1b9e301d-cecd-4eb1-8b36-eef811c2696d@62.238.32.25:443?Telegram=@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad&security=reality&encryption=none&pbk=3LUIM_6cYceTgNt6LWnR8YSVrenpLsh-FIGDrmfjjwc&headerType=none&fp=chrome&type=tcp&sni=yastatic.net&sid=5e841fab": {
+    "alive": true,
+    "latency": 317,
+    "time": 1780236552.6673286,
+    "country": "SE",
+    "host": "62.238.32.25"
+  },
+  "vless://1b9e301d-cecd-4eb1-8b36-eef811c2696d@62.238.32.25:443?encryption=none&security=reality&sni=yastatic.net&fp=chrome&pbk=3LUIM_6cYceTgNt6LWnR8YSVrenpLsh-FIGDrmfjjwc&sid=5e841fab&type=tcp&headerType=none": {
+    "alive": true,
+    "latency": 366,
+    "time": 1780236552.667336,
+    "country": "SE",
+    "host": "62.238.32.25"
+  },
+  "vless://1ef15939-7ec4-427f-9d47-eed9ced4c96f@194.246.81.135:8443?security=reality&encryption=none&pbk=Cxvc5bVMKln6RxPs5MtviUZNDsmpfuYUK8UFBlcBaS0&headerType=none&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=sun6-22.userapi.com&sid=808e2d36726ee97e": {
+    "alive": true,
+    "latency": 226,
+    "time": 1780236570.228745,
+    "country": "SE",
+    "host": "194.246.81.135"
+  },
+  "vless://1f9d104e-ca0e-4202-ba4b-a0afb969c747@188.114.97.6:443?mode=stream-one&path=%2Fassignment&security=tls&encryption=none&alpn=h2,http/1.1&host=www.multiplydose.cc.cd&fp=chrome&allowinsecure=0&type=xhttp&sni=www.multiplydose.cc.cd": {
+    "alive": true,
+    "latency": 43,
+    "time": 1780236570.2289307,
+    "country": "SE",
+    "host": "188.114.97.6"
+  },
+  "vless://21f1af13-f6e9-4483-8a17-a521a665b335@germany.samanidempire.org:443?Telegram=@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad&Telegram=@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad&Telegram=@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad&Telegram=@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAz": {
+    "alive": true,
+    "latency": 265,
+    "time": 1780236574.4920468,
+    "country": "ES",
+    "host": "germany.samanidempire.org"
+  },
+  "vless://21f1af13-f6e9-4483-8a17-a521a665b335@germany.samanidempire.org:443?Telegram=@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad&Telegram=@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad&Telegram=@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad&Telegram=@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad&Telegram=@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAz": {
+    "alive": true,
+    "latency": 481,
+    "time": 1780236574.492073,
+    "country": "ES",
+    "host": "germany.samanidempire.org"
+  },
+  "vless://228ecfd3-9bf0-42fd-a50e-581f84022513@188.225.79.134:13343?flow=xtls-rprx-vision&fp=chrome&pbk=MIs98I7LawHDr-TGlrEguEWcPQlaxoRMQW6zX9LaeUM&security=reality&sid=cd0e3984071f&sni=www.rcsb.org&spx=/bJAVHUcigNlJzBE&type=tcp": {
+    "alive": true,
+    "latency": 715,
+    "time": 1780236576.9782622,
+    "country": "SE",
+    "host": "188.225.79.134"
+  },
+  "vless://228ecfd3-9bf0-42fd-a50e-581f84022513@78.17.198.65:18443?flow=xtls-rprx-vision&fp=chrome&pbk=09dnS8j39kek1dupFOV_NgLaQPwP46W8dAqt8IaTO1Y&security=reality&sid=c914a1c62903b4a2&sni=www.ozone.nl&spx=/iqxMzf6LT7rPdBd&type=tcp": {
+    "alive": true,
+    "latency": 298,
+    "time": 1780236576.978296,
+    "country": "SE",
+    "host": "78.17.198.65"
   }
 }
